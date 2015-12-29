@@ -1,0 +1,135 @@
+%\documentclass[12pt]{article}
+
+%\addtolength{\textwidth}{1.4in}
+%\addtolength{\oddsidemargin}{-.7in} %left margin
+%\addtolength{\evensidemargin}{-.7in}
+%\setlength{\textheight}{8.5in}
+%\setlength{\topmargin}{0.0in}
+%\setlength{\headsep}{0.0in}
+%\setlength{\headheight}{0.0in}
+%\setlength{\footskip}{.5in}
+%\renewcommand{\baselinestretch}{1.0}
+%\setlength{\parindent}{0pt}
+%\linespread{1.1}
+
+%\usepackage{amssymb, amsmath, amsthm, bm}
+%\usepackage{graphicx,csquotes,verbatim}
+%\usepackage[backend=biber,block=space,style=authoryear]{biblatex}
+%\setlength{\bibitemsep}{\baselineskip}
+%\usepackage[american]{babel}
+%dell laptop
+%\addbibresource{C:/Users/Kristy/Dropbox/Research/xBibs/tradeagreements.bib}
+%\addbibresource{C:/Users/Kristy/Documents/Dropbox/Research/xBibs/tradeagreements.bib}
+%\renewcommand{\newunitpunct}{,}
+%\renewbibmacro{in:}{}
+
+
+%\DeclareMathOperator*{\argmax}{arg\,max}
+%\usepackage{xcolor}
+%\hbadness=10000
+
+%\newcommand{\ve}{\varepsilon}
+%\newcommand{\ov}{\overline}
+%\newcommand{\un}{\underline}
+%\newcommand{\al}{\alpha}
+%\newcommand{\expect}{\mathbb{E}}
+%\newcommand{\ga}{\gamma}
+%\newcommand{\Ga}{\Gamma}
+%\newcommand{\de}{\delta}
+
+%\begin{document}
+
+In many situations, it is realistic to assume that, in addition to the ex-post lobbying examined throughout this text, lobbying also takes place before the trade agreement is signed to affect its terms. Sections~\ref{sec:rigid} and \ref{sec:objfcn} have shown that, although ex-post lobbying occurs after the trade agreement is signed in order to impact the level of the applied tariff, it alters the incentives of governments when they negotiate the trade agreement. Similarly, ex-ante lobbying is aimed directly at changing the level of the trade agreement tariff, but here lobbies only engage in this activity in order to alter what will be possible ex-post.
+
+One of the main implications of the possibility of ex-ante lobbying is the addition of a new time at which the lobby may have to exert influence. As in Section~\ref{sec:strong}, when facing a trade agreement in which commitments take the form of strong bindings, the lobby's optimal ex-post effort choice is zero. However, when facing a tariff cap, protection will only be supplied at the ex-post stage if the lobby exerts effort. Thus, ex-ante lobbying adds a second time at which the lobby may have an incentive to exert effort in the case of a tariff cap; it introduces a first time at which the lobby may supply non-zero effort in the case of a strong binding.
+
+For simplicity, here I consider ex-ante lobbying when political pressure is endogenous only, i.e. there is no exogenous, probabilistic influence on $\ga$. Since there is no possibility of ex-ante lobbying in the \Textcite{bs2005} framework this paper follows, it must be determined how ex-ante lobbying can best be integrated into the model.
+
+The \Textcite{bs2005} framework posits that governments negotiate the trade agreement so that they will be able to set the applied tariff that best matches the political pressure they experience ex-post. In the case of endogenous political pressure, I argue that the governments will tune the trade agreement to deliver the amount of lobbying effort that is in their best interest ex-post. How does this change when lobbies can influence the terms of the trade agreement?
+
+A lobby knows that the trade agreement will bind its future action, so exerting effort at the ex-ante stage only matters insofar as it improves ex-post profits net of both ex-ante and ex-post lobbying effort.
+
+Looking at the policy-makers, with ex-post pressure only, the governments are completely forward looking: they set the trade agreement with a view toward maximizing expected joint ex-post welfare. In order for ex-ante lobbying to have an effect, it must be that governments also receive some utility from the setting of the trade agreement itself: perhaps they receive or lose political capital from various interested parties, and can be persuaded to forgo future benefits if ex-ante lobbying is strong enough to outweigh those future concerns. 
+
+Thus I model the influence of ex-ante lobbying on the governments' tariff-setting behavior as operating through a threshold. Recall how the trade agreement tariff is determined under ex-post lobbying only. Because the trade agreement can act as a commitment device, the governments choose the tariff level $\tau^R_{\cdot,e}$, and implicitly ex-post effort $e^{EP}=e^R_{\cdot,e}$, to maximize their joint political welfare as in Equation~\ref{exp:1}, subject only to the constraint that $\ga$ will be realized according to the ex-post lobbying process.
+		
+As discussed in Section~\ref{sec:objfcn}, depending on how government welfare changes as political pressure increases, the governments may be looking ahead and manipulating ex-post lobbying incentives when there is only ex-post lobbying. When ex-ante lobbying is possible the governments may have to raise the trade agreement tariff above $\tau^R_{\cdot,e}$ in order to respond to that pressure.
+
+This is modeled here with a simple cut-off. The trade agreement tariff cap will be set according to $\ga\left(e^{EA}\right)$ instead of at $\tau^R_{\cdot,e}$ if $\ga\left(e^{EA}\right)$ would lead to a higher trade agreement tariff. If, on the other hand, $\tau = \frac{4(\ga(e^{EA})-1)}{25-4\ga(e^{EA})} < \tau^R_{\cdot,e}$, the governments respond to the higher ex-post pressure and set $\tau^R_{\cdot,e}$.
+
+Thus the governments lose some measure of control with ex-ante lobbying. If $e^{EA}$ is low enough, ex-ante lobbying has no impact. But if $e^{EA}$ is above the threshold, the trade agreement tariff is strictly greater than $\tau^R_{\cdot,e}$ and so joint government welfare will not be at its globally optimal level. The trade agreement the governments choose will be constrained by ex-ante pressure.
+
+We will see that this change to the government's preferences has the impacts one would expect, at least in the case of weak bindings (tariff caps): net profits for the lobby (weakly) increase, and net political utility for the governments (weakly) decrease. We begin with the less clear-cut case of strong bindings.
+
+\subsection{Strong Bindings}
+Let us first look at how ex-ante lobbying impacts trade agreements that involve strong bindings, or exact tariff commitments. We know that when there is only ex-post lobbying, $e^{EP} =0$ and $\tau^{EP} = \tau^R_{S,e}$. Since ex-ante effort will be sunk ex-post, the ex-post stage of the game that includes ex-ante lobbying is identical to the game without ex-ante lobbying. In the case of exact tariff commitments, because $e^{EP} = 0 \ \forall e^{EA}$, the lobby does not consider the impact of ex-ante lobbying on the ex-post effort level.
+
+This thus looks like a problem with no ex-post lobbying, but where there is perfect enforcement of the tariff commitment. This collapses to a simple problem of maximizing joint government welfare with $e=e^{EA}$, and the lobby maximizing profits net of ex-ante effort facing the joint maximization of the governments.
+
+Without knowing how government welfare varies in $\ga$, we can't say for sure the effect on government welfare at the ex-ante stage. As with the example in Figure~\ref{fig:weight}, joint welfare could fall but could also rise. Ex-post political pressure will not match ex-ante political pressure: because of the incentives involved with strong bindings, the home government will experience $\ga(0)$ but be forced to apply the ex-ante tariff, so this is a welfare loss relative to the no ex-ante case at this stage.\footnote{This is a government welfare loss from exact tariff commitments that is not accounted for in \Textcite{mrc2007} because of their assumption that the government has no bargaining power. It seems to be closely related that, in their model,  exact tariff commitments and tariff caps are equivalent in the case of perfectly immobile capital. As will be shown below, that is not the case here.} There is a very clear gain for the lobby relative to the case where there is no ex-ante lobbying; it can avoid any loss by setting $e^{EA}=0$.
+				
+\subsection{Weak Bindings}
+In the case of weak bindings, or tariff caps, the ex-post stage will also work as in the no-ex-ante-lobbying case, that is, as in Section~\ref{sec:weak}, again because ex-ante effort is sunk at the ex-post stage. To recap, when there is no ex-ante lobbying---or ex-ante-lobbying is less important than ex-post lobbying---the governments choose the $\tau^R_{W,e}$ that leads to the level of ex-post political pressure that maximizes ex-ante joint welfare
+		\[
+		  W(\ga(e^R_{W,e})),\tau^R_{W,e}) + W^*(\tau^R_{W,e})
+		\]
+		knowing that the home government will set the applied tariff in the third stage unilaterally (i.e. $\tau^N(\ga(e^R_{W,e})) = \frac{8\ga(e^R_{W,e}) - 5}{68 - 8 \ga(e^R_{W,e})} = \tau^R_{W,e}$).
+						
+What is different here is that the tariff cap could be set higher than this level because of the presence of ex-ante lobbying. The lobby chooses its ex-ante effort level $e^{EA}$ taking into account that the governments will set either the optimal ex-post tariff cap $\tau^R_{W,e}$ or a higher cap in ex-ante stage given the $e^{EA}$ with which it is confronted.
+
+The lobby maximizes $\pi(\tau^E(e^{EA})) - e^{EA} - e^{EP}(e^{EA})$, with a first order condition of 
+	\begin{equation}
+	  \frac{\partial \pi}{\partial \tau} \frac{\partial \tau^E}{\partial \ga} \frac{\partial \ga}{\partial e^{EA}} = 1 +\frac{\partial e^{EP}}{\partial e^{EA}}
+			\label{eq:ea}
+	\end{equation}
+This condition illustrates that, when it is operative, the governments choose the tariff cap according to Expression~\ref{exp:1} with $e^{EA}$, but the lobby still has to exert effort ex-post to receive the applied tariff. $e^{EP}$ is the amount the lobby pays according to Equation~\ref{eq:nash} to achieve $\tau^E(e^{EA})$ (see Equation~\ref{eq:eff}).
+
+The lobby sets $e^{EA}$ according to this condition as long as 
+	\begin{equation}
+		\pi(\tau^E(e^{EA})) - e^{EA} - e^{EP}(e^{EA}) > \pi(\tau^N(e^R_{W,e})) - e^R_{W,e}.
+		\label{ine:ea}
+	\end{equation}
+Otherwise, it maximizes net profits by setting $e^{EA} =0$.	
+
+Thus if the lobby's incentives to exert pressure ex-ante are strong enough, they overpower the government's ability to use the trade agreement to directly manipulate lobbying incentives ex-post. The lobby can force the government to set a cap higher than the level that would optimize its welfare when there is no ex-ante lobbying. The lobby has no interest in a lower cap and can choose a zero effort level whenever positive effort would reduce its nets profits below the level with ex-post lobbying only. Therefore we have the following result:
+		
+\begin{result}
+	When trade agreements take the form of weak bindings, the binding under ex-ante lobbying can only be (weakly) higher than when ex-ante lobbying is not possible. This can only (weakly) reduce the joint political welfare of the governments and it can only (weakly) increase net profits for the lobby.
+\end{result}
+
+\subsection{The Role of Trade Agreements with Ex-Ante Lobbying}				
+To understand the function trade agreements serve in the presence of ex-ante lobbying when lobbying is endogenous, it is helpful to establish some facts about the levels at which tariff are set under various scenarios.
+
+\begin{lemma}
+  Trade agreements with ex-post lobbying lead to weakly lower tariffs (when bindings are either strong or weak) than those that are applied in the absence of an agreement.
+	\label{lem:1}
+\end{lemma}
+
+See the \hyperlink{lem1}{Appendix} for the proof. Intuitively, both the terms-of-trade and domestic-commitment motives drive the governments to chose a (weakly) lower tariff than that which the home government chooses when there is no agreement.
+
+It has been established above that the presence of ex-ante lobbying can only weakly increase tariffs from the ex-post agreement level with both strong and weak bindings. Lemma~\ref{lem:1} only establishes that the tariffs with ex-post lobbying are lower than the tariffs with no agreement; we would like to be able to derive a clear result comparing the tariff level with ex-ante lobbying to that with no agreement as well. Lemma~\ref{lem:2} does just that, but this is only possible in the case of weak bindings.
+
+\begin{lemma}
+  When bindings are weak, trade agreements with ex-ante lobbying lead to lower tariffs than those that are applied in the absence of an agreement. When bindings are strong, tariffs with ex-ante lobbying may be either higher or lower than those that are applied in the absence of an agreement.
+	\label{lem:2}
+\end{lemma}
+
+See the \hyperlink{lem1}{Appendix} for the proof. The key insight here is that every unit of effort ex ante results in more political support than it would ex post because producer profits are counted the same while the terms of trade motivation is absent. With stronger incentives on the margin ex ante, we must rule out that the lobby exerts sufficiently more effort to overcome the internalization of the terms of trade externality that occurs through the trade agreement negotiation. The fact that the lobby must pay a second time, as well as from a lower base, is sufficient to mute its incentives at the ex-ante stage in the case of weak bindings; because it pays nothing at the ex-post stage with strong bindings, it is possible (although not likely) that the heightened incentives on the margin could lead to sufficient effort to produce a higher trade agreement tariff than that which the lobby would achieve with unilateral tariff setting. 
+
+\begin{result}
+	When trade agreements take the form of weak bindings and political pressure is endogenous, tariffs are always lower under trade agreements than in the absence of a trade agreement. 
+\end{result}
+
+This follows directly from Lemmas~\ref{lem:1} and \ref{lem:2}, since tariffs under ex-ante lobbying are set either in line with lobbying effort according to the first order condition (\ref{eq:ea}) or via ex-post incentives. Although Lemma~\ref{lem:2} shows that ex-ante effort will be strictly lower than effort under no trade agreement, it is possible that ex-ante effort will be nil and the trade agreement level will be set by ex-post incentives that provide for a tariff at the non-cooperative level (see Section~\ref{sec:objfcn} for an example).\footnote{Note that it is possible to have positive ex-ante lobbying when $e^R_{W,e}$ is restrictive, notably in the case where joint government welfare is concave in $\ga$ with a strict interior maximum. This implies that government welfare must eventually decrease in $\ga$, as in \Textcite{ethier2012} where there are diminishing returns to lobbying as tariffs increase. In the current model, one way this can arise is if $\ga$ is taken to be a decreasing function of $\tau$.}
+
+A similar result clearly does not hold for strong bindings, and adds to the list of potential reasons why we do not see trade agreements take this form in reality.
+
+This contrasts with \Textcite{mrc2007}. In their model, which also features endogenous political pressure with ex-ante lobbying, tariff caps and exact tariff commitments are equivalent in the case of perfectly immobile capital. This seems to be the result of their assumption, within the context of a cooperative bargaining solution for the trade agreement phase, that the lobby has all the bargaining power and thus receives all rents. Because the lobby receives protection ex post without exerting effort under exact tariff commitments, these two types of bindings lead to very different decisions ex-ante and splits of the surplus ex-post in the model under consideration here.\footnote{One reason the lobby is not included in the cooperative bargaining formulation here is that it leads to the strange outcome that the governments overweight the lobby's profits even when the lobby exerts no effort ex ante.}
+
+Focusing on the case of weak bindings (i.e. tariff caps), we see that, as long as governments want to restrain lobbying, relative to non-cooperative levels, trade agreements will deliver this result even when ex-ante lobbying is possible. If a government wants to encourage political pressure, it may want to consider eschewing trade agreements, although the tradeoff is losing the ability to internalize the terms of trade externality. If a government wants to restrain political pressure, a trade agreement is doubly good.
+
+There are several avenues through which trade agreements mute lobbying incentives. First, according to Condition~\ref{ine:ea}, ex-ante lobbying may be too costly since it adds a second time at which the lobby has to exert effort. When the lobby does find it advantageous to participate in ex-ante lobbying, although on the margin the incentives are stronger, the same effort produces a lower trade agreement tariff ex-ante than ex-post because $\ga$ is translated via Equation~\ref{eq:eff} instead of Equation~\ref{eq:nash} as when there is only ex-post lobbying. Thus not only must the lobby exert effort a second time, but it must work harder for the same level of protection ex-ante.
+
+This points out an important role of trade agreements vis-\`{a}-vis political pressure groups: relative to ex-post lobbying, ex-ante lobbying gives them more ability to exert influence, but at a significantly higher cost. If either that higher cost or some institutional constraint makes only ex-post lobbying feasible, the governments can use the trade agreement to exert more significant control over the trade policy outcome.
+
+%\end{document}
