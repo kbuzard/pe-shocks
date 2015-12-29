@@ -1,0 +1,564 @@
+\documentclass[12pt]{article}
+
+\addtolength{\textwidth}{1.3in}
+\addtolength{\oddsidemargin}{-.65in} %left margin
+\addtolength{\evensidemargin}{-.65in}
+\setlength{\textheight}{9in}
+\setlength{\topmargin}{-.5in}
+\setlength{\headheight}{0.0in}
+\setlength{\footskip}{.375in}
+\renewcommand{\baselinestretch}{1.0}
+\linespread{1.5}
+
+%dell laptop
+\usepackage[backend=biber,block=space,style=authoryear-comp]{biblatex}
+
+%campus computer
+%\usepackage[backend=bibtex,block=space,style=authoryear]{biblatex}
+
+%dell laptop
+\addbibresource{C:/Users/Kristy/Dropbox/Research/xBibs/tradeagreements.bib}
+%\addbibresource{C:/Users/Kristy/Documents/Dropbox/Research/xBibs/tradeagreements.bib}
+
+%campus computer
+%\addbibresource{C:/Apps-SU/Dropbox/Research/xBibs/tradeagreements.bib}
+\renewcommand{\newunitpunct}{,}
+\renewbibmacro{in:}{}
+
+\usepackage{csquotes}
+\setlength{\bibitemsep}{\baselineskip}
+\usepackage[american]{babel}
+
+\usepackage[pdftex,
+bookmarks=true,
+bookmarksnumbered=false,
+pdfview=fitH,
+bookmarksopen=true,hyperfootnotes=false]{hyperref}
+\usepackage[pdftex]{graphicx}
+
+\usepackage{amsbsy,amssymb, amsmath, amsthm, MnSymbol,bbding}
+\usepackage[hang,flushmargin]{footmisc} 
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage{cite}
+\usepackage{times, verbatim,bm,pifont,pdfsync}
+%\usepackage[hang,flushmargin]{footmisc}%unindents footnotes
+
+% disables chapter, section and subsection numbering
+%\setcounter{secnumdepth}{-1} 
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{assumption}{Assumption}
+\newtheorem{fact}{Fact}
+\newtheorem{result}{Result}
+\newtheorem{proposition}{Proposition}
+
+\newcommand{\ve}{\theta}
+\newcommand{\ta}{\theta}
+\newcommand{\ov}{\overline}
+\newcommand{\un}{\underline}
+\newcommand{\al}{\alpha}
+\newcommand{\Ta}{\Theta}
+\newcommand{\expect}{\mathbb{E}}
+\newcommand{\Bt}{B(\bm{\tau^a})}
+\newcommand{\bta}{\bm{\tau^a}}
+\newcommand{\bte}{\bm{\tau^E}}
+\newcommand{\btn}{\bm{\tau^n}}
+\newcommand{\ga}{\gamma}
+\newcommand{\btw}{\bm{\tau^{tw}}}
+\newcommand{\de}{\delta}
+
+%This version was begun on May 10, 2014 for first public release (to ISNIE posting and first posting to my website); I anticipate those main changes will be some significant editing since first draft for Midwest was hurried, plus some expansion to escape clause section.
+
+\begin{document}
+\title{\vskip-0.6in Endogenous Politics and the Design of Trade Institutions}
+\author{Kristy Buzard\thanks{Syracuse University, Economics Department. Email: kbuzard@syr.edu. http://faculty.maxwell.syr.edu/kbuzard.}}
+\date{\vskip-.1in \today}
+\maketitle
+
+\vskip.3in
+\begin{center} {\bf Abstract} \end{center}
+
+\begin{quote}
+{\small Political pressure is undoubtedly an important influence in the setting of trade policy and the formulation of trade agreements. Most of the literature in this area models the political pressure that governments face as resulting from an exogenous, stochastic process. This paper shows that when political pressure arises endogenously, important results can be overturned and new insights into the motivation for features of the trade agreements we observe and rules of organizations such as the WTO come to light. Developing a model that integrates both exogenous and endogenous political pressure and taking a general approach to the government objective function, I show that governments may want to use tariff caps both to force special interest groups to continue lobbying after a trade agreement is signed and to reduce the magnitude of that lobbying effort. The presence of endogenous politics can also destroy an escape clause's ability to provide flexibility in times of large negative political shocks when lobbies use the flexibility to seek rents. This can explain why use of WTO Safeguards are conditioned on measurable economic indicators as well as why Safeguard levels of protection are not regulated.}
+\end{quote}
+
+%JEL Codes: F13,F53,C73,D72
+
+\bigskip
+\section{Introduction}
+\input{intro}
+
+\section{The Model}
+\label{sec:stage}
+I employ a two good partial equilibrium model with two countries: home (no asterisk) and foreign (asterisk).  The countries trade two goods, $X$ and $Y$, where $P_i$ denotes the home price of good $i \in \left\{X,Y\right\}$ and $P_i^*$ denotes the foreign price of good $i$.
+
+The fundamentals here are chosen to match those of \Textcite{bs2001,bs2005}. Home country demand, supply and profits are given by $D(P_i) = 1 - P_i$, $Q_X(P_X) = \frac{P_X}{2}$, $Q_Y(P_Y) = P_Y$, $\Pi_X(P_X) = \frac{(P_X)^2}{4}$, and $\Pi_Y(P_Y) = \frac{(P_Y)^2}{2}$. %Note that production function consistent with these supply functions are $F_X = \sqrt{l}$ and $F_Y = \sqrt{2l}$ where we assume $w=1$. 
+Foreign is taken to be symmetric.
+
+This implies Home-country imports of $X$ and exports of $Y$ of $M_X(P_X)= 1 - \frac{3}{2}P_X$ and $E_Y(P_Y)= 2P_Y -1$, with foreign imports of $Y$ and exports of $X$ given by $M_Y^*(P_Y^*)= 1 - \frac{3}{2}P_Y^*$ and $E_X(P_X^*)= 2P_X^* -1$. With the only trade policy instruments being tariffs on import-competing goods, world prices are $P_X = P_X^W + \tau$, $P_X^* = P_X^W$, $P_Y^* = P_Y^W + \tau^*$, and $P_Y = P_Y^W$. Market clearing implies that world and home prices of $X$ are $P_X^W = \frac{4-3\tau}{7}$ and $P_X = \frac{4+4\tau}{7}$, symmetric for $Y$.
+
+As is standard in the literature, it is assumed that the production of each good requires the possession of a sector-specific factor that is available in inelastic supply and is non-tradable so that the income of owners of the specific factor is tied to the price of the good in whose production their factor is used. 
+
+Note that $P_X^W$ and $P_Y^W$ are decreasing in $\tau$ and $\tau^*$ respectively, while $P_X$ and $P_Y^*$ are increasing in the respective importing country's tariff. As profits and producer surplus (identical in this model) in a sector are increasing in the price of its good, profits in the import-competing sector are also increasing in the domestic tariff. This economic fact, combined with the assumptions on specific factor ownership, is what motivates political activity.
+
+I next describe the politically-relevant actors, which are a government and import-competing lobby in each country. In order to focus attention on protectionist political forces, I assume that only the import-competing industry in each country is politically-organized and able to lobby and that it is represented by a single lobbying organization.\footnote{Adding a pro-trade lobby for the exporting industry would serve to strengthen some results.} Each country's government can set trade policy either unilaterally or through a negotiated trade agreement and then choose an applied tariff that is potentially different from that agreed upon in a trade negotiation.
+
+The stage-game timing is as follows. First, the governments cooperatively form a trade agreement.\footnote{See Section~\ref{sec:rigid} for a discussion of why lobbies are assumed not to be involved at the trade agreement formation stage.} After the trade agreement is concluded, the special interest group representing the import-competing industry in each country lobbies the government for protection in the form of tariffs and any exogenous shock is realized. Finally, given the trade agreement, enforcement conditions, and political pressure it experiences, each government chooses the applied tariff level for its import-competing good.
+
+As this game is solved by backward induction, it is intuitive to start by describing the incentives of the government in setting the applied tariff in the final stage. As the economy is fully separable and the economic and political structures are symmetric, I focus here on the home country and the $X$-sector. The details are analogous for $Y$ and foreign.
+
+The per-period welfare function of the home government is given by
+\begin{equation}
+  W(\ga(s,e),\tau,\tau^*) = \mathit{CS}_X(\tau) + \ga(s,e) \cdot \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
+  \label{eq:wel}
+\end{equation}
+where $\mathit{CS}$ is consumer surplus, $\pi$ represents profits, $\ga(s,e)$ is the weight placed on profits (producer surplus) in the import-competing industry, $s$ is an exogenous state variable, $e$ is lobbying effort, and $\mathit{TR}$ is tariff revenue. Here, the weight the government places on the profits of the import-competing industry, $\ga(s,e)$, is affected both by a shock (due to \Textcite{ms2011}) and by the level of lobbying effort.\footnote{The standard `Protection for Sale' modeling of \Textcite{gh94} would specify $W = C + aW$, this form allows the incorporation of endogenous political pressure into the government objective function that is most often used to examine questions concerning the design of international trade agreements and the institutions that facilitate them. An isomorphism can be made between the two forms as discussed in \Textcite{buzard2013b}.}
+
+%\begin{assumption}
+ % $\ga(s,e)$ is continuously differentiable, strictly increasing and concave in $e$.
+  %\label{as:ga_c3}
+%\end{assumption}
+
+%Assumption~\ref{as:ga_c3} formalizes the intuition that the government favors the import-competing industry more the higher is its lobbying effort, but that there are diminishing returns to lobbying activity. 
+
+Given the government's preferences, the home lobby chooses its lobbying effort $e$ to maximize profits net of lobbying effort:
+\begin{equation}
+  U_\text{L} = \pi(\tau(\ga(e))) - e
+  \label{eq:lv3}
+\end{equation}
+where $\pi(\cdot)$ is the current-period profit and $\tau$ is the home country's tariff on the import good. %I use the convention throughout of representing a vector of tariffs for both countries $(\tau,\tau^*)$ as a single bold $\bm{\tau}$. 
+
+I assume the lobby's contribution is not observable to the foreign government. The implication is that the lobby can directly influence only the home government, and so the influence of one country's lobby on the other country's government occurs only through the tariffs selected.\footnote{cfr. \Textcite{gh95}, page 685.} $\ga(s)$ is assumed to be private information of the government, with specifics about its distributions given below. This makes the environment one of asymmetric information, with asymmetries potentially coming from two sources: the exogenous shocks and the endogenous behavior of the special interest group.
+
+In the first stage, the governments choose the trade agreement tariffs via a negotiating process that I assume to be efficient. This process therefore maximizes the joint payoffs produced by the trade agreement:
+\begin{equation}
+  W(\ga(s,e),\ga^*(s^*,e^*),\tau,\tau^*) = W(\ga(s,e),\tau,\tau^*) + W^*(\ga^*(s^*,e^*),\tau,\tau^*)
+  \label{eq:jv}
+\end{equation}
+Note that in this symmetric environment, this is the Nash bargaining solution where the disagreement point is the welfare resulting from the Nash equilibrium in the non-cooperative game.
+
+
+\subsection{Nash Tariffs and Internationally Efficient Tariffs}
+\label{sec:nasheff}
+The home government's welfare is $W(\ga(s,e),\tau,\tau^*) = W_X(\ga(s,e),\tau) +W_Y(\tau^*)$, where
+\[
+  W_X(\ga(s,e),\tau) = \frac{9}{98} - \frac{5}{49}\tau - \frac{34}{49}\tau^2 +\frac{1}{98}\ga(s,e)\left[ 8 + 16\tau + 8\tau^2 \right]
+\]
+\[
+  W_Y(\tau^*) = \frac{25}{98} - \frac{3}{49}\tau^* + \frac{9}{49}(\tau^*)^2 
+\]
+$W_X(\ga(s,e),\tau)$ is the utility derived from consumer surplus, producer surplus and tariff revenues in the import-competing industry and $W_Y(\tau^*)$ is the utility derived from consumer and producer surplus in the exporting industry.
+
+When setting the tariff unilaterally, the government simply maximizes $W(\ga(s,e),\tau, \tau^*)$ by choice of $\tau$ given $\ga(s,e)$ and $\tau^*$. As there are no interactions between $\tau$ and $\tau^*$, the government simply maximizes $W_X(\ga,(s,e),\tau)$ and sets the non-cooperative tariff
+\begin{equation}
+  \tau^N(\ga(s,e)) = \frac{8\ga(s,e)-5}{68-8\ga(s,e)}.
+  \label{eq:nash}
+\end{equation}
+I refer to this as the Nash tariff because it is the result of Nash equilibrium in the non-cooperative game between the governments. $\tau^N$ is increasing in $\ga$ and the second order condition is satisfied for all values of $\ga < 17/2$. Because $\ga = 7/4$ is enough to achieve the prohibitive tariff of $1/6$ it seems reasonable to assume that this condition will be satisfied in equilibrium. 
+
+In order to derive the jointly efficient tariff choice---that is, the tariff that maximizes the joint welfare of the home and foreign government, we require the welfare of the foreign government, $W^*(\ga^*(s^*,e^*),\tau,\tau^*)$ = $W_Y^*(\ga^*(s^*,e^*),\tau^*) + W_X^*(\tau)$, where
+\[
+  W_Y^*(\ga^*(s^*,e^*),\tau^*) = \frac{9}{98} - \frac{5}{49}\tau^* - \frac{34}{49}(\tau^*)^2 +\frac{1}{98}\ga^*(s^*,e^*)\left[ 8 + 16\tau^* + 8(\tau^*)^2 \right]
+\]
+\[
+  W_X^*(\tau) = \frac{25}{98} - \frac{3}{49}\tau + \frac{9}{49}(\tau)^2 
+\]
+
+The internationally efficient home tariff is the $\tau$ that maximizes $W(\ga(s,e),\tau,\tau^*) + W^*(\ga^*(s^*,e^*),\tau,\tau^*)$. Since government welfare in both countries is additively separable in $\tau$, this is equivalent to maximizing $W_X(\ga(s,e),\tau) + W_X^*(\tau)$. The solution to this problem is the internationally efficient tariff
+\begin{equation}
+  \tau^E(\ga(s,e)) = \frac{4\left[\ga(s,e)-1\right]}{25-4\ga(s,e)}
+  \label{eq:eff}
+\end{equation}
+The second order condition is satisfied for $\ga < \frac{25}{4}$, so again for all values of $\ga$ that lead to a non-prohibitive tariff.
+
+%In the event of a trade war and facing this tariff-setting behavior by the legislature, the lobby maximizes $\pi\left(\tau^n\left(\ga\left(e_n,\ve_n\right)\right)\right) - e_n$. In order to predict the Nash tariff, the political weighting function and form of political uncertainty must be specified. Take for instance $\ga(e,\ve) = 1.25 + C^{.2}$ with $\ve$ distributed uniformly on $[-0.25,0.25]$. Facing this specification of the political process, the lobby maximizes its objective function at $e_n = 0.00166$, which produces a Nash tariff of $0.129$.
+
+
+%Therefore, in line with both the theoretical and empirical literature, I will assume that $\ga(e) \geq 1$ for all $e$. That is, even for the least favorable outcome of the lobbying process, the legislature will be at least weakly more protectionist than the executive. 
+
+%\begin{assumption}
+%  $\ga(e) \geq 1 \ \forall e$.
+%  \label{as:ga_l_e3}
+%\end{assumption}
+
+%Assumption~\ref{as:ga_l_e3} ensures that $\tau^a < \tau^{tw}$.
+
+\subsection{Exogenous Political Pressure and Incentive Compatibility}
+In order to compare the results for the case of endogenous political pressure to \Textcite{bs2005} results for exogenous political shocks, I provide the essentials of their setup. 
+
+They assume that $\ga$ and $\ga^*$ are each drawn independently from probability distributions with cumulative distribution functions $H(\ga)$ with $h(\ga)=H'(\ga)$. The support for this probability distribution is $\left[\un{\ga}, \ov{\ga} \right]$ where $\ov{\ga} < \frac{7}{4}$. They also assume $\ga$ and $\ga^*$ are private information.
+
+This leads to a concern about incentive compatibility. It must be in a government's best interest to truthfully reveal its $\ga$ or else it will misrepresent its private information about $\ga$ in order to raise tariffs and create a terms-of-trade gain, thereby improving its unilateral welfare. They provide conditions that guarantee incentive compatibility on page 481.
+
+On a separate note, it is important to make clear that in this strand of the literature, it is assumed that trade agreements are negotiated to maximize the expected welfare of politically motivated governments given the exogenously-determined political pressure they expect to face at the time of the agreement's implementation. I will follow this convention throughout.
+
+
+
+
+\section{Rigid Tariffs with Endogenous Political Pressure}
+\label{sec:rigid}
+In this section and the next, I demonstrate the implications of taking account of endogenous political pressure on some central design features of trade agreements. I do this by first summarizing the essential results from \Textcite{bs2005} for the design of trade agreements when political considerations are exogenous and then compare them to the case under consideration here of endogenous political activity aimed at gaining protectionist tariffs.
+
+In Section~\ref{sec:escape2} I will examine the more realistic case where endogenous and exogenous political forces coexist. Until then, I will consider the cases separately to establish clearly the different dynamics that arise from the two distinct types of influence. I will use ``$\ga$'' to represent the political economy parameter in a general sense, ``$\ga(s)$'' when treating the case of pressure arising from exogenous shocks only, and ``$\ga(e)$'' when referring to political pressure that results from the rent-seeking behavior of lobbies.\footnote{See Section~\ref{sec:escape2} for a detailed discussion of the relationship and interactions between these two extreme cases.} I begin with the case of rigid tariffs---that is, trade agreements that have no provision for flexibility. Rigid tariffs cannot be made to depend on the realized level of $\ga$ and so incentive compatibility considerations will not come into play.
+
+%Importantly, both cases suffer from asymmetric information, but we will see that the nature of the informational lacuna differs. In the  exogenous case, there is a difference between the ex-ante and ex-post information of each government that has very important implications; this difference does not exist in the endogenous case. The implications for the features of trade agreements that are desirable---such as escape clauses---result directly from this difference. 
+
+Because the trade agreement is set ex-ante---that is, before political pressure is realized, regardless of its source---the process of choosing the optimal tariffs differs across the two cases. When $\ga$ is exogenous, the government must plan for level of $\ga$ it will face \textit{in expectation}. When political pressure in purely endogenous, the government has perfect foresight to plan for the $\ga$ it will face but must confront the fact that its decisions affect lobbying incentives.
+
+With the introduction of endogenous political pressure, one must take a stand on whether lobbies influence the formation of the trade agreement or are only active once the trade agreement is in place. Since a central goal here is to determine the impact of relaxing the assumption that political pressure is exogenously determined, I assume the latter to make the comparison most direct to this literature in which by definition there can be no endogenous political pressure at the trade agreement formation stage. The former, which is undoubtedly an important possibility in many institutional settings, is left as an important extension.\footnote{Note that the endogenous trade policy literature that involves trade agreements (e.g. \Textcite{gh95}, \Textcite{mrc2007}) explicitly assumes that trade agreements are formed in the face of political pressure while answering a different set of questions.}
+
+
+\subsection{Perfect External Enforcement}
+I begin by assuming that perfect external enforcement is available for ensuring that the trading partners abide by the terms of the trade agreement. Although it is widely agreed that this is unrealistic, this is an important baseline case. Section~\ref{sec:self} will relax this assumption and require that trade agreements be self-enforcing.
+
+I compare strong bindings, in which the terms of the agreement are that tariffs must be set at the precise value stipulated and weak bindings---commonly referred to as tariff caps---in which the applied tariff can take any value as long as it is no greater than that which is agreed upon. To reiterate, with either form of rigid tariff, there is no incentive compatibility problem because the contractually-allowed tariff may not vary with $\ga$.
+
+\vskip.2in
+\subsubsection{Strong Bindings}
+\label{sec:strong}
+When there is perfect external enforcement of an agreement that specifies the exact tariff each government must adhere to, \Textcite{bs2005} derive the result that the optimal rigid, strong binding $\tau_S^R$ will be set at the level that is politically efficient for the expected realization of political pressure, $\ga(s)$. In their environment, $\ga(s)$ is exogenously determined and so the optimal trade agreement tariff is chosen as
+\[
+  \tau_S^R = \frac{4\left[\expect \ga(s) - 1\right]}{25 - 4\expect \ga(s)}
+\]
+which is simply Equation~\ref{eq:eff} evaluated at the expected $\ga$.
+
+The optimal strong binding is very different if we instead allow political pressure to be endogenously determined. In this simple setting with only endogenous political pressure and no exogenous shocks, there is no uncertainty; the level of political pressure can be determined through backward induction.
+
+In the final stage, the external enforcement agency compels the government to apply the precise tariff listed in the trade agreement contract regardless of circumstances. Call this $\tau_{S,e}^R$ to distinguish the strong (rigid) binding in the case of endogenous pressure from $\tau_S^R$ when political pressure is exogenous above. 
+
+Moving back to the lobbying stage and given that the government will be compelled to apply $\tau_{S,e}^R$ regardless of the $\ga(e)$ it faces, the lobby maximizes its payoffs by choosing $e=0$. Making the binding strong removes any incentives for the lobby to exert effort since that effort will not change the level of tariff protection that it will receive. To be clear: $\tau_{S,e}^R$ does not depend on lobbying effort, so no effort is exerted.
+
+Then when setting the trade agreement tariffs to maximize its political welfare, the government can predict that $e$ will be zero. If it's the case that $\ga(0) = 1$, the trade agreement will specify free trade.
+
+\begin{result}
+  When political pressure is entirely endogenous, under the equilibrium trade agreement with strong bindings the lobbies exert no effort and are afforded no protection if governments have no inherent bias toward protection. 
+	\label{res:strong}
+\end{result}
+
+This very strong form of commitment for governments removes the lobby's commitment to pay for the protection it desires. Unless one assumes that the government is inherently biased toward the import-competing industry---that is, would provide protection in the absence of any political pressure being exerted---this case results in an outcome that is equivalent to the outcome under a social welfare maximizing government. This contrasts starkly with the prediction when political pressure is assumed to be completely exogenously determined.
+
+
+\subsubsection{Weak Bindings}
+\label{sec:weak}
+Recall that a weak binding, call it $\tau_W^R$, permits the government to apply any tariff less than or equal to $\tau_W^R$. Weak bindings are often referred to as \textit{tariff caps}. \Textcite{bs2005} show several interesting results regarding weak bindings when there is perfect external enforcement and political pressure is in the form of exogenous shocks.
+
+To be optimal, the weak binding must be set at the level that is efficient for the realization of political pressure that is expected conditional on tariff setting being constrained by the cap. Their Proposition 1 follows: 
+
+\begin{proposition}[Bagwell and Stagier 2005]
+Governments prefer negotiating commitments that take the form of weak bindings over strong bindings. When governments negotiate commitments that take the form of weak bindings, they choose to adopt tariff bindings that (a) are higher than those they would choose if their negotiated commitments instead took the form of strong bindings and (b) imply that governments with low realizations of political pressure will set their applied tariffs strictly below the bound level.
+\end{proposition}
+
+I now turn to the model under examination here with endogenous political effort.\footnote{As above, in this section I consider endogenous political pressure alone in place of exogenously-determined $\ga$.} As in the analysis of strong bindings, in place of expectations over a range of probabilistically-determined levels of political pressure, we can backward induct to determine the lobby's effort decision and the government's optimal choice of weak binding in anticipation of the lobby's behavior.
+
+In the final stage, the government will seek to maximize its welfare by choice of $\tau$ given the political pressure that it faces and the enforcement of the tariff cap, here denoted $\tau_{W,e}^R$ for the case of endogenous political pressure, as distinct from $\tau_W^R$ in the case of exogenous political pressure. Thus, the home government unilaterally maximizes Expression~\ref{eq:wel}, so that the applied tariff is the Nash tariff $\tau^N(\ga(e))$ as long as  $\tau^N(\ga(e)) \leq \tau_{W,e}^R$. Otherwise, it must set $\tau = \tau_{W,e}^R$ since the weak binding $\tau_{W,e}^R$ is externally enforced.
+
+Knowing how the government will set the applied tariff, in the second stage the lobby makes its effort decision to maximize net profits according to Expression~\ref{eq:lv3}. If the lobby's optimal effort level in the unconstrained problem (label it $e^L$) would lead to $\tau^N(\ga(e)) > \tau_{W,e}^R$, the lobby will reduce its choice so that no effort is wasted. I label the lobbying effort choice that leads to the weak binding level as $e^R_{W,e}$ so that $\tau^N(\ga(e^R_{W,e})) = \tau_{W,e}^R$.
+
+We are now in a position to determine how the governments set trade agreement tariffs. Their goal is to maximize their joint welfare as in Expression~\ref{eq:jv} given the behavior they expect from the lobbies. Again, we can restrict attention to the home country and the $X$ sector because of the symmetry and separability of the economy.
+
+We know that the lobby will either choose its unconstrained optimal effort $e^L$, or $e^R_{W,e}$ in the case that its optimal effort would lead to a tariff level higher than that allowed by the weak binding. The government's tariff cap choice can reduce lobbying effort; it cannot, however, increase lobbying effort above $e^L$. The government is unable to use a weak binding to encourage extra lobbying---at least in the case with only one import-competing lobby under consideration here.\footnote{Introducing lobbies for the export industry could reverse this: lobbying effort by exporters could be encouraged in support of capping the import tariffs of the partner country.}
+
+I assume for simplicity of exposition that the government does not set the tariff binding $\tau^R_{W,e}$ higher than that which would result from the lobby's optimal effort $e^L$, as setting a higher tariff cap would not change lobbying behavior or outcomes in any way. This is in contrast to the case of exogenous political pressure, where low realizations of $\ga$ lead to applied tariff levels below the cap in an economically meaning sense.
+
+The optimal home tariff $\tau^R_{W,e}$ under the trade agreement is the one that maximizes joint government welfare. As argued in Section~\ref{sec:nasheff}, joint government welfare (with variables that do not affect the $X$ sector suppressed) is
+  \begin{equation}
+		W_x \left(\ga(e),\tau) \right) + W_x^*\left(\tau \right)
+	  \label{exp:1}
+	\end{equation}
+where the lobby will exert no more effort than that which produces the capped $\tau^R_{W,e}=\tau^N(\ga(e))$. Recall that the Nash tariff, $\tau^N(\ga(e))$ is the solution to the unilateral optimization problem the home government faces when choosing the applied tariff level in the final stage of the game. It is given by Expression~\ref{eq:nash}, which contains the mapping between the political pressure the lobby exerts and the government's unilateral tariff response. We can therefore use Expression~\ref{eq:nash} to determine the level of $e$ the lobby must exert in order to receive a particular $\tau^N(\ga(e))$ equal to the tariff cap $\tau^R_{W,e}$. This $e$ is that which is labeled $e^R_{W,e}$ above.
+
+Ex-post lobbying will constrain the governments in that the $\ga\left(e^R_{W,e}\right)$ they experience will be determined through the unilateral maximization problem in the last stage according to the chosen tariff cap $\tau^R_{W,e}$. The governments get to choose the $\tau^R_{W,e}$ that maximizes their joint welfare, but they cannot change this future lobbying process; they can only reduce the level at which it takes place through the tariff cap.
+
+Notice that the maximand in Expression~\ref{exp:1} is exactly the same as that in this third-stage maximization problem except it adds  foreign government welfare. This implies that $\tau^R_{W,e}$ is (weakly) lower than the unilateral tariff as the terms-of-trade externality is internalized.\footnote{The terms-of-trade motivation for the trade agreement may not strictly lower the tariff if the solution to the government's joint maximization problem is not interior in the sense that the governments do not want as much lobbying as possible. To illustrate: if joint welfare is everywhere increasing in $\ga$, although reducing tariffs would improve welfare when $\ga$ is \textit{exogenously given} because each country would not imposing the terms-of-trade externality on the other, when $\ga$ is endogenous, reducing the tariff reduces $\ga$ and therefore joint welfare. See Section~\ref{sec:objfcn} for further discussion.}
+
+A second motive is operative here that is absent in the case of exogenous political pressure: the trade agreement can act as a domestic political commitment device, allowing the home government to manipulate ex-post lobbying incentives. In fact, whenever the cap is strictly below the non-cooperative level, that is when $\tau^R_{W,e} < \tau^N$, the weak binding serves to restrain political pressure whether or not the governments desire it.
+
+On the other hand, if the level of the optimal weak binding $\tau^R_{W,e}$ is strictly positive, the weak binding is at least in part serving to generate political involvement---most often thought of as campaign contributions---that the government finds beneficial from its politically-motivated point of view. The government could have chosen a cap of zero and eliminated lobbying activity altogether. In fact, any strong binding accomplishes this very feat, but is also \textit{unable} to generate lobbying activity because of its effect on lobbying incentives. Thus the introduction of endogenous political pressure provides an explanation of the prevalence of tariff caps: they are a a sort of carrot to encourage political contributions, or perhaps they should be seen as a stick with which to threaten the removal of protection if political support does not continue.\footnote{Note that this is a related to a point made by \Textcite{mrc2007}; in their model, tariff caps and exact tariff commitments are equivalent when factors are perfectly immobile as in this model.}
+
+\begin{result}
+    (a) When political pressure is entirely endogenous, governments prefer negotiating commitments that take the form of weak bindings over strong bindings. When governments negotiate commitments that take the form of weak bindings, they choose to adopt tariff bindings that are higher than those they would choose if their negotiated commitments instead took the form of strong bindings. (b) Governments will not set applied tariffs strictly below the bound level, but they may use the weak tariff binding to restrain and/or encourage endogenous political pressure.
+		\label{res:weak}
+\end{result}
+
+Note that part (a) of Result~\ref{res:weak} matches Proposition 1 of \Textcite{bs2005}. The similarities are cosmetic only; the result holds in the case of endogenous $\ga(e)$ because of the extreme result for strong bindings that no lobbying effort is exerted and the trade agreement is at free trade. This can be replicated with a tariff ceiling of zero. Part (b) points out that the governments can use a tariff cap to manipulate lobbying incentives so that political effort is neither too low or too high.
+					
+\subsection{Self-Enforcing Trade Agreements}
+\label{sec:self}
+Here I relax the assumption of perfect external enforcement, since this is not widely available in the context of international trade relations. External enforcement is replaced with promises of future cooperation and punishment is modeled via a repeated game. I will first describe this repeated game and then present the analysis for the case of (rigid) weak bindings. 
+
+\subsubsection{Repeated Game}
+For the setting of exogenous political pressure, Bagwell and Staiger assume that $\ga$ is independently and identically distributed across governments and time. Because the governments are faced with asymmetric information, perfect public equilibrium (PPE) is the appropriate solution concept. Here attention is restricted to symmetric, stationary PPE.
+	
+In order to establish an equilibrium, we must ensure that both the on-schedule (static) incentive constraint and the off-schedule (repeated-game) incentive constraint is satisfied. We know that the former is trivially satisfied for the case of rigid bindings, so it is only the repeated-game constraint that must be considered here. Following \Textcite{bs2005} and most of the literature, I assume that any deviation triggers a reversion to the static Nash equilibrium---what is known as `grim trigger.'\footnote{See \Textcite{krw} and \Textcite{buzard2013a} for alternatives that take seriously the threat of governments renegotiating out of punishments that are not themselves incentive compatible.}
+	%see KRW, Buzard 2014 for alternatives
+	
+\subsubsection{Self Enforcement with Weak Bindings}
+\label{sec:selfweak}
+When political pressure is exogenous, \Textcite{bs2005} perform a standard repeated-game prisoner's dilemma analysis and show that if governments are patient enough ($\de$ is sufficiently high), the optimal weak binding from the perfect external enforcement setting can always be sustained with repeated-game incentives.
+
+When $\ga$ is endogenously-determined, repeated-game enforcement is altered relative to the case of exogenously-given political pressure. This is because, in place of a stochastic process that determines $\ga$, $\ga$ is determined by a new repeated-game player who has incentives relative to whether the trade agreement is followed or reversion to the non-cooperative Nash outcome takes place.
+
+When $\ga$ is exogenous, the optimal trade agreement tariff is the same under perfect external enforcement and self-enforcement because the change in enforcement conditions cannot affect the realization of $\ga$. We will see that moving from a static problem with external enforcement to a repeated-game problem with an enforcement constraint changes the lobby's decision problem. However, it does not alter the within-period costs and benefits and so in the case of endogenous political pressure we will see the same result that the optimal trade agreement tariff in invariant to the enforcement conditions.
+
+Recall that the government's most preferred trade agreement tariff in this setting is the one that would allow it to provide the level of protection that is demanded \textit{ex-post}. Enforcement considerations do not change the protection demands when $\ga$ is exogenous. Similarly, because the government's objective function does not change and it is able to use the tariff cap to control the lobby's effort level, as long as it is sufficiently patient, it will set the same tariff cap.
+
+Let us see how this works. Again, because of symmetry and separability, we can focus on the home government's choice of $\tau$ and the $X$ industry.
+
+The government's incentive constraint is given by
+  \begin{multline}
+    \frac{\de}{1-\de} \left\{W_x(\ga(e^R),\tau^R_{W,e}) + W_x^*(\tau^R_{W,e}) - \left[W_x(\ga(e^N),\tau^N(\ga(e^N)) + W_x^*(\tau^N(\ga(e^N)) \right] \right\} \\ \geq W_X(\ga(e^B),\tau^B(\ga(e^B)) - W_X(\ga(e^R),\tau^R_{W,e})
+		\label{exp:govincent}
+  \end{multline}
+where $\de$ is the discount factor assumed common to the government and lobby, $\tau^R_{W,e}$ is the same tariff cap from Section~\ref{sec:weak}, and $\tau^B$ is the ``break'' tariff. Any $\tau > \tau^R_{W,e}$ is sufficient to breach the trade agreement and trigger Nash reversion; $\tau^B(\ga(e^B))$ is defined as the tariff the government would choose as unilaterally optimal if faced with $e^B$, where $e^B$ is the minimum lobbying effort that would give the government incentive to break the trade agreement in the absence of external enforcement.
+
+On the left side of the inequality is the discounted per-period gain from maintaining the trade agreement relative to Nash reversion. In order for the government to have the incentive to abide by the agreement, this must be at least as large as the benefit to cheating. This is the current period increase in unilateral welfare from the tariff applied when breaking the agreement and is given on the righthand side of Inequality~\ref{exp:govincent}.
+
+For a given $\de$, $\tau^B$ and $e^B$ are derived using Equation~\ref{eq:nash} and Expression~\ref{exp:govincent} evaluated at equality. $e^B$ can be interpreted as the minimum level of lobbying effort that will persuade the government to abrogate the agreement. It must provide significantly more unilateral welfare than the trade agreement tariff in order to compensate the government for the loss of cooperation in every future period.
+
+The lobby's incentives must also be satisfied, as the government's decision on whether to abide by the agreement or break it depends on the amount of lobbying effort it encounters. In order for the lobby to prefer the trade agreement tariff to the option of causing the agreement to be broken and tariffs to revert to the non-cooperative level, the following must hold
+\begin{equation}
+  \frac{1}{1-\de}\left[\pi(\tau^R_{W,e}) - e^R\right] \geq \pi(\tau^B) - e^B + \frac{\de}{1-\de}\left[\pi(\tau^N) - e^N\right]
+	\label{exp:lobby}
+\end{equation}
+That is, the present discounted value of net profits under the trade agreement must be weakly higher than one period of net profits from the ``cheater'' tariffs and the discounted future Nash profits.
+
+Here we have the possibility of a starkly different result from that under exogenous political pressure, where \Textcite{bs2005} show that sufficiently patient governments can always sustain the optimal trade agreement tariffs. Instead, the addition of a second incentive constraint can make it impossible to sustain the politically efficient tariffs.
+
+To see this, start by noticing that the lefthand side of Expression~\ref{exp:govincent} in increasing in $\de$, while the righthand side is constant in $\de$. That is, as the government becomes more patient, it is easier to satisfy the government's constraint. Equivalently, it requires a larger $e^B$ to violate the constraint.
+
+Shifting attention to the lobby's incentive constraint in Expression~\ref{exp:lobby}, this becomes harder to satisfy as $\de$ increases. That is, the lefthand side is decreasing in $\de$ and the righthand side is increasing in $\de$, and this relationship holds even taking into account the influence from the government's constraint on $e^B$ as long as $e^B$ is to the left of the lobby's optimal choice of effort. Once $e^B$ passes $e^L$, $\pi(\tau^B) - e^B$ begins to decrease and it's possible for the effect of $\de$ on the lobby's constraint to eventually be overturned.
+
+In general, however, we cannot be guaranteed that even the most patient government can sustain cooperation at the politically optimal trade agreement level. At issue is the behavior of the lobby, which is now a formal player in its own right and must be incentivized to keep its behavior on the equilibrium path. More patient lobbies are willing to work harder to encourage the government to break the trade agreement so that they can enjoy infinite periods of Nash tariffs, so increasing the discount factor makes it more difficult rather than easier to satisfy the lobby's constraint.\footnote{The essential point underlying this result was first made by \Textcite{buzard2013a}.}
+
+\begin{result}
+  The presence of the lobby as a repeated-game player may imply that the politically optimal self-enforcing trade agreement tariff is strictly greater than $\tau^R_{W,e}$. 
+\end{result}
+
+If there is no $\de$ such that Inequalities~\ref{exp:govincent} and \ref{exp:lobby} hold simultaneously, the governments must raise the trade agreement tariff, which loosens both incentives constraints simultaneously.
+
+\section{Endogenous Political Pressure and the Escape Clause}
+\label{sec:escape}
+I follow \Textcite{bs2005} in examining a trade agreement with an escape clause by adding a second negotiated binding to the agreement so that there is one (weak) binding for when political pressure is low / normal and a higher (weak) binding for exceptional circumstances of high levels of political pressure. Escape clauses are common features of trade agreements in practice, and when one models political pressure as exogenous, an escape clause seems attractive: in the presence of a particularly large negative political shock, being bound to a tariff designed for normal times would cause significant welfare losses to the politician.
+
+However, because the tariff allowed under the trade agreement with an escape clause varies with the announced level of political pressure, the incentive compatibility constraint now comes into play: a government may gain an advantage by misreporting the level of $\ga$ it experiences. In their Proposition 4, Bagwell and Staiger show that a trade agreement with a costless escape clause cannot improve welfare because it cannot be made incentive compatible. No matter the realization of the stochastic $\ga$, it is always in the government's interest to announce that $\ga$ is high, which allows it to apply any tariff up to the higher weak binding. This deviation improves unilateral welfare while imposing a terms-of-trade externality on the trading partner.
+
+A similar problem arises in the case of endogenous political pressure, but with no parallel potential gain. The problem of asymmetric information remains, as lobbying effort is not observable to the trading partner. The appeal of an escape clause is to provide the flexibility of a higher binding in exceptional circumstances when political pressure is randomly high. But in the stark case under examination here with purely endogenous politics, an exceptionally high $\ga$ can only derive from higher effort exerted by the lobby. If one chooses an optimal tariff cap, a second, higher cap can only encourage excess, sub-optimal lobbying.
+
+Thus, while with a costless escape clause there is no way to make truth-telling incentive compatible, this is of little consequence. The government would actually be \textit{truthfully} reporting the higher level of $\ga(e)$ as long as it is worthwhile for the lobby to increase its effort to this level. The appeal of an escape clause is missing in this case, but the potential for governments to be forced ex-post to exploit the escape clause in a way that damages their ex-ante welfare remains.\footnote{Notice that the ex-post rent-seeking that creates this ex-ante loss is different in the two cases. With exogenous shocks, the government increases its welfare through the terms-of-trade channel. With endogenous political pressure, the lobby extracts the rents.}
+
+\subsection{Escape Clauses with Strong Bindings}
+Suppose that political pressure derives only from endogenous sources but an escape clause is to be implemented anyway. As \Textcite{bs2005} point out, in order for an escape clause to be useful to the government, it should be costly so that its use can be made incentive compatible. They suggest several avenues for introducing a cost for the use of the escape clause.
+
+One possibility is to make the escape clause tariff a strong binding instead of a weak binding. The cost imposed here is the following: if the realization of $\ga$ is such that the optimal tariff is above the agreed-upon weak binding for normal times but below the strong binding for exceptionally high realizations of political pressure, the government must choose between applying the lower weak binding and the precise escape-clause tariff. In this case, there are welfare losses from implementing a sub-optimal tariff level that are not present if the escape clause tariff is a weak binding.
+
+When $\ga$ is endogenous, the government is not subject to such random, unpredictable realizations of political pressure. It can avoid such costs by setting the escape clause tariff precisely at the level the lobby will find optimal to ask for; it thus avoids the mechanism that allows for incentive compatibility as well. In addition, given that the lower, normal binding could be set optimally for the government, the government only stands to lose from entering into a trade agreement with such an escape clause. This is, again, assuming that there is no exogenous source of political shocks for which flexibility is desired.
+
+Thus, in this case the strong binding does not really create an incentive-compatibility-inducing cost, but again the central problem is that of lobbying incentives. This could explain, as Bagwell and Staiger point out, why the WTO does not incorporate strong bindings for the escape clause.
+
+\subsection{Escape Clause with Side Payments}
+Suppose instead that the use of the escape clause must be accompanied by a side payment when the higher tariff is applied. In efficiency terms, this will only redistribute surplus from the trading partner who invokes the escape clause to the partner whose goods are targeted by the higher tariff. This is not entirely realistic as cash transfers are rarely observed in the WTO and other trade agreements; instead compensation is in the form of retaliatory tariffs---which are not efficient.\footnote{Note also that the WTO Safeguards agreement has a dynamic use constraint but removes the requirement for compensatory action in the first three years.}
+
+\Textcite{bs2005} show that, again, the transfer function must satisfy two incentive compatibility conditions: the static condition that makes it worthwhile to truthfully reveal one's true $\ga$, and the repeated-game incentive constraint required for self-enforcement. Given these requirements, their Proposition 5 establishes that an appropriate transfer scheme can make a trade agreement with an escape clause incentive compatible.
+
+Given the limited nature of the result in Section~\ref{sec:selfweak}, for the case of endogenous $\ga$ I restrict attention to economies in which the jointly optimal weak binding is supportable. The conditions given in Lemma 1 of \Textcite{bs2005} are not materially changed by substituting endogenous $\ga$ for exogenous $\ga$, so incentive compatibility in the static sense is ensured.
+
+It is the repeated-game, or off-schedule, constraint that is significantly altered. The new element compared to self-enforcement without the escape clause is that the government can cheat on both its tariff and its transfer payment. With no lobby, the Bagwell and Staiger result shows that this temptation can be overcome; the question is whether the lobby makes this more difficult.
+
+The answer is that it does not. Assuming the lobby represents a negligible share of the population, it does not bear the cost of the transfer. In fact, because it receives all the benefit of the tariff increase under the escape clause with none of the burden of paying for it, the lobby is much better off under the trade agreement with escape than the trade agreement without escape.
+
+%	\item BUT need to check equilibrium impact on lobby's utility--does something in this constraint make it cheaper / more expensive for lobby to get the tariff it wants?
+
+Here, we have a mechanism that is incentive compatible despite the presence of lobbying. It makes the lobby exert effort in order to receive the higher level of protection under the escape clause just as in the other mechanism. And although the burden of the transfer falls on others in the economy, at least the trading partner is compensated. Here the government is truthfully revealing the level of political pressure it faces, but that pressure is created by endogenous forces that are intensified by the existence of the escape clause.
+
+In the next section, I ask the question of whether this type of outcome is likely to be consistent with the ex-ante best interests of the governments themselves as a prelude to exploring the likely intentions behind the design of such escape clauses.
+
+
+\section{Political Objective Functions and the Role of Trade Agreements}
+\label{sec:objfcn}
+The previous sections analyze in general the effects of various forms of trade agreements when political pressure is endogenous. I now use the specific functional forms for the economy given in Section~\ref{sec:stage} and compare government objective functions to understand the impact of strong bindings, weak bindings and escape clauses on government welfare.
+
+To reiterate, in line with the dominant strain of the literature, I have assumed that the governments' choice of trade agreement tariff is optimized with respect to the political pressure it expects to experience after the trade agreement is signed. In the case of exogenous political pressure, the best one can do is take an expectation given the distribution of $\ga$, or possibly build some kind of flexibility into the agreement through tariff caps or an incentive compatible escape clause.
+
+With endogenously-determined political pressure with no shocks---the simple case examined so far here---each government can predict the political pressure it will face and in some cases use the trade agreement to alter the incentives of the lobby. Since the government has some control through the trade agreement over the level of $\ga$ it will face, it becomes important to understand how the government's welfare varies in $\ga$.
+
+Let's begin with the \Textcite{baldwin}-style government objective function that is most common in the recent literature on trade agreements and that has been in use throughout this paper so far, specialized to the case of endogenous pressure only.
+\begin{equation}
+  W(\ga(e),\tau,\tau^*) = \mathit{CS}_X(\tau) + \ga(e) \cdot \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
+  \tag{\ref{eq:wel}}
+\end{equation}
+What we would like to know is at what $\ga(e)$ the government's welfare is maximized, given that it will choose $\tau$ according to either Equation~\ref{eq:nash} when setting tariffs unilaterally or Equation~\ref{eq:eff} when setting tariffs in the context of a trade agreement.
+
+The answer turns out to be the same for the unilateral and joint problems. Starting with the non-cooperative maximization problem with respect to $\ga$ (there is no loss in suppressing the dependence of $\ga$ on $e$ for the time being):
+\[
+ \max_{\ga} W_x(\ga,\tau) + W_y(\tau^*)
+\]
+The first order condition is
+\[
+	\frac{\partial W_x}{\partial \ga} + \frac{\partial W_x}{\partial \tau}\frac{\partial \tau}{\partial \ga} = 0
+\]
+In an envelope-theorem style result, because the Nash tariff is the result of the government's optimization with respect to $\tau$, $\frac{\partial W_x}{\partial \tau}=0$ so that the first order condition reduces to $\frac{\partial W_x}{\partial \ga} = 0$.
+				
+Turning to the maximization of joint welfare in the trade agreement, we have
+\[
+  \max_{\ga} W_x(\ga,\tau) + W_y(\tau^*) + W_x^*(\tau)+ W_y^*(\tau^*)
+\]
+The first order condition is 
+\[
+  \frac{\partial W_x}{\partial \ga} + \frac{\partial W_x}{\partial \tau}\frac{\partial \tau}{\partial \ga} + \frac{\partial W_x^*}{\partial \tau}\frac{\partial \tau}{\partial \ga} = \frac{\partial W_x}{\partial \ga} + \left[ \frac{\partial W_x}{\partial \tau} + \frac{\partial W_x^*}{\partial \tau}\right]\frac{\partial \tau}{\partial \ga} = 0
+\]
+Here, it is the efficient joint tariff that is chosen, and it is chosen precisely by setting the term in brackets equal to zero so that we have the first order condition simplifying to the same expression as in the unilateral case.
+
+An interior solution does not exist to this problem. By inspection, the partial derivative of government welfare with respect to $\ga$ is simply producer surplus in the import sector. This is always positive. Thus, under the government welfare function in Expression~\ref{eq:wel}, government welfare is maximized when $\ga$ takes on the highest value achievable.
+
+This can be seen in Figure~\ref{fig:unweight}, which displays a graph of the partially weighted government welfare function from Expression~\ref{eq:wel} under the parameterization of \Textcite{bs2005} used throughout this paper. Graphed in terms of tariffs, one can see that from $\tau=0.05$---the tariff the home government optimally sets when making unilateral policy with no political pressure---government welfare steadily increases as the trade agreement tariff increases. This is because the governments can expect that ex-post political pressure will increase in the trade agreement tariff, and government welfare increases everywhere in political pressure.
+
+\begin{figure}
+\begin{center}
+\includegraphics[height=3.5in, width=5in]{unweight.jpg}
+\end{center}
+\caption{Government Welfare with Partially Weighted Objective Function \label{fig:unweight}}
+\end{figure}
+
+This result that government welfare is strictly increasing in the political pressure parameter would seem to be related to the fact that, although $\ga$ is often referred to as a ``political economy weight,'' Expression~\ref{eq:wel} is only partially weighted. That the extra importance given to profits of importers when $\ga$ increases is pure additional welfare with no concomitant reduction elsewhere may be an assumption worth weakening, particularly in the context of endogenous political activity. 
+
+An alternative formulation for the government objective function is one in which $\ga$ is a true weight in the following straightforward sense:
+\begin{equation}
+  \frac{1}{4+\ga(e)}CS_X(\tau) + \frac{\ga(e)}{4+\ga(e)}PS_X(\tau) + \frac{1}{4+\ga(e)}CS_Y(\tau^*) + \frac{1}{4+\ga(e)}PS_Y(\tau^*) + \frac{1}{4+\ga(e)}TR(\tau)
+  \label{eq:weighted}
+\end{equation}
+
+See the \hyperlink{sol_weighted}{Appendix} for the mathematical derivations corresponding to Figure~\ref{fig:weight}. They show that, particularly for the trade agreement tariffs, government welfare first declines and then increases, with the minimum value occurring around $\tau = 0.057$ and $\ga = 1.05$. The maximum still unquestionably occurs at the maximum value of $\ga$, which leads to the prohibitive tariff of $\frac{1}{6}$. But if a government's objective function is closer to Expression~\ref{eq:weighted} than Expression~\ref{eq:wel}, the government may be interested in using the trade agreement to manipulate the lobby's behavior and therefore the political pressure that it experiences.
+	
+\begin{figure}
+\begin{center}
+\includegraphics[height=3.5in, width=5in]{weight.jpg}
+\end{center}
+\caption{Government Welfare with Weighted Objective Function \label{fig:weight}}
+\end{figure}
+
+Whether or not the optimal trade agreement would set a tariff cap aimed at reducing lobbying depends on the lobby's incentives, which depends in turn on the shape of $\ga(e)$. Let's look at two parameterizations in a simple family of functions for $\ga(e)$ that demonstrate drastically different outcomes.
+
+I begin with $\ga(e) = 1 + e^{.1}$. With no trade agreement, the lobby maximizes its net profits by choosing $e=0.0016$, which results in $\ga=1.525$ and a Nash tariff of $0.129$. Import-competing producer (net) profits are $0.1025$, while government welfare is $0.0862$. Because joint government welfare is convex in the tariff, the solution will be at a corner: either at $\tau^R_{W,e} =0$ or at the highest level for which the lobby will exert effort, i.e. the Nash tariff. Since joint welfare at the zero tariff is $0.0857$, the tariff cap is set at the trivial level of the non-cooperative Nash tariff. 
+
+Here, given the way in which lobbying effort is translated into political support as represented by $\ga$, the government cannot improve its welfare by manipulating lobbying incentives. Discouraging lobbying would reduce welfare; in this parameter range, the government's interest is solely in encouraging lobbying effort, and there is nothing it can do in this regard.
+
+%This is does through the introduction of the trade agreement: by making protection more expensive, on the margin the lobby pays more in order to get even less protection than it did in the absence of the agreement. But there is nothing further the government can do to increase $\ga$.
+
+This example stands in contrast to a less concave (in the sense of Arrow Pratt) $\ga$. Take $\ga(e) = 1 + e^{.3}$. With no trade agreement, the lobby maximizes its net profits by choosing $e=0.0010$, which results in $\ga=1.126$ and a unilateral tariff of $0.068$. Import-competing producer (net) profits are $0.0921$, while government welfare is $0.0855$. Since joint government welfare is higher at free trade, the trade agreement will set $\tau^R_{W,e}=0$, profits decrease to $0.0816$, and government welfare increases to $0.0857$.
+
+In this case, again the government does not have means to encourage any additional lobbying, but it can improve its situation by discouraging lobbying. By setting a tariff cap of zero---assuming the conditions for self enforcement outlined in Section~\ref{sec:selfweak} are met---the government can use the trade agreement to improve welfare by changing lobbying incentives and therefore the political pressure it encounters. The stark prediction that the best the government can do is by setting the trade agreement to zero would be softened in an environment such as that in Section~\ref{sec:escape2} where there are both endogenous and exogenous sources of political pressure or with a government welfare function that has a interior global maximum in $\ga$.
+
+With this weighted welfare function, we see that the trade agreement is employed to different ends depending on $\ga(e)$. If the lobby's ability to make an impact on the political process is strong enough, the government will be chiefly concerned with the profits of the import-competing industry and will use the trade agreement solely to internalize the terms-of-trade externality. However, if the lobby's impact is below a given threshold, the distortions that protection create are weighed more heavily and the government will use the trade agreement to rein in lobbying activity.
+
+%In either case, we see that the government is able to provide reduced protection while extracting more effort from the lobby under a trade agreement: internalizing the terms of trade externality increases the marginal cost of protection.
+
+It is not claimed that the government welfare function in Expression~\ref{eq:weighted} perfectly represents the preferences of those who negotiate trade agreements. However, examining this alternative in combination with endogenous lobbying points out that the idea that trade agreements can function as domestic political commitment devices may be more general than previously demonstrated. It can also provide a bridge between the theoretical literature and the claims of trade policy practitioners that an important role of trade agreements is to rein in protectionist pressure.
+
+In the next section, I turn to the implications for the structure of the WTO procedures for administered protection, and the escape clause in particular, in a more realistic setting where both exogenous political shocks and endogenous lobbying are present.
+
+\section{The Purpose and Design of the Escape Clause}
+\label{sec:escape2}
+The title of this section pays direct homage to \Textcite{bs2005} for their above-referenced, foundational work on the escape clause in a setting with exogenous political pressure. Here, I ask how the addition of endogenous political pressure alters the optimal design of an escape clause.
+
+When $\ga$ is exogenous, the purpose of the escape clause is clear: it improves welfare by allowing the government to apply a higher tariff when the realization of $\ga$ is particularly high. In this case, the government would suffer significant welfare losses from abiding by the lower, normal tariff binding, and may find its interests are better served by abrogating the trade agreement if no escape were permitted.
+
+In Section~\ref{sec:escape}, I show that there is no such benefit when political pressure is purely endogenous in nature. All political pressure can be anticipated by the government and accounted for in the normal binding, so any higher tariff provided for escape would either not be used or would reduce government welfare by encouraging excess political pressure in the case where the trade agreement tariff is being employed to reduce lobbying.
+
+In reality, it is likely that both exogenous shocks and endogenous forces contribute to the pressure to which policy makers are subject. Thus, the desire for flexibility that derives from the purely exogenous case remains and we desire to see if it is possible to implement an escape clause in the face of the additional endogenous source of political pressure.
+
+So we go back to the general formulation where $\ga$ is a function of both lobbying effort $e$ and exogenously-determined events that create political pressure as in \Textcite{ms2011}, $s$. Let us take a simple case where the political pressure from the two sources are additively separable so that $\ga(s,e) = \ga(s) + \ga(e)$. Various interpretations are possible, including that some part of $\ga(s)$ derives from lobbying associated with the exogenous shock, while $\ga(e)$ is pure rent-seeking. Assume the interesting case that $\ga(\un{s}) < \ga(\ov{s}) < \ga(e^L)$; that is, the optimal political economy parameter from the lobby's point of view is greater than that which results from even the highest value of the exogenous shock variable. This implies that the lobby has the incentive for all realizations strictly below $\ov{s}$ to add pressure to that which comes directly from exogenous sources.
+
+Imagine first that $s$ and its mapping $\ga(s)$ are completely unverifiable so as to make the analogy to the exogenous shocks examined above complete. There is a large parameter space over which an escape clause could not function in the way it is intended. When the realization of the shock is high, the government will report the high shock and apply the escape clause tariff. But when the shock is low, the lobby will exert effort so that the sum of $\ga(s)$ and $\ga(e)$ equals the high realization. From the point of view of maximizing the political welfare of the governments, this is only problematic if, as demonstrated in Section~\ref{sec:objfcn}, the governments' ex-ante welfare is reduced by excess lobbying.
+
+Given that the intent of the escape clause is to provide flexibility for high realizations of $\ga(s)$, we see that the presence of endogenous lobbying can easily destroy its efficacy for this purpose as the lower binding will never be used. The water in the escape clause will be filled in by endogenous political pressure.
+
+This is not a problem of incentive compatibility. Similar to \Textcite{beshkar2010b}, it can be shown [formal result coming soon] that a dispute settlement body that provides an independent signal about the value of $\ga(s,e)$ on which the governments condition punishments for misreporting can make truth-telling incentive compatible. That is, a government will not over-report its political-economy pressure in order to impose a terms-of-trade externality on its trading partner. But this is of little consequence because the political-economy parameter will always take on its highest value.
+
+Given the inability of achieving the first best in this environment, what can be done? Unless political pressure that comes from a shock can be distinguished from political pressure that is purely rent-seeking, there appears to be little hope that the two can be disentangled through the investigation of a body such as the WTO's DSB. In fact, in its rulings the DSB does not appear to take into account political conditions at all.
+
+It seems plausible that this kind of dynamic is the reason that use of the WTO Safeguards are predicated on verifiable economic indicators--the $s$'s. This would appear to be the only way to prevent lobbies from exploiting the escape clause for uses for which it was not intended. However, once a shock has occurred, given that the DSB cannot distinguish between $\ga(s)$ and $\ga(e)$, determining the tariff that should be applied could only be done if (a) the DSB has the mapping $s \rightarrow \ga$ \textit{and} this strong form of separability holds. These conditions seem unlikely to be met in reality and we observe, again, that the DSB makes no attempt to determine the political parameter. Without this information, it thus can only certify the legitimacy of a Safeguard measure; it cannot determine the correct level at which the Safeguard measure should be applied.
+
+\section{Ex-Ante Lobbying}
+\label{sec:exante}
+
+\input{ex_ante}
+
+\section{Conclusion}
+\label{sec:concl}
+I have shown that accounting for endogenous lobbying has important implications for the design of trade agreements. Tariff caps may be used alternatively to reduce lobbying activity, or to incentivize lobbies to remain active after a trade agreement is in place, whereas a strong binding would remove lobbies' incentives to provide political support ex-post.
+
+The addition of the lobby can make it harder to sustain cooperation and complicates the incentive compatibility problem associated with the use of escape clauses. The temptation for lobbies to exploit the opportunity presented by an escape clause provides a justification for the WTO requirements that verifiable economic conditions are met in order to legally invoke these protections.
+
+I introduce a fully-weighted government utility function that is a slight modification of the standard Baldwin-style government objective function to demonstrate that it may be in even a politically-motivated government's interest to use a trade agreement to restrain political activity. The fact that the WTO Safeguards Agreement replaced compensation in the first three years of the invocation of a safeguard with a dynamic use constraint is consistent with the idea that the organization and the governments that constitute it are working to reduce rent seeking by lobbies. Section~\ref{sec:escape} demonstrates that lobbies do not care about the compensation since the costs do not fall on them, whereas a dynamic use constraint directly affects their ability to receive protection in the future.
+
+There are many exciting avenues to extend this work. This simple framework demonstrates a tractable way to introduce endogenous political pressure into many of the important questions that have been and are currently being explored concerning the design of trade agreements and the institutions that facilitate them.
+
+The discussion in Section~\ref{sec:exante} presumes both that there are no significant interactions between lobbies and that governments are free to choose which sectors are part of a trade agreement, but these decisions are part of a more complicated game that is, in particular, influenced by WTO rules. Taking into account the interactions between multiple lobbies, the influence of WTO rules, and differences in the $\ga$ functions across industries---that is, in how political pressure translates into weight in the policy-making process---seem like important and interesting avenues for further study.
+
+In particular, here there is no scope for the government to encourage lobbying above the level that is optimal from the special interest group's point of view; adding additional lobbies may create insights to this effect. There is also strong potential to gain insights concerning very realistic dynamics between political and economics shocks and lobbying, especially insofar as they impact questions of enforcement and administered protection.
+
+\section{Appendix}
+
+\noindent \textbf{\hypertarget{sol_weighted}{Optimal $\ga$ for Weighted Government Welfare Function}}: \\
+The first order condition for the weighted welfare function in Expression~\ref{eq:weighted}
+			  \[
+				  \frac{\partial W}{\partial \ga} = \frac{1}{\left(4+\ga(e)\right)^2}\left[ - CS_X + 4 \cdot PS_X - CS_Y - PS_Y - TR \right] = 0
+				\]
+Examining the expression in brackets:				
+				\[
+				  - CS_X + 4 \cdot PS_X - CS_Y - PS_Y - TR = 
+				\]
+				\[
+				  -\frac{9-24\tau + 16\tau^2}{98} + 4\frac{4+8\tau + 4\tau^2}{49} - \frac{7\tau - 42\tau^2}{49} - \frac{9+18\tau + 9\tau^2}{98} - \frac{16-24\tau + 9\tau^2}{98}
+				\]
+				\[
+				  = \frac{-9 + 32 -9 -16}{98} + \frac{24 + 64 -14 -18 +24}{98} \tau + \frac{-16 + 32 + 84 - 9 - 9}{98}\tau^2
+				\]
+				\[
+				  = \frac{-2}{98} + \frac{80}{98} \tau + \frac{82}{98}\tau^2
+				\]
+			This expression is negative at $\tau=0$ and increases monotonically with an interior minimum; note the second derivative is strictly positive.
+				
+				Because $\tau$ is an increasing function of $\ga$, this pattern holds for $\ga$ as well. $\frac{1}{\left(4+\ga(e)\right)^2}$ is positive (and decreasing as a function of $\ga$), so the pattern holds for the derivative as a whole. Thus the FOC delivers a minimum point and the maximum must be at one of the endpoints. Calculations show that $W(\ga=1.75) > W(\ga=1)$. $\hfill\blacksquare$
+
+\vskip.2in
+\noindent \textbf{\hypertarget{lem1}{Proof of Lemma~\ref{lem:1}}}: \\
+In the case of strong bindings, this is immediate from Result~\ref{res:strong}. In the case of weak bindings, first examine the first order condition for unilateral tariff setting:
+\[
+  \frac{\partial W_X(\ga,\tau)}{\partial \tau} = - \frac{5}{49} - \frac{68}{49}\tau +\frac{1}{98}\ga\left[ 16 + 16\tau \right] = 0
+\]
+Substituting in the inverse of the solution function $\tau^N(\ga) = \frac{8\ga-5}{68-8\ga}$ for $\ga$, this is
+\[
+  \frac{\partial W_X(\ga,\tau)}{\partial \tau} = - \frac{5}{49} - \frac{68}{49}\tau +\frac{1}{98} \frac{68\tau+5}{8+8\tau} \left[ 16 + 16\tau \right] = 0
+\]
+This same solution for $\ga$ will be substituted into the first order condition for the joint maximization problem in the ex-post trade agreement game; the only difference is the foreign welfare $W_X^*(\tau) = \frac{25}{98} - \frac{3}{49}\tau + \frac{9}{49}(\tau)^2$ is added to the objective function. The derivative with respect to $\tau$, $- \frac{3}{49} + \frac{18}{49}\tau$ is strictly negative for all non-prohibitive levels of the tariff ($\tau \in \left[0,1/6\right)$) and 0 at the prohibitive tariff. Thus the first order condition for the joint problem is negative at the unilateral tariff; a (weakly) lower tariff must be chosen to achieve the maximal value of this objective function. As demonstrated in Section{sec:objfcn}, the domestic commitment motive may also drive the solution to the free trade corner solution. $\hfill\blacksquare$
+
+\vskip.2in
+\noindent \textbf{\hypertarget{lem2}{Proof of Lemma~\ref{lem:2}}}: \\
+Denote the tariff with no agreement as $\tau^N(e^N)$. The lobby's effort level in the absence of a trade agreement is determined by the first order condition
+	\begin{equation}
+		\frac{\partial \pi}{\partial \tau} \frac{\partial \tau^N}{\partial \ga} \frac{\partial \ga}{\partial e^N} = 1
+			\label{eq:nta}
+	\end{equation}
+In order to compare this with Equation (\ref{eq:ea}) for weak bindings, note that
+  \[
+	  \frac{\partial e^{EP}}{\partial e^{EA}} = \frac{\partial e^{EP}}{\partial \tau^{EA}} \frac{\partial \tau^{EA}}{\partial e^{EA}} = \frac{1}{\frac{\partial \tau^N}{\partial e^{EP}}} \frac{\partial \tau^{E}}{\partial e^{EA}} =  \frac{\frac{\partial \tau^{E}}{\partial e^{EA}}}{\frac{\partial \tau^N}{\partial e^{EP}}} =  \frac{\frac{\partial \tau^{E}}{\partial \ga}\frac{\partial \ga}{\partial e}}{\frac{\partial \tau^N}{\partial \ga}\frac{\partial \ga}{\partial e}} =  \frac{\frac{\partial \tau^{E}}{\partial \ga}}{\frac{\partial \tau^N}{\partial \ga}} 
+	\]
+where the first equality follows by the fact that the impact of a marginal unit of ex-ante lobbying effort on ex-post effort is to raise the trade agreement tariff. This is a tariff cap, and so we need to calculate the effect of this increased cap on ex-post effort. The second equality represents that this is just the inverse of the marginal impact of ex-post lobbying effort on the non-cooperative tariff; the super-script on the $\tau$ in the denominator has been changed to $N$ to denote that ex-post tariff setting is non-cooperative; that on the $\tau$ in the numerator has been change to $E$ to denote that trade agreement tariff setting is cooperative. The fourth equality unpacks the partial derivatives to show the intermediate impact of $\ga$. This leads to the final expression in which the common terms have been canceled.
+
+Multiplying Equation (\ref{eq:ea}) by $\frac{\frac{\partial \tau^N}{\partial \ga}}{\frac{\partial \tau^E}{\partial \ga}}$, we have
+	\begin{equation}
+	  \frac{\partial \pi}{\partial \tau} \frac{\partial \tau^N}{\partial \ga} \frac{\partial \ga}{\partial e^{EA}} = \frac{\frac{\partial \tau^N}{\partial \ga}}{\frac{\partial \tau^E}{\partial \ga}} + 1.
+			\label{eq:ea2}
+		\end{equation}
+Because $\frac{\frac{\partial \tau^N}{\partial \ga}}{\frac{\partial \tau^E}{\partial \ga}} > 0$, the solution to the ex-ante weak binding first order condition as given in Equation~(\ref{eq:ea2}) is smaller than the solution to Equation~(\ref{eq:nta}), so that the lobby exerts less effort in the ex-ante stage of trade agreement negotiations than when there is no trade agreement. Since $\tau^E(\cdot) < \tau^N(\cdot)$ for all $e$, $\tau^{EA}\left(e^{EA}\right) < \tau^N\left(e^N\right)$ when bindings are weak.
+
+In contrast, the last term of the first order condition when bindings are strong is zero since the lobby does not exert any effort at the ex-post stage. The right hand side of Equation~\ref{eq:ea2} then has just the one term, and it can be either greater than or less than 1, so we cannot bound the ex-ante effort level. $\hfill\blacksquare$
+
+\newpage
+\printbibliography[title=References]
+
+\end{document}
