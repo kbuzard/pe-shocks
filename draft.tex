@@ -188,6 +188,65 @@ The second order condition is satisfied for $\ga < \frac{25}{4}$, so again for a
 
 %Assumption~\ref{as:ga_l_e3} ensures that $\tau^a < \tau^{tw}$.
 
+\subsection{Political Objective Functions and the Role of Trade Agreements}
+\label{sec:objfcn}
+When political pressure is determined endogenously, a government can predict the political pressure it will face and in some cases use a trade agreement to alter lobbying incentives. Since the government has some control through the trade agreement over the level of $\ga$ it will face, it becomes important to understand how the government's welfare varies in $\ga$. The perceived role that trade agreements can play is therefore influenced by the choice of government objective function.
+
+Let's begin with the \Textcite{baldwin}-style government objective function that is most common in the recent literature on trade agreements, specialized to the case of endogenous pressure only.
+\begin{equation}
+  W(\ga(e),\tau,\tau^*) = \mathit{CS}_X(\tau) + \ga(e) \cdot \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
+  \tag{\ref{eq:wel}}
+\end{equation}
+We need to know at what $\ga(e)$ the government's welfare is maximized, given that it will choose $\tau$ according to either Equation~\ref{eq:nash} when setting tariffs unilaterally or Equation~\ref{eq:eff} when setting tariffs in the context of a trade agreement.
+
+Envelope-theorem style results imply that the first order condition in the same in the unilateral and joint problems: $\displaystyle \frac{\partial W_x}{\partial \ga} = 0$. See the \hyperlink{envelope}{Appendix} for details.
+
+An interior solution does not exist to this problem. By inspection, the partial derivative of government welfare with respect to $\ga$ is simply producer surplus in the import sector. This is always positive. Thus, under the government welfare function in Expression~\ref{eq:wel}, government welfare is maximized when $\ga$ takes on the highest value achievable.
+
+This can be seen in Figure~\ref{fig:unweight}, which displays a graph of the partially weighted government welfare function from Expression~\ref{eq:wel} under the parameterization of \Textcite{bs2005} used throughout this paper. Graphed in terms of tariffs, one can see that from $\tau=0.05$---the tariff the home government optimally sets when making unilateral policy with no political pressure---government welfare steadily increases as the trade agreement tariff increases. This is because the governments can expect that ex-post political pressure will increase in the trade agreement tariff, and government welfare increases everywhere in political pressure.
+
+\begin{figure}
+\begin{center}
+\includegraphics[height=3in, width=4.25in]{unweight.jpg}
+\end{center}
+\caption{Government Welfare with Partially Weighted Objective Function \label{fig:unweight}}
+\end{figure}
+
+This result that government welfare is strictly increasing in the political pressure parameter would seem to be related to the fact that, although $\ga$ is often referred to as a ``political economy weight,'' Expression~\ref{eq:wel} is only partially weighted. That the extra importance given to profits of importers when $\ga$ increases is pure additional welfare with no concomitant reduction elsewhere may be an assumption worth weakening, particularly in the context of endogenous political activity. 
+
+One alternative formulation for the government objective function is one in which $\ga$ is a true weight in the following straightforward sense:
+\begin{equation}
+  \frac{1}{4+\ga(e)}CS_X(\tau) + \frac{\ga(e)}{4+\ga(e)}PS_X(\tau) + \frac{1}{4+\ga(e)}CS_Y(\tau^*) + \frac{1}{4+\ga(e)}PS_Y(\tau^*) + \frac{1}{4+\ga(e)}TR(\tau)
+  \label{eq:weighted}
+\end{equation}
+
+See the \hyperlink{sol_weighted}{Appendix} for the mathematical derivations corresponding to Figure~\ref{fig:weight}. They show that, particularly for the trade agreement tariffs, government welfare first declines and then increases, with the minimum value occurring around $\tau = 0.057$ and $\ga = 1.05$. The maximum still unquestionably occurs at the maximum value of $\ga$, which leads to the prohibitive tariff of $\frac{1}{6}$. But if a government's objective function is closer to Expression~\ref{eq:weighted} than Expression~\ref{eq:wel}, the government may be interested in using the trade agreement to manipulate the lobby's behavior and therefore the political pressure that it experiences.
+	
+\begin{figure}
+\begin{center}
+\includegraphics[height=3in, width=4.25in]{weight.jpg}
+\end{center}
+\caption{Government Welfare with Weighted Objective Function \label{fig:weight}}
+\end{figure}
+
+Whether or not the optimal trade agreement would set a tariff cap aimed at reducing lobbying depends on the lobby's incentives, which depends in turn on the shape of $\ga(e)$. Let's look at two parameterizations in a simple family of functions for $\ga(e)$ that demonstrate drastically different outcomes.
+
+I begin with $\ga(e) = 1 + e^{.1}$. With no trade agreement, the lobby maximizes its net profits by choosing $e=0.0016$, which results in $\ga=1.525$ and a Nash tariff of $0.129$. Import-competing producer (net) profits are $0.1025$, while government welfare is $0.0862$. Because joint government welfare is convex in the tariff, the solution will be at a corner: either at $\tau^R_{W,e} =0$ or at the highest level for which the lobby will exert effort, i.e. the Nash tariff. Since joint welfare at the zero tariff is $0.0857$, the tariff cap is set at the trivial level of the non-cooperative Nash tariff. 
+
+Here, given the way in which lobbying effort is translated into political support as represented by $\ga$, the government cannot improve its welfare by manipulating lobbying incentives. Discouraging lobbying would reduce welfare; in this parameter range, the government's interest is solely in encouraging lobbying effort, and there is nothing it can do in this regard.
+
+%This is does through the introduction of the trade agreement: by making protection more expensive, on the margin the lobby pays more in order to get even less protection than it did in the absence of the agreement. But there is nothing further the government can do to increase $\ga$.
+
+This example stands in contrast to a less concave (in the sense of Arrow Pratt) $\ga$. Take $\ga(e) = 1 + e^{.3}$. With no trade agreement, the lobby maximizes its net profits by choosing $e=0.0010$, which results in $\ga=1.126$ and a unilateral tariff of $0.068$. Import-competing producer (net) profits are $0.0921$, while government welfare is $0.0855$. Since joint government welfare is higher at free trade, the trade agreement will set $\tau^R_{W,e}=0$, profits decrease to $0.0816$, and government welfare increases to $0.0857$.
+
+In this case, again the government does not have means to encourage any additional lobbying, but it can improve its situation by discouraging lobbying. By setting a tariff cap of zero---assuming the conditions for self enforcement outlined in Section~\ref{sec:selfweak} are met---the government can use the trade agreement to improve welfare by changing lobbying incentives and therefore the political pressure it encounters. The stark prediction that the best the government can do is by setting the trade agreement to zero would be softened in an environment such as that in Section~\ref{sec:escape2} where there are both endogenous and exogenous sources of political pressure or with a government welfare function that has an interior global maximum in $\ga$.
+
+With this weighted welfare function, we see that the trade agreement is employed to different ends depending on $\ga(e)$. If the lobby's ability to make an impact on the political process is strong enough, the government will be chiefly concerned with the profits of the import-competing industry and will use the trade agreement solely to internalize the terms-of-trade externality. However, if the lobby's impact is below a given threshold, the distortions that protection create are weighed more heavily and the government will use the trade agreement to rein in lobbying activity.
+
+%In either case, we see that the government is able to provide reduced protection while extracting more effort from the lobby under a trade agreement: internalizing the terms of trade externality increases the marginal cost of protection.
+
+It is not claimed that the government welfare function in Expression~\ref{eq:weighted} perfectly represents the preferences of those who negotiate trade agreements. However, examining this alternative in combination with endogenous lobbying points out that the idea that trade agreements can function as domestic political commitment devices may be more general than previously demonstrated. It can also provide a bridge between the theoretical literature and the claims of trade policy practitioners that an important role of trade agreements is to rein in protectionist pressure.
+
 \subsection{Exogenous Political Pressure and Incentive Compatibility}
 In order to compare the results for the case of endogenous political pressure to \Textcite{bs2005} results for exogenous political shocks, I provide the essentials of their setup. 
 
@@ -342,91 +401,8 @@ The answer is that it does not. Assuming the lobby represents a negligible share
 
 Here, we have a mechanism that is incentive compatible despite the presence of lobbying. It makes the lobby exert effort in order to receive the higher level of protection under the escape clause just as in the other mechanism. And although the burden of the transfer falls on others in the economy, at least the trading partner is compensated. Here the government is truthfully revealing the level of political pressure it faces, but that pressure is created by endogenous forces that are intensified by the existence of the escape clause.
 
-In the next section, I ask the question of whether this type of outcome is likely to be consistent with the ex-ante best interests of the governments themselves as a prelude to exploring the likely intentions behind the design of such escape clauses.
-
-
-\section{Political Objective Functions and the Role of Trade Agreements}
-\label{sec:objfcn}
-The previous sections analyze in general the effects of various forms of trade agreements when political pressure is endogenous. I now use the specific functional forms for the economy given in Section~\ref{sec:stage} and compare government objective functions to understand the impact of trade agreements on government welfare.
-
-To reiterate, in line with the dominant strain of the literature, I have assumed that the governments' choice of trade agreement tariff is optimized with respect to the political pressure it expects to experience after the trade agreement is signed. In the case of exogenous political pressure, the best one can do is take an expectation given the distribution of $\ga$, or possibly build some kind of flexibility into the agreement through tariff caps or an incentive compatible escape clause.
-
-With endogenously-determined political pressure with no shocks---the simple case examined so far here---each government can predict the political pressure it will face and in some cases use the trade agreement to alter the incentives of the lobby. Since the government has some control through the trade agreement over the level of $\ga$ it will face, it becomes important to understand how the government's welfare varies in $\ga$.
-
-Let's begin with the \Textcite{baldwin}-style government objective function that is most common in the recent literature on trade agreements and that has been in use throughout this paper so far, specialized to the case of endogenous pressure only.
-\begin{equation}
-  W(\ga(e),\tau,\tau^*) = \mathit{CS}_X(\tau) + \ga(e) \cdot \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
-  \tag{\ref{eq:wel}}
-\end{equation}
-What we would like to know is at what $\ga(e)$ the government's welfare is maximized, given that it will choose $\tau$ according to either Equation~\ref{eq:nash} when setting tariffs unilaterally or Equation~\ref{eq:eff} when setting tariffs in the context of a trade agreement.
-
-The answer turns out to be the same for the unilateral and joint problems. Starting with the non-cooperative maximization problem with respect to $\ga$ (there is no loss in suppressing the dependence of $\ga$ on $e$ for the time being):
-\[
- \max_{\ga} W_x(\ga,\tau) + W_y(\tau^*)
-\]
-The first order condition is
-\[
-	\frac{\partial W_x}{\partial \ga} + \frac{\partial W_x}{\partial \tau}\frac{\partial \tau}{\partial \ga} = 0
-\]
-In an envelope-theorem style result, because the Nash tariff is the result of the government's optimization with respect to $\tau$, $\frac{\partial W_x}{\partial \tau}=0$ so that the first order condition reduces to $\frac{\partial W_x}{\partial \ga} = 0$.
-				
-Turning to the maximization of joint welfare in the trade agreement, we have
-\[
-  \max_{\ga} W_x(\ga,\tau) + W_y(\tau^*) + W_x^*(\tau)+ W_y^*(\tau^*)
-\]
-The first order condition is 
-\[
-  \frac{\partial W_x}{\partial \ga} + \frac{\partial W_x}{\partial \tau}\frac{\partial \tau}{\partial \ga} + \frac{\partial W_x^*}{\partial \tau}\frac{\partial \tau}{\partial \ga} = \frac{\partial W_x}{\partial \ga} + \left[ \frac{\partial W_x}{\partial \tau} + \frac{\partial W_x^*}{\partial \tau}\right]\frac{\partial \tau}{\partial \ga} = 0
-\]
-Here, it is the efficient joint tariff that is chosen, and it is chosen precisely by setting the term in brackets equal to zero so that we have the first order condition simplifying to the same expression as in the unilateral case.
-
-An interior solution does not exist to this problem. By inspection, the partial derivative of government welfare with respect to $\ga$ is simply producer surplus in the import sector. This is always positive. Thus, under the government welfare function in Expression~\ref{eq:wel}, government welfare is maximized when $\ga$ takes on the highest value achievable.
-
-This can be seen in Figure~\ref{fig:unweight}, which displays a graph of the partially weighted government welfare function from Expression~\ref{eq:wel} under the parameterization of \Textcite{bs2005} used throughout this paper. Graphed in terms of tariffs, one can see that from $\tau=0.05$---the tariff the home government optimally sets when making unilateral policy with no political pressure---government welfare steadily increases as the trade agreement tariff increases. This is because the governments can expect that ex-post political pressure will increase in the trade agreement tariff, and government welfare increases everywhere in political pressure.
-
-\begin{figure}
-\begin{center}
-\includegraphics[height=3.5in, width=5in]{unweight.jpg}
-\end{center}
-\caption{Government Welfare with Partially Weighted Objective Function \label{fig:unweight}}
-\end{figure}
-
-This result that government welfare is strictly increasing in the political pressure parameter would seem to be related to the fact that, although $\ga$ is often referred to as a ``political economy weight,'' Expression~\ref{eq:wel} is only partially weighted. That the extra importance given to profits of importers when $\ga$ increases is pure additional welfare with no concomitant reduction elsewhere may be an assumption worth weakening, particularly in the context of endogenous political activity. 
-
-An alternative formulation for the government objective function is one in which $\ga$ is a true weight in the following straightforward sense:
-\begin{equation}
-  \frac{1}{4+\ga(e)}CS_X(\tau) + \frac{\ga(e)}{4+\ga(e)}PS_X(\tau) + \frac{1}{4+\ga(e)}CS_Y(\tau^*) + \frac{1}{4+\ga(e)}PS_Y(\tau^*) + \frac{1}{4+\ga(e)}TR(\tau)
-  \label{eq:weighted}
-\end{equation}
-
-See the \hyperlink{sol_weighted}{Appendix} for the mathematical derivations corresponding to Figure~\ref{fig:weight}. They show that, particularly for the trade agreement tariffs, government welfare first declines and then increases, with the minimum value occurring around $\tau = 0.057$ and $\ga = 1.05$. The maximum still unquestionably occurs at the maximum value of $\ga$, which leads to the prohibitive tariff of $\frac{1}{6}$. But if a government's objective function is closer to Expression~\ref{eq:weighted} than Expression~\ref{eq:wel}, the government may be interested in using the trade agreement to manipulate the lobby's behavior and therefore the political pressure that it experiences.
-	
-\begin{figure}
-\begin{center}
-\includegraphics[height=3.5in, width=5in]{weight.jpg}
-\end{center}
-\caption{Government Welfare with Weighted Objective Function \label{fig:weight}}
-\end{figure}
-
-Whether or not the optimal trade agreement would set a tariff cap aimed at reducing lobbying depends on the lobby's incentives, which depends in turn on the shape of $\ga(e)$. Let's look at two parameterizations in a simple family of functions for $\ga(e)$ that demonstrate drastically different outcomes.
-
-I begin with $\ga(e) = 1 + e^{.1}$. With no trade agreement, the lobby maximizes its net profits by choosing $e=0.0016$, which results in $\ga=1.525$ and a Nash tariff of $0.129$. Import-competing producer (net) profits are $0.1025$, while government welfare is $0.0862$. Because joint government welfare is convex in the tariff, the solution will be at a corner: either at $\tau^R_{W,e} =0$ or at the highest level for which the lobby will exert effort, i.e. the Nash tariff. Since joint welfare at the zero tariff is $0.0857$, the tariff cap is set at the trivial level of the non-cooperative Nash tariff. 
-
-Here, given the way in which lobbying effort is translated into political support as represented by $\ga$, the government cannot improve its welfare by manipulating lobbying incentives. Discouraging lobbying would reduce welfare; in this parameter range, the government's interest is solely in encouraging lobbying effort, and there is nothing it can do in this regard.
-
-%This is does through the introduction of the trade agreement: by making protection more expensive, on the margin the lobby pays more in order to get even less protection than it did in the absence of the agreement. But there is nothing further the government can do to increase $\ga$.
-
-This example stands in contrast to a less concave (in the sense of Arrow Pratt) $\ga$. Take $\ga(e) = 1 + e^{.3}$. With no trade agreement, the lobby maximizes its net profits by choosing $e=0.0010$, which results in $\ga=1.126$ and a unilateral tariff of $0.068$. Import-competing producer (net) profits are $0.0921$, while government welfare is $0.0855$. Since joint government welfare is higher at free trade, the trade agreement will set $\tau^R_{W,e}=0$, profits decrease to $0.0816$, and government welfare increases to $0.0857$.
-
-In this case, again the government does not have means to encourage any additional lobbying, but it can improve its situation by discouraging lobbying. By setting a tariff cap of zero---assuming the conditions for self enforcement outlined in Section~\ref{sec:selfweak} are met---the government can use the trade agreement to improve welfare by changing lobbying incentives and therefore the political pressure it encounters. The stark prediction that the best the government can do is by setting the trade agreement to zero would be softened in an environment such as that in Section~\ref{sec:escape2} where there are both endogenous and exogenous sources of political pressure or with a government welfare function that has an interior global maximum in $\ga$.
-
-With this weighted welfare function, we see that the trade agreement is employed to different ends depending on $\ga(e)$. If the lobby's ability to make an impact on the political process is strong enough, the government will be chiefly concerned with the profits of the import-competing industry and will use the trade agreement solely to internalize the terms-of-trade externality. However, if the lobby's impact is below a given threshold, the distortions that protection create are weighed more heavily and the government will use the trade agreement to rein in lobbying activity.
-
-%In either case, we see that the government is able to provide reduced protection while extracting more effort from the lobby under a trade agreement: internalizing the terms of trade externality increases the marginal cost of protection.
-
-It is not claimed that the government welfare function in Expression~\ref{eq:weighted} perfectly represents the preferences of those who negotiate trade agreements. However, examining this alternative in combination with endogenous lobbying points out that the idea that trade agreements can function as domestic political commitment devices may be more general than previously demonstrated. It can also provide a bridge between the theoretical literature and the claims of trade policy practitioners that an important role of trade agreements is to rein in protectionist pressure.
-
 In the next section, I turn to the implications for the structure of the WTO procedures for administered protection, and the escape clause in particular, in a more realistic setting where both exogenous political shocks and endogenous lobbying are present.
+
 
 \section{The Purpose and Design of the Escape Clause}
 \label{sec:escape2}
@@ -472,7 +448,29 @@ Taking into account the interactions between multiple lobbies, the influence of 
 In particular, here there is no scope for the government to encourage lobbying above the level that is optimal from the special interest group's point of view; adding additional lobbies may create insights to this effect. There is also strong potential to gain insights concerning very realistic dynamics between political and economics shocks and lobbying, especially insofar as they impact questions of enforcement and administered protection.
 
 \section{Appendix}
+\noindent \textbf{\hypertarget{envelope}{Unilateral and Joint Welfare Maximized at same $\ga$}}: \\
+Starting with the non-cooperative maximization problem with respect to $\ga$:
+\[
+ \max_{\ga} W_x(\ga,\tau) + W_y(\tau^*)
+\]
+The first order condition is
+\[
+	\frac{\partial W_x}{\partial \ga} + \frac{\partial W_x}{\partial \tau}\frac{\partial \tau}{\partial \ga} = 0
+\]
+In an envelope-theorem style result, because the Nash tariff is the result of the government's optimization with respect to $\tau$, $\frac{\partial W_x}{\partial \tau}=0$ so that the first order condition reduces to $\frac{\partial W_x}{\partial \ga} = 0$.
+				
+Turning to the maximization of joint welfare in the trade agreement, we have
+\[
+  \max_{\ga} W_x(\ga,\tau) + W_y(\tau^*) + W_x^*(\tau)+ W_y^*(\tau^*)
+\]
+The first order condition is 
+\[
+  \frac{\partial W_x}{\partial \ga} + \frac{\partial W_x}{\partial \tau}\frac{\partial \tau}{\partial \ga} + \frac{\partial W_x^*}{\partial \tau}\frac{\partial \tau}{\partial \ga} = \frac{\partial W_x}{\partial \ga} + \left[ \frac{\partial W_x}{\partial \tau} + \frac{\partial W_x^*}{\partial \tau}\right]\frac{\partial \tau}{\partial \ga} = 0
+\]
+Here, it is the efficient joint tariff that is chosen, and it is chosen precisely by setting the term in brackets equal to zero so that we have the first order condition simplifying to the same expression as in the unilateral case. $\hfill\blacksquare$
 
+
+\vskip.3in
 \noindent \textbf{\hypertarget{sol_weighted}{Optimal $\ga$ for Weighted Government Welfare Function}}: \\
 The first order condition for the weighted welfare function in Expression~\ref{eq:weighted}
 			  \[
