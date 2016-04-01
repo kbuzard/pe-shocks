@@ -406,7 +406,7 @@ Here, we have a mechanism that is incentive compatible despite the presence of l
 In the next section, I turn to the implications for the structure of the WTO procedures for administered protection, and the escape clause in particular, in a more realistic setting where both exogenous political shocks and endogenous lobbying are present.
 
 
-\section{The Purpose and Design of the Escape Clause}
+\subsection{The Purpose and Design of the Escape Clause}
 \label{sec:escape2}
 The title of this section pays direct homage to \Textcite{bs2005} for their above-referenced, foundational work on the escape clause in a setting with exogenous political pressure. Here, I ask how the addition of endogenous political pressure alters the optimal design of an escape clause.
 
@@ -443,18 +443,28 @@ In this world that is far from first best, I next demonstrate how a WTO-style es
 	\item The lobby chooses its effort level $e_F$.
 	\item The government chooses the applied tariff level from among $\tau^F_{W,e}$, $\tau(s)$ and $\tau^B(\ga(s,e_F))$.
 \end{enumerate}
-Here I take the higher, `escape' tariff to be continuous instead of set at a given binding. If the government applies $\tau^F_{W,e}$, implementation of the agreement goes on as before. Consistent with the WTO Agreement on Safeguards, the government can apply the tariff that is necessary to remedy the injury caused by the shock, $\tau(s)$, with no retaliation for three periods. If the government applies a tariff that is higher than either $\tau^F_{W,e}$, $\tau(s)$, it will choose its myopic best response to the pressure it experiences. I label this tariff $\tau^B(\ga(s,e_F))$. This is a violation of the trade agreement even in the presence of the safeguard and incurs retaliation.
+Here I take the higher, `escape' tariff to be continuous instead of set at a given binding. If the government applies $\tau^F_{W,e}$, implementation of the agreement goes on as before. Consistent with the WTO Agreement on Safeguards, the government can apply the tariff that is necessary to remedy the injury caused by the shock, $\tau(s)$, with no retaliation for three periods. If the government applies a tariff that is higher than either $\tau^F_{W,e}$, $\tau(s)$, it will choose its myopic best response to the pressure it experiences. I label this tariff $\tau^B(\ga(s,e_F))$, where $e^F$ is the minimum lobbying effort that would give the government incentive to break the trade agreement in the absence of external enforcement.
 
+This is a violation of the trade agreement even in the presence of the safeguard and incurs retaliation. It is a violation of the agreement because the applied tariff level is higher than is needed to remedy the injury caused by the shock; the Agreement on Safeguards instructs that ``A Member shall apply safeguard measures only to the extent necessary to prevent or remedy serious injury and to facilitate adjustment'' (Article 5.1).\footnote{The paragraph goes on to give even more clarification: ``If a quantitative restriction is used, such a measure shall  not reduce the quantity of imports below the level of a recent period which shall be the average of imports in the last three representative years for which statistics are available, unless clear justification is given that a different level is necessary to prevent or remedy serious injury.''}
 
-				
-						\begin{itemize}
-							\item Is responding to $e$ in some cases worth it?
-							\item Does WEC help or hurt vs. grim trigger, $T$ period Nash reversion?
-						\end{itemize}
-				
+To see how such a scheme works in the context of repeated-game enforcement, we look to the incentive constraints of the government and lobby. I follow \Textcite{buzard2013a} by using limited reversions to the stage-game Nash equilibrium outcome. For ease of analysis, I use a punishment length of two periods. This simply implies that a country would return to the agreement either after applying a valid escape clause for three years or after violating the agreement.
 
-				
-				
+The government's incentive constraint is given by
+  \begin{multline}
+    \left[1+ \de +\de^2 \right] \left\{W_x(\ga(s,0),\tau(s)) + W_x^*(\tau^F_{W,e}) \right\} \geq \\ W_X(\ga(s,e^F),\tau^B(\ga(s,e^F)) + W_x^*(\tau^F_{W,e}) + \left[\de +\de^2 \right] \left\{W_X(\ga(s,e^N),\tau^N) + W_x^*(\tau^N) \right\}
+		\label{exp:govincentEC}
+  \end{multline}
+Label $\ov{e}$ the level of $e^F$ that is just high enough to cause the government to throw the trading relationship into dispute. We use $\ov{e}$ in the lobby's constraint, in which the lobby optimally exerts no effort if the government applies the safeguard tariff $\tau(s)$:
+\begin{equation}
+  \left[1+ \de +\de^2 \right] \pi(\tau(s)) \geq \left[1+ \de +\de^2 \right] \left\{\pi(\tau(\ga(s,\ov{e})) - \ov{e} \right\}
+	\label{exp:lobbyEC}
+\end{equation}
+
+Depending on the level of $s$ and the properties of $\ga(s,e)$, the government may chooses to set the trade agreement tariff in the presence of an escape clause $\left(\tau^F_{W,e}\right)$ so that in some cases the lobby's incentive constraint is violated. This would lead to the legislature's constraint being violated as well, leading to a dispute. 
+
+I plan to compare the Nash-reversion punishment to punishment via 'withdrawal of equivalent concessions,' as it appears on the face of it that this environment may provide a justification its use. The intuition is the following: \Textcite{buzard2013a} shows that the lobbying effort required to cause the government to enter into a dispute is higher than the Nash equilibrium effort levels. Then the tariffs during a dispute are also higher, and punishment at this higher level would be more severe than Nash---both for the government and the lobby.
+
+		
 
 %\section{Ex-Ante Lobbying}
 %\label{sec:exante}
