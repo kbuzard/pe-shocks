@@ -245,7 +245,9 @@ With this weighted welfare function, we see that the trade agreement is employed
 
 %In either case, we see that the government is able to provide reduced protection while extracting more effort from the lobby under a trade agreement: internalizing the terms of trade externality increases the marginal cost of protection.
 
-It is not claimed that the government welfare function in Expression~\ref{eq:weighted} perfectly represents the preferences of those who negotiate trade agreements. However, examining this alternative in combination with endogenous lobbying points out that the idea that trade agreements can function as domestic political commitment devices may be more general than previously demonstrated. It can also provide a bridge between the theoretical literature and the claims of trade policy practitioners that an important role of trade agreements is to rein in protectionist pressure.
+I do not argue that the government welfare function in Expression~\ref{eq:weighted} perfectly represents the preferences of those who negotiate trade agreements. Another reasonable candidate for the government objective function embodies diminishing returns to lobbying as tariffs increase as in \Textcite{ethier2012}. In the current model, one would take $\ga$ to be a decreasing function of $\tau$. This implies that government welfare must eventually decrease in $\ga$, providing for concavity in $\ga$ and a strict interior maximum.
+
+Examining these alternatives in combination with endogenous lobbying points out that the idea that trade agreements can function as domestic political commitment devices may be more general than previously demonstrated. It can also provide a bridge between the theoretical literature and the claims of trade policy practitioners that an important role of trade agreements is to rein in protectionist pressure.
 
 \subsection{Exogenous Political Pressure and Incentive Compatibility}
 In order to compare the results for the case of endogenous political pressure to \Textcite{bs2005} results for exogenous political shocks, I provide the essentials of their setup. 
@@ -416,7 +418,13 @@ In reality, it is likely that both exogenous shocks and endogenous forces contri
 
 So we go back to the general formulation where $\ga$ is a function of both lobbying effort $e$ and exogenously-determined events that create political pressure as in \Textcite{ms2011}, $s$. Let us take a simple case where the political pressure from the two sources are additively separable so that $\ga(s,e) = \ga(s) + \ga(e)$. Various interpretations are possible, including that some part of $\ga(s)$ derives from lobbying associated with the exogenous shock, while $\ga(e)$ is pure rent-seeking. Assume the interesting case that $\ga(\un{s}) < \ga(\ov{s}) < \ga(e^L)$; that is, the optimal political economy parameter from the lobby's point of view is greater than that which results from even the highest value of the exogenous shock variable. This implies that the lobby has the incentive for all realizations strictly below $\ov{s}$ to add pressure to that which comes directly from exogenous sources.
 
-Imagine first that $s$ and its mapping $\ga(s)$ are completely unverifiable so as to make the analogy to the exogenous shocks examined above complete. There is a large parameter space over which an escape clause could not function in the way it is intended. When the realization of the shock is high, the government will report the high shock and apply the escape clause tariff. But when the shock is low, the lobby will exert effort so that the sum of $\ga(s)$ and $\ga(e)$ equals the high realization. From the point of view of maximizing the political welfare of the governments, this is only problematic if, as demonstrated in Section~\ref{sec:objfcn}, the governments' ex-ante welfare is reduced by excess lobbying.
+Imagine first that $s$ and its mapping $\ga(s)$ are completely unverifiable so as to make the analogy to the exogenous shocks examined above complete. There is a large parameter space over which an escape clause could not function in the way it is intended. When the realization of the shock is high, the government will report the high shock and apply the escape clause tariff. But when the shock is low, the lobby will exert effort so that the sum of $\ga(s)$ and $\ga(e)$ equals the high realization.
+
+\begin{proposition}{Ineffectiveness of Political Criterion for Escape Clause}
+    Assume $\ga(s,e)$ is additively separable in $s$ and $e$ with $s$ and $e$ independent. If an escape clause conditions on $\ga(s,e)$ and the lobby's preferred tariff is higher than the escape clause binding, the lower ``normal'' tariff binding will never be applied.
+\end{proposition}
+
+From the point of view of maximizing the political welfare of the governments, this is only problematic if, as demonstrated in Section~\ref{sec:objfcn}, the governments' ex-ante welfare is reduced by excess lobbying.
 
 Given that the intent of the escape clause is to provide flexibility for high realizations of $\ga(s)$, we see that the presence of endogenous lobbying can easily destroy its efficacy for this purpose as the lower binding will never be used. The water in the escape clause will be filled in by endogenous political pressure.
 
@@ -425,6 +433,28 @@ This is not a problem of incentive compatibility. Similar to \Textcite{beshkar20
 Given the inability of achieving the first best in this environment, what can be done? Unless political pressure that comes from a shock can be distinguished from political pressure that is purely rent-seeking, there appears to be little hope that the two can be disentangled through the investigation of a body such as the WTO's DSB. In fact, in its rulings the DSB does not appear to take into account political conditions at all.
 
 It seems plausible that this kind of dynamic is the reason that use of the WTO Safeguards are predicated on verifiable economic indicators--the $s$'s. This would appear to be the only way to prevent lobbies from exploiting the escape clause for uses for which it was not intended. However, once a shock has occurred, given that the DSB cannot distinguish between $\ga(s)$ and $\ga(e)$, determining the tariff that should be applied could only be done if (a) the DSB has the mapping $s \rightarrow \ga$ \textit{and} this strong form of separability holds. These conditions seem unlikely to be met in reality and we observe, again, that the DSB makes no attempt to determine the political parameter. Without this information, it thus can only certify the legitimacy of a Safeguard measure; it cannot determine the correct level at which the Safeguard measure should be applied.
+
+In this world that is far from first best, I next demonstrate how a WTO-styled escape clause can allow flexibility in the face of fundamental shocks $s$ while discouraging lobbyists from using the shock as cover for rent-seeking behavior. The timeline is as follows:
+\begin{enumerate}
+	\item The government sets the trade agreement tariff $\tau^F_{W,e}$ cooperatively. I assume this is a weak binding and add the subscript $F$ to denote the environment with flexibility to deal with shocks.
+	\item The exogenous shock $s$ is realized.
+	\item The lobby chooses its effort level $e_F$.
+	\item The government chooses the applied tariff level from among $\tau^F_{W,e}$, $\tau($s$)$ and $\tau^B(\ga(s,e_F))$.
+\end{enumerate}
+
+
+
+				\begin{enumerate}
+					\item consistent with $s$, no retaliation
+					\item consistent with $s$ and $e$ and be retaliated against according to WEC (need to work WEC into model--repeated game incentives necessary)
+						\begin{itemize}
+							\item Is responding to $e$ in some cases worth it?
+							\item Does WEC help or hurt vs. grim trigger, $T$ period Nash reversion?
+						\end{itemize}
+					\end{enumerate}
+
+				
+				
 
 %\section{Ex-Ante Lobbying}
 %\label{sec:exante}
