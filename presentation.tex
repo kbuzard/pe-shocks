@@ -50,6 +50,8 @@
 	
 	\let\Tiny=\tiny
 
+\usepackage{appendixnumberbeamer}
+
 
 \title[Endogenous Politics and the Design of Trade Institutions\hspace{2.05in}\insertframenumber/\inserttotalframenumber]{Endogenous Politics and \\ the Design of Trade Institutions}
 %\author[Kristy Buzard]{Kristy Buzard \\ Syracuse University and The Wallis Institute \\ kbuzard@syr.edu}
@@ -432,7 +434,8 @@ Must set tariff at or below specified level (aka tariff cap)
 \end{frame}
 
 
-\begin{frame}{Tariff Caps with Self Enforcement}
+\begin{frame}[label=self]
+\frametitle{Tariff Caps with Self Enforcement}
 \pause
 \begin{itemize}[<+->]
 	\item $\ga$ exogenous (Bagwell $\&$ Staiger 2005): if governments patient enough ($\de$ high enough), optimal externally-enforced weak binding can be self-enforced
@@ -443,7 +446,7 @@ Must set tariff at or below specified level (aka tariff cap)
 		\end{itemize}
 	 
 \end{itemize}
-
+\hyperlink{repeated<1>}{\beamergotobutton{Repeated Game Intuition}}
 \end{frame}
 
 
@@ -481,34 +484,6 @@ Must set tariff at or below specified level (aka tariff cap)
 \end{itemize}
 \end{frame}
 \end{comment}
-
-
-\begin{frame}{Repeated Game Intuition}
-\pause
-Legislature: break agreement if punishment not strong enough
-\pause
-\begin{itemize}
-	\item i.e. if one period of gain from cheater's payoff is greater than T-periods of loss from trade-war
-\end{itemize}
-
-\vskip.1in
-\pause
-Lobby: solve for lowest effort ($\ov{e}_b$) that breaks this constraint
-\pause
-\begin{itemize}
-	\item pay $\ov{e}_b$ if it's less than gain from $T$ periods of trade-war profits
-\end{itemize}
-
-\pause
-\vskip.1in
-Executives: set lowest $\bta$ that makes paying $\ov{e}_b$ unprofitable \textit{and} satisfies legislature's condition
-\pause
-\begin{itemize}
-	\item[$\Rightarrow$] $e_b=0$, agreement remains in force
-	\pause
-	\item High tariffs, no lobbying, no trade disruptions
-\end{itemize}
-\end{frame}
 
 
 \section{Escape Clause}
@@ -668,6 +643,38 @@ Taking into account endogenous political forces alongside exogenous ones...
 \end{itemize}
 
 \end{frame}
+
+\appendix
+\begin{frame}[label=repeated]
+\frametitle{Repeated Game Intuition}
+\pause
+Legislature: break agreement if punishment not strong enough
+\pause
+\begin{itemize}
+	\item i.e. if one period of gain from cheater's payoff is greater than T-periods of loss from trade-war
+\end{itemize}
+
+\vskip.1in
+\pause
+Lobby: solve for lowest effort ($\ov{e}_b$) that breaks this constraint
+\pause
+\begin{itemize}
+	\item pay $\ov{e}_b$ if it's less than gain from $T$ periods of trade-war profits
+\end{itemize}
+
+\pause
+\vskip.1in
+Executives: set lowest $\bta$ that makes paying $\ov{e}_b$ unprofitable \textit{and} satisfies legislature's condition
+\pause
+\begin{itemize}
+	\item[$\Rightarrow$] $e_b=0$, agreement remains in force
+	\pause
+	\item High tariffs, no lobbying, no trade disruptions
+\end{itemize}
+\hyperlink{self<1>}{\beamergotobutton{Go Back}}
+\end{frame}
+
+
 
 
 \end{document}
