@@ -364,15 +364,16 @@ Once agreement is set, cooperation enforced by repeated-game punishments conditi
 %It's easy to see that weak bindings keep lobbying alive relative to strong bindings
 \begin{itemize}[<+->]
 	\item Will TA be used to discourage lobbying? Depends on how gov't welfare varies in $\ga$
-	\item With standard Baldwin-style objective function, welfare always increases with $\ga$:
+	\item With standard Baldwin-style objective function, welfare always increases with $\ga$\spaceskip1pt
 \[
-  W = \mathit{CS}_X(\tau) + \ga \cdot \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
-\]
+  W = \mathit{CS}_X(\tau) + \ga \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
+\] 
+
 	\begin{itemize}
 		\item Note `Protection for Sale' objective function is isomorphic
 	\end{itemize}
 
-	\item If we instead make weights sum to 1, welfare is no longer monotonic in $\ga$
+	\item If weights must sum to 1, welfare no longer monotonic in $\ga$
 \end{itemize}
 \end{frame}
 
@@ -435,7 +436,7 @@ Must set tariff at or below specified level (aka tariff cap)
 \pause
 \begin{itemize}[<+->]
 	\item $\ga$ exogenous (Bagwell $\&$ Staiger 2005): if governments patient enough ($\de$ high enough), optimal externally-enforced weak binding can be self-enforced
-  \item $\ga$ endogenous: not necessarily true
+  \item $\ga$ endogenous: optimal externally-enforced weak binding may not be self-enforcing
 		\begin{itemize}
 			\item Problem: lobby is an additional repeated-game player
 			\item Lobby's incentive constraint is harder to satisfy as $\de$ increases
