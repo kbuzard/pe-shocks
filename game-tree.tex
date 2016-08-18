@@ -1,4 +1,4 @@
-\begin{comment}
+%\begin{comment}
 \documentclass[10pt]{article}
 
 \addtolength{\textwidth}{1.3in}
@@ -49,7 +49,7 @@ bookmarksopen=true]{hyperref}
 
 
 \begin{document}
-\end{comment}
+%\end{comment}
 
 \tikzset{
 % Two node styles for game trees: solid and hollow
@@ -62,27 +62,24 @@ hollow node/.style={circle,draw,inner sep=1.5,fill=white}
 \tikzstyle{level 1}=[level distance=10mm,sibling distance=8mm]
 \tikzstyle{level 2}=[level distance=8mm,sibling distance=8mm]
 % The Tree
-\node(0)[solid node,label=above:{$E,E^*$}]{} 
+\node(0)[solid node,label=above:{$G,G^*$}]{} 
 child{node(1)[solid node,label=below:{$0$}]{}}
 child{[white] node(2)[solid node,xshift=12,label=above:{L}]{}  
 	child{[black] node(4)[solid node,label=below:{$0$}]{}}
 	child{[white] node(5)[hollow node,xshift=12]{} 
-	 child[sibling distance=11mm]{[black] node(22)[solid node]{}  }
-	 child{[white] node(24)[solid node,xshift=7]{}
-		child[sibling distance=8mm]{[black] node(7)[solid node,label=below:{$-\infty$}]{}}
-		child[sibling distance=8mm]{[white] node(8)[solid node,xshift=12]{}  
-			child[sibling distance=10mm]{[black] node(10)[solid node]{}  }
-			child{[white] node(11)[solid node,xshift=7]{}
-				child[sibling distance=5mm]{[black] node(13)[solid node,label=below:{$0$}]{}}
-				child{[white] node(15)[solid node,xshift=7]{}	}
-				child[sibling distance=5mm]{[black] node(14)[solid node,label=above:{$\infty$}]{} }
-				}
-			child[sibling distance=10mm]{[black] node(12)[solid node]{}  }
+	 %child[sibling distance=11mm]{[black] node(22)[solid node]{}  }
+	 child{[black] node(22)[solid node]{}  }
+	 child{[white] node(24)[solid node,xshift=12]{}
+		child{[black] node(7)[solid node,label=below:{$-\infty$}]{}}
+		child{[white] node(8)[solid node,xshift=12]{}  
+			child{[black] node(10)[solid node]{}  }
+			child{[white] node(11)[solid node,xshift=14]{} }
+			child{[black] node(12)[solid node]{}  }
 			%edge from parent node[black, xshift=20]{$\ta$} 
 			}
-		child[sibling distance=8mm]{[black] node(9)[solid node,label=above:{$\infty$}]{} }
+		child{[black] node(9)[solid node,label=above:{$\infty$}]{} }
 		}
-	 child[sibling distance=11mm]{[black] node(23)[solid node]{}  }
+	 child{[black] node(23)[solid node]{}  }
 	 edge from parent node[black, xshift=20]{$e_b$} 	
 	 }
 	child{[black] node(6)[solid node,label=above:{$\infty$}]{}}
@@ -95,7 +92,6 @@ child{node(3)[solid node,label=above:{$\infty$}]{}
     \draw[solid,bend right](1)to(3);
 		\draw[solid,bend right](4)to(6);
 		\draw[solid,bend right](7)to(9);
-		\draw[solid,bend right](13)to(14);
 		\draw[solid,bend right](10)to(12);
 		\draw[solid,bend right](22)to(23);
 % labels
@@ -104,12 +100,11 @@ child{node(3)[solid node,label=above:{$\infty$}]{}
 		\node[above,xshift=3,yshift=5]at(5){$N$}; 
 		\node[above,xshift=6,yshift=5]at(8){$Leg$}; 
 		\node[above,xshift=5,yshift=5]at(12){$L$};
-		\node[above,xshift=7,yshift=5]at(15){$N$};
 		\draw[solid](5)circle(.05cm);
 		\draw[solid](0)circle(.15cm);
-		%\node[right]at (18) {$W_E\left(\btn\right),$};
-		%\node[right,yshift=-10]at (18) {$\pi\left(\tau^n\right)-e_b -e_n,$};
-		%\node[right,yshift=-20]at (18) {$W_{ML}\left(\ga(e_n,\ta_n),\btn\right)$};
+		\node[right]at (11) {$W_E\left(\btn\right),$};
+		\node[right,yshift=-10]at (11) {$\pi\left(\tau^n\right)-e,$};
+		\node[right,yshift=-20]at (11) {$W_{ML}\left(\ga(e_n,\ta_n),\btn\right)$};
 \end{tikzpicture}
 
-%\end{document}
+\end{document}
