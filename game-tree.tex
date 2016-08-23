@@ -75,7 +75,7 @@ child{[white] node(2)[solid node,xshift=12,label=above:{L}]{}
 			child{[black] node(10)[solid node,label=below:{$0$}]{}  }
 			child{[white] node(11)[solid node,xshift=14]{} }
 			child{[black] node(12)[solid node,label=above:{$\infty$}]{}  }
-			%edge from parent node[black, xshift=20]{$\ta$} 
+			edge from parent node[black, xshift=20]{$\tau$} 
 			}
 		child{[black] node(9)[solid node,label=above:{$\infty$}]{} }
 		edge from parent node[black, xshift=20]{$s$} 	
@@ -103,9 +103,9 @@ child{node(3)[solid node,label=above:{$\infty$}]{}
 		%\node[above,xshift=5,yshift=5]at(12){$L$};
 		\draw[solid](5)circle(.05cm);
 		\draw[solid](0)circle(.15cm);
-		\node[right]at (11) {$W_E\left(\btn\right),$};
-		\node[right,yshift=-10]at (11) {$\pi\left(\tau^n\right)-e,$};
-		\node[right,yshift=-20]at (11) {$W_{ML}\left(\ga(e_n,\ta_n),\btn\right)$};
+		\node[left]at (11) {$\tau^*$};
+		\node[right]at (11) {$W\left(\ga(e,s),\bm{\tau}\right),W^*\left(\ga(e^*,s^*),\bm{\tau}\right)$};
+		\node[right,yshift=-10]at (11) {$\pi\left(\tau \right)-e$};
 \end{tikzpicture}
 
 %\end{document}
