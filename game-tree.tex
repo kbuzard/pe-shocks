@@ -1,4 +1,4 @@
-%!TEX root = draft
+% !TEX root = ../draft.tex
 \begin{comment}
 \documentclass[10pt]{article}
 
@@ -66,10 +66,10 @@ hollow node/.style={circle,draw,inner sep=1.5,fill=white}
 \node(0)[solid node,label=above:{$G,G^*$}]{} 
 child{node(1)[solid node,label=below:{$0$}]{}}
 child{[white] node(2)[solid node,xshift=12,label=above:{L}]{}  
-	child{[black] node(4)[solid node,label=below:{$0$}]{}}
+	child{[black] node(4)[solid node,label=below:{$-\infty$}]{}}
 	child{[white] node(5)[hollow node,xshift=12]{} 
 	 %child[sibling distance=11mm]{[black] node(22)[solid node]{}  }
-	 child{[black] node(22)[solid node,,label=below:{$-\infty$}]{}  }
+	 child{[black] node(22)[solid node,,label=below:{$0$}]{}  }
 	 child{[white] node(24)[solid node,xshift=12]{}
 		child{[black] node(7)[solid node,label=below:{$0$}]{}}
 		child{[white] node(8)[solid node,xshift=12]{}  
@@ -79,10 +79,10 @@ child{[white] node(2)[solid node,xshift=12,label=above:{L}]{}
 			edge from parent node[black, xshift=20]{$\tau$} 
 			}
 		child{[black] node(9)[solid node,label=above:{$\infty$}]{} }
-		edge from parent node[black, xshift=20]{$s$} 	
+		edge from parent node[black, xshift=20]{$e$} 	
 		}
 	 child{[black] node(23)[solid node,label=above:{$\infty$}]{}  }
-	 edge from parent node[black, xshift=20]{$e$} 	
+	 edge from parent node[black, xshift=20]{$s$} 	
 	 }
 	child{[black] node(6)[solid node,label=above:{$\infty$}]{}}
 	edge from parent node[black, xshift=23]{$\bta$} 
@@ -98,9 +98,9 @@ child{node(3)[solid node,label=above:{$\infty$}]{}
 		\draw[solid,bend right](10)to(12);
 		\draw[solid,bend right](22)to(23);
 % labels
-		\node[above,xshift=3,yshift=5]at(2){$L$}; 
+		\node[above,xshift=3,yshift=5]at(2){$N$}; 
 		\node[above,xshift=3,yshift=5]at(24){$G$}; 
-		\node[above,xshift=3,yshift=5]at(5){$N$}; 
+		\node[above,xshift=3,yshift=5]at(5){$L$}; 
 		\node[above,xshift=6,yshift=5]at(8){$G^*$}; 
 		%\node[above,xshift=5,yshift=5]at(12){$L$};
 		\draw[solid](5)circle(.05cm);
