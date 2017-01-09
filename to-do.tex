@@ -106,7 +106,6 @@ PE Shocks To-Do list
 				\item Perhaps higher level model like BS GE model or some alternative approach that is not so rinky dink (my words)
 			\end{itemize}
 		\item I like the way you use Bagwell and Staiger (2005) as your benchmark.  But I also wondered whether Maggi and Rodriguez-Clare (2007, henceforth MRC) also offered a useful benchmark.  I know you did have comparisons to their paper in many places but it would be useful if this could be more systematic, and if your paper could draw careful parallels to your assumptions and theirs.  In both papers, the government wants to set a tariff cap in order to be able to extract rents from lobbies afterwards.  But your mechanisms seem quite different.  They have capital mobility whereas your factors are specific to each sector.  If capital is highly immobile they have a hold-up problem, which creates an incentive for lobbies to try to prevent too much liberalization under the agreement.  What drives this feature in your model?  Here I think it would be useful to explain carefully the sequence of events in your set-up more carefully.  What is the relationship between lobby effort level and tariff policy?  Is effort fixed first, after which the government sets its tariff?  If so it seems to me that would drive a kind of hold-up because lobbying effort is sunk.  It would be useful to be clearer about this so we can really understand where the results are coming from and how they compare to MRC. 
-		\item In general it seems to me that you seem to ``dependent" on Bagwell and Staiger... (e.g. beginning of Sections 4 and 6).
 		\item DGH / MRC analogy from JIE$\_$revision
 			\begin{itemize}
 				\item Footnote fn:mrc1 is good place to start to put references to MRC 2007
@@ -124,8 +123,6 @@ PE Shocks To-Do list
 						\item I claim that the government welfare function presented in this paper can be interpreted as a special case of the general welfare function proposed in DGH97. They specify government welfare as $G(a,c)$ where $a$ is the policy vector $\left(\left(\tau,\tau^*\right)\right)$ and $c$ is a vector of payments from each lobby ($e$).
 						
 						\item To be clear about the differences, the non-unitary model examined in the body of the paper assumes that different levels of lobbying effort result in different \textit{decision-makers}. In the unitary model of DGH97, one decision maker makes different decisions depending on the level of lobbying effort. This distinction is mainly important in the context of the repeated game. Whereas the unitary decision-maker evaluates future welfare according to the lobbying effort she expects to experience in the future, the non-unitary decision-maker knows that different decision-makers will be in power and evaluates future welfare with her own preferences.
-	
-						\item Denote the government's welfare function as $W_G(\tau,\tau^*,e(\tau)) = W(\tau,\tau^*) + g(e(\tau))$ where $W = CS_X + PS_X + CS_Y + PS_Y +TR$ is social welfare. Then do analysis...
 					\end{itemize}
 			\end{itemize}
 		\item Comparison to GH94
@@ -161,6 +158,35 @@ PE Shocks To-Do list
 						\item Or rather, should I follow Limao and Tovar?
 					\end{itemize}
 			\end{itemize}
+		\item Approach: denote the government's welfare function as $W_G(\tau,\tau^*,e) = W(\tau,\tau^*) + g(e)$ where $W = CS_X + PS_X + CS_Y + PS_Y +TR$ is social welfare.
+			\begin{itemize}
+				\item This is like DGH97 (they write as $G(a,C)$, so no problem putting an $e$ in there), BS1999 `Economic Theory of GATT' (I think), $W(p,\tilde{p}^w)$
+					\begin{itemize}
+						\item I've already written $W(\ga(e,s),\tau,\tau^*)$
+						\item I think people are most concerned with underlying economic model. I need a numeraire anyway. DGH97 doesn't have numeraire b/c small country
+					\end{itemize}
+				\item Then specialize to BS2005 when necessary (tariff cap example, picture for interior max of gov't obj fcn)
+				\item Menu auction framework doesn't work with one lobby because gov't doesn't get any surplus. Switch to MRC07 (bargaining). But want decreasing returns (LT).
+				\item Make argument that want this version like Baldwin-style literature for comparison
+					\begin{itemize}
+						\item Want to make argument that things go wrong in standard model when you insert $e$ into $\ga$ (also, when $e$ goes into $\ga$ need to subtract $e$ too, and this often results in interior optimum)
+						\item This is an easier way to get the result from MRC07 / LT, can make comparisons, develop design results more easily
+					\end{itemize}
+				\item Want non-contingent set-up for different assumptions on timing / meaning of $s$; contingent only makes sense if $e$ chosen after $s$ and $s$ is completely verifiable to lobby. If $s$ is political uncertainty, it probably realizes after/contemporaneously with $e$
+					\begin{itemize}
+						\item I can leave general, then specify for escape clause. Or I can just go with my order of $s$ then $e$, which assumes $s$ is an economic shock.
+					\end{itemize}
+				\item Bargaining framework is not appealing when gov't is non-unitary
+				\item Limao $\&$ Tovar: lobby objective the same as mine. $G = \Psi(C) + aW(p)$. Gov't decides whether to commit in int'l agreement, then Nash bargains with lobby over $C$ and policies $(t,\tau)$ where $\tau$ is a NTB
+					\begin{itemize}
+						\item Section 3.3: They show exactly what I need to show. If gov't can commit with this obj fcn, it will as long as it doesn't have all the bargaining power and there are decreasing returns to lobbying.
+						\item Gov't does not have an interest in maximizing joint surplus, because it doesn't appropriate all the gains
+					\end{itemize}
+				\item Only difference between Limao / Tovar and mine is $\Psi(e)$ vs. $[\ga(e) - 1]\pi_x(\tau)$
+					\begin{itemize}
+						\item This means there's a positive cross partial between $e$ and $\tau$ in my formulation, so that an incraese in $\tau$ increases $W$ more the higher is $e$
+					\end{itemize}
+			\end{itemize}
 	\end{itemize}
 
 
@@ -181,6 +207,7 @@ Do I need to add a numeraire so I can put $e$ in terms of it?
 		\begin{itemize}
 			\item and make clear that GH is isomorphic / provides microfoundations for Baldwin objective function
 			\item More on Coates $\&$ Ludema (2001)
+			\item Check out Ben and James new paper
 		\end{itemize}
 	\item I think that I need to bring people along more carefully from GH/MRC to what I'm doing
 	\item Paola: How do I want to sell the paper?
@@ -342,9 +369,6 @@ When would lobby exert effort to top up?
 
 \section{Lobby's optimal effort}
 Need to be clear about when lobby's optimal $\tau$ is higher than gov'ts: that is, when TA would want to rein in lobby and escape clause would ruin that
-
-
-\section{Add empirics / evidence?}
 
 
 \section{Existence proofs?}
