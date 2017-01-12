@@ -162,7 +162,7 @@ In the first stage, the governments choose the trade agreement tariffs via a neg
 
 Government welfare in both countries is additively separable in $\tau$ and we can write the welfare of the foreign government as $W^*(\ga^*(s^*,e^*),\tau,\tau^*)$ = $W_Y^*(\ga^*(s^*,e^*),\tau^*) + W_X^*(\tau)$. Therefore maximizing Expression~\ref{eq:jv} in $\tau$ is equivalent to maximizing $W_X(\ga(s,e),\tau) + W_X^*(\tau)$. The trade agreement tariff is then given by
 \begin{equation}
-  \tau^E(\ga(s,e)) = \max_\tau W_X(\ga(s,e),\tau) + W_X^*(\tau)
+  \tau^a(\ga(s,e)) = \max_\tau W_X(\ga(s,e),\tau) + W_X^*(\tau)
   \label{eq:eff}
 \end{equation}
 As in the applied tariff problem, I assume the realization of $\ga$ is below the threshold need to ensure the second order condition is satisfied.
@@ -201,7 +201,7 @@ In order to derive the jointly efficient tariff choice---that is, the tariff tha
 
 The internationally efficient home tariff is the $\tau$ that maximizes $W(\ga(s,e),\tau,\tau^*) + W^*(\ga^*(s^*,e^*),\tau,\tau^*)$. Since government welfare in both countries is additively separable in $\tau$, this is equivalent to maximizing $W_X(\ga(s,e),\tau) + W_X^*(\tau)$. The solution to this problem is the internationally efficient tariff
 \begin{equation}
-  \tau^E(\ga(s,e)) = \frac{4\left[\ga(s,e)-1\right]}{25-4\ga(s,e)}
+  \tau^a(\ga(s,e)) = \frac{4\left[\ga(s,e)-1\right]}{25-4\ga(s,e)}
   \label{eq:eff}
 \end{equation}
 The second order condition is satisfied for $\ga < \frac{25}{4}$, so again for all values of $\ga$ that lead to a non-prohibitive tariff.
@@ -595,12 +595,12 @@ In order to compare this with Equation (\ref{eq:ea}) for weak bindings, note tha
 	\]
 where the first equality follows by the fact that the impact of a marginal unit of ex-ante lobbying effort on ex-post effort is to raise the trade agreement tariff. This is a tariff cap, and so we need to calculate the effect of this increased cap on ex-post effort. The second equality represents that this is just the inverse of the marginal impact of ex-post lobbying effort on the non-cooperative tariff; the super-script on the $\tau$ in the denominator has been changed to $N$ to denote that ex-post tariff setting is non-cooperative; that on the $\tau$ in the numerator has been change to $E$ to denote that trade agreement tariff setting is cooperative. The fourth equality unpacks the partial derivatives to show the intermediate impact of $\ga$. This leads to the final expression in which the common terms have been canceled.
 
-Multiplying Equation (\ref{eq:ea}) by $\frac{\frac{\partial \tau^N}{\partial \ga}}{\frac{\partial \tau^E}{\partial \ga}}$, we have
+Multiplying Equation (\ref{eq:ea}) by $\frac{\frac{\partial \tau^N}{\partial \ga}}{\frac{\partial \tau^a}{\partial \ga}}$, we have
 	\begin{equation}
-	  \frac{\partial \pi}{\partial \tau} \frac{\partial \tau^N}{\partial \ga} \frac{\partial \ga}{\partial e^{EA}} = \frac{\frac{\partial \tau^N}{\partial \ga}}{\frac{\partial \tau^E}{\partial \ga}} + 1.
+	  \frac{\partial \pi}{\partial \tau} \frac{\partial \tau^N}{\partial \ga} \frac{\partial \ga}{\partial e^{EA}} = \frac{\frac{\partial \tau^N}{\partial \ga}}{\frac{\partial \tau^a}{\partial \ga}} + 1.
 			\label{eq:ea2}
 		\end{equation}
-Because $\frac{\frac{\partial \tau^N}{\partial \ga}}{\frac{\partial \tau^E}{\partial \ga}} > 0$, the solution to the ex-ante weak binding first order condition as given in Equation~(\ref{eq:ea2}) is smaller than the solution to Equation~(\ref{eq:nta}), so that the lobby exerts less effort in the ex-ante stage of trade agreement negotiations than when there is no trade agreement. Since $\tau^E(\cdot) < \tau^N(\cdot)$ for all $e$, $\tau^{EA}\left(e^{EA}\right) < \tau^N\left(e^N\right)$ when bindings are weak.
+Because $\frac{\frac{\partial \tau^N}{\partial \ga}}{\frac{\partial \tau^a}{\partial \ga}} > 0$, the solution to the ex-ante weak binding first order condition as given in Equation~(\ref{eq:ea2}) is smaller than the solution to Equation~(\ref{eq:nta}), so that the lobby exerts less effort in the ex-ante stage of trade agreement negotiations than when there is no trade agreement. Since $\tau^a(\cdot) < \tau^N(\cdot)$ for all $e$, $\tau^{EA}\left(e^{EA}\right) < \tau^N\left(e^N\right)$ when bindings are weak.
 
 In contrast, the last term of the first order condition when bindings are strong is zero since the lobby does not exert any effort at the ex-post stage. The right hand side of Equation~\ref{eq:ea2} then has just the one term, and it can be either greater than or less than 1, so we cannot bound the ex-ante effort level. $\hfill\blacksquare$
 \end{comment}
