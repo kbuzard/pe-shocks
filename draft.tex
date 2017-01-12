@@ -138,6 +138,13 @@ where $\mathit{CS}$ is consumer surplus, $\pi$ represents profits, $\ga(s,e)$ is
 
 %Assumption~\ref{as:ga_c3} formalizes the intuition that the government favors the import-competing industry more the higher is its lobbying effort, but that there are diminishing returns to lobbying activity. 
 
+Expression~\ref{eq:wel} can be written $W(\ga(s,e),\tau,\tau^*) = W_X(\ga(s,e),\tau) +W_Y(\tau^*)$, where $W_X(\ga(s,e),\tau)$ is the utility derived from consumer surplus, producer surplus and tariff revenues in the import-competing industry and $W_Y(\tau^*)$ is the utility derived from consumer and producer surplus in the exporting industry. As there are no interactions between $\tau$ and $\tau^*$, when setting the tariff unilaterally, the government simply maximizes $W(\ga(s,e),\tau, \tau^*)$ by choice of $\tau$ given $\ga(s,e)$ and $\tau^*$ and sets the non-cooperative tariff
+\begin{equation}
+  \tau^N(\ga(s,e)) = \max_\tau W_X(\ga(s,e),\tau)
+  \label{eq:nash}
+\end{equation}
+I refer to this as the Nash tariff because it is the result of Nash equilibrium in the non-cooperative game between the governments. $\tau^N$ is increasing in $\ga$ and I assume the realization of $\ga$ is below the threshold need to ensure the second order condition is satisfied. This assumption does not in general rule out that the solution to Expression~\ref{eq:nash} could be the prohibitive tariff.
+
 Given the government's preferences, the home lobby chooses its lobbying effort $e$ to maximize profits net of lobbying effort:
 \begin{equation}
   U_\text{L} = \pi(\tau(\ga(s,e))) - e
@@ -152,11 +159,21 @@ In the first stage, the governments choose the trade agreement tariffs via a neg
   W(\ga(s,e),\ga^*(s^*,e^*),\tau,\tau^*) = W(\ga(s,e),\tau,\tau^*) + W^*(\ga^*(s^*,e^*),\tau,\tau^*)
   \label{eq:jv}
 \end{equation}
-Note that in this symmetric environment, this is the Nash bargaining solution where the disagreement point is the welfare resulting from the Nash equilibrium in the non-cooperative game.
+
+Government welfare in both countries is additively separable in $\tau$ and we can write the welfare of the foreign government as $W^*(\ga^*(s^*,e^*),\tau,\tau^*)$ = $W_Y^*(\ga^*(s^*,e^*),\tau^*) + W_X^*(\tau)$. Therefore maximizing Expression~\ref{eq:jv} in $\tau$ is equivalent to maximizing $W_X(\ga(s,e),\tau) + W_X^*(\tau)$. The trade agreement tariff is then given by
+\begin{equation}
+  \tau^E(\ga(s,e)) = \max_\tau W_X(\ga(s,e),\tau) + W_X^*(\tau)
+  \label{eq:eff}
+\end{equation}
+As in the applied tariff problem, I assume the realization of $\ga$ is below the threshold need to ensure the second order condition is satisfied.
+
+Note that in this symmetric environment, this problem can be solved by applying the Nash bargaining solution where the disagreement point is the welfare resulting from the Nash equilibrium in the non-cooperative game.
 
 
+\begin{comment}
 \subsection{Nash Tariffs and Internationally Efficient Tariffs}
 \label{sec:nasheff}
+
 The home government's welfare is $W(\ga(s,e),\tau,\tau^*) = W_X(\ga(s,e),\tau) +W_Y(\tau^*)$, where
 \[
   W_X(\ga(s,e),\tau) = \frac{9}{98} - \frac{5}{49}\tau - \frac{34}{49}\tau^2 +\frac{1}{98}\ga(s,e)\left[ 8 + 16\tau + 8\tau^2 \right]
@@ -173,6 +190,7 @@ When setting the tariff unilaterally, the government simply maximizes $W(\ga(s,e
 \end{equation}
 I refer to this as the Nash tariff because it is the result of Nash equilibrium in the non-cooperative game between the governments. $\tau^N$ is increasing in $\ga$ and the second order condition is satisfied for all values of $\ga < 17/2$. Because $\ga = 7/4$ is enough to achieve the prohibitive tariff of $1/6$ I assume that this condition is satisfied in equilibrium. 
 
+
 In order to derive the jointly efficient tariff choice---that is, the tariff that maximizes the joint welfare of the home and foreign government, we also need the welfare of the foreign government. We can write $W^*(\ga^*(s^*,e^*),\tau,\tau^*)$ = $W_Y^*(\ga^*(s^*,e^*),\tau^*) + W_X^*(\tau)$, where
 \[
   W_Y^*(\ga^*(s^*,e^*),\tau^*) = \frac{9}{98} - \frac{5}{49}\tau^* - \frac{34}{49}(\tau^*)^2 +\frac{1}{98}\ga^*(s^*,e^*)\left[ 8 + 16\tau^* + 8(\tau^*)^2 \right]
@@ -187,6 +205,7 @@ The internationally efficient home tariff is the $\tau$ that maximizes $W(\ga(s,
   \label{eq:eff}
 \end{equation}
 The second order condition is satisfied for $\ga < \frac{25}{4}$, so again for all values of $\ga$ that lead to a non-prohibitive tariff.
+\end{comment}
 
 %In the event of a trade war and facing this tariff-setting behavior by the legislature, the lobby maximizes $\pi\left(\tau^n\left(\ga\left(e_n,\ve_n\right)\right)\right) - e_n$. In order to predict the Nash tariff, the political weighting function and form of political uncertainty must be specified. Take for instance $\ga(e,\ve) = 1.25 + C^{.2}$ with $\ve$ distributed uniformly on $[-0.25,0.25]$. Facing this specification of the political process, the lobby maximizes its objective function at $e_n = 0.00166$, which produces a Nash tariff of $0.129$.
 
@@ -302,7 +321,7 @@ I assume for simplicity of exposition that the government does not set the tarif
 
 This is in contrast to the case of exogenous political pressure, for which \Textcite{bs2005} show several interesting results.\footnote{Note that in their treatment, Bagwell and Staiger (2005) assume linear supply and demand.} In particular, they find that when governments negotiate commitments that take the form of weak bindings, the tariff caps they choose imply that applied tariffs will be set strictly below the bound level when governments experience low realizations of political pressure.
 
-To understand how the optimal home tariff $\tau_e^R$ under the trade agreement is set, notice that it must maximize joint government welfare. As argued in Section~\ref{sec:nasheff}, joint government welfare (with variables that do not affect the $X$ sector suppressed) is
+To understand how the optimal home tariff $\tau_e^R$ under the trade agreement is set, notice that it must maximize joint government welfare. As argued in Section~\ref{sec:stage}, joint government welfare (with variables that do not affect the $X$ sector suppressed) is
   \begin{equation}
 		W_x \left(\ga(e),\tau) \right) + W_x^*\left(\tau \right)
 	  \label{exp:1}
