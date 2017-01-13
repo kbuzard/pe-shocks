@@ -10,8 +10,6 @@ CSy = ((3 +3*t)^2)/98
 PSy = ((4 -3*t)^2)/98
                           
 gtn = (68*t + 5)/(8*(1+t))    #gamma as fcn of tau, unilateral maximization
-e = (gtn - 1)^4
-
 
 #some values of tau are so low that gamma would be less than one
 gtn2 = matrix(0,length(gtn),1)
@@ -21,16 +19,12 @@ for (j in 1:length(gtn)) {
   gtn2[j] = max(x,1)
 }  
 
-w = 1/(4+gtn2)                 #create weights as function of gamma
-                          
-W = w*CSx + gtn2*w*PSx + w*CSy + w*PSy + w*TR  #fully weighted welfare
-plot(t,W)
-                          
-W2 = CSx + gtn2*PSx + CSy + PSy + TR  #partially weighted welfare
-plot(t,W2)
+W = CSx + gtn2*PSx + CSy + PSy + TR  #partially weighted welfare
+plot(t,W, type = "l",xlab = "Tariff",ylab = "Gov't Welfare")
 
-W3 = CSx + gtn2*PSx + CSy + PSy + TR - e  #partially weighted welfare - e
-plot(t,W3)
+e = (gtn2 - 1)^10
+W2 = CSx + gtn2*PSx + CSy + PSy + TR - e  #partially weighted welfare - e
+plot(t,W2, type = "l",xlab = "Tariff",ylab = "Gov't Welfare")
 
                           
 ##########################################################
