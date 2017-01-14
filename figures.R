@@ -22,9 +22,14 @@ for (j in 1:length(gtn)) {
 W = CSx + gtn2*PSx + CSy + PSy + TR  #partially weighted welfare
 plot(t,W, type = "l",xlab = "Tariff",ylab = "Gov't Welfare")
 
-e = (gtn2 - 1)^10
-W2 = CSx + gtn2*PSx + CSy + PSy + TR - e  #partially weighted welfare - e
+e = (gtn2 - 1)^5
+e = -(log(2 - gtn2))/30
+W2 = CSx + gtn2*PSx + CSy + PSy + TR - gtn2*e  #partially weighted welfare - e
 plot(t,W2, type = "l",xlab = "Tariff",ylab = "Gov't Welfare")
+g = which.max(W2)
+
+P = PSx - e
+l = which.max(P) #lobby's optimum
 
                           
 ##########################################################
