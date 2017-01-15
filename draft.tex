@@ -146,7 +146,7 @@ The per-period welfare function of the home government is given by
   W(\ga(s,e),\tau,\tau^*) = \mathit{CS}_X(\tau) + \ga(s,e) \cdot \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau) - e
   \label{eq:wel}
 \end{equation}
-where $\mathit{CS}$ is consumer surplus, $\pi$ represents profits, $\ga(s,e)$ is the weight placed on profits (producer surplus) in the import-competing industry, $s$ is an exogenous state variable, $e$ is lobbying effort in terms of the numeraire, and $\mathit{TR}$ is tariff revenue. Here, the weight the government places on the profits of the import-competing industry, $\ga(s,e)$, may be affected both by a shock (due to \Textcite{ms2011}) and by the level of lobbying effort.\footnote{While the standard `Protection for Sale' modeling of \Textcite{gh94} would specify $W = C + aW$, this form allows the incorporation of endogenous political pressure into the government objective function that is most often used to examine questions concerning the design of international trade agreements and the institutions that facilitate them. An isomorphism can be made between the two forms as discussed in \Textcite{buzard2013b}.} I will use ``$\ga$'' to represent the political economy parameter in a general sense, ``$\ga(s)$'' when treating the case of pressure arising from exogenous shocks only, and ``$\ga(e)$'' when referring to the case where political pressure  results from the rent-seeking behavior of lobbies only.
+where $\mathit{CS}$ is consumer surplus, $\pi$ represents profits, $\ga(s,e)$ is the weight placed on profits (producer surplus) in the import-competing industry, $s$ is an exogenous state variable, $e$ is lobbying effort in terms of the numeraire, and $\mathit{TR}$ is tariff revenue. Here, the weight the government places on the profits of the import-competing industry, $\ga(s,e)$, may be affected both by a shock (due to \Textcite{ms2011}) and by the level of lobbying effort.\footnote{While the standard `Protection for Sale' modeling of \Textcite{gh94} would specify $W = C + aW$, this form allows the incorporation of endogenous political pressure into the government objective function that is most often used to examine questions concerning the design of international trade agreements and the institutions that facilitate them. See Section~\ref{sec:objfcn} for a detailed discussion.} I will use ``$\ga$'' to represent the political economy parameter in a general sense, ``$\ga(s)$'' when treating the case of pressure arising from exogenous shocks only, and ``$\ga(e)$'' when referring to the case where political pressure  results from the rent-seeking behavior of lobbies only.
 
 %\begin{assumption}
  % $\ga(s,e)$ is continuously differentiable, strictly increasing and concave in $e$.
@@ -238,67 +238,35 @@ The second order condition is satisfied for $\ga < \frac{25}{4}$, so again for a
 
 \subsection{Political Objective Functions and the Role of Trade Agreements}
 \label{sec:objfcn}
-Approach: denote the government's welfare function as $W_G(\tau,\tau^*,e) = W(\tau,\tau^*) + g(e)$ where $W = CS_X + PS_X + CS_Y + PS_Y +TR$ is social welfare.
-			\begin{itemize}
-				\item This is like DGH97 (they write as $G(a,C)$, so no problem putting an $e$ in there), BS1999 `Economic Theory of GATT' (I think), $W(p,\tilde{p}^w)$
-				\item Careful of transferable vs. non-transferable utility
-					\begin{itemize}
-						\item I've already written $W(\ga(e,s),\tau,\tau^*)$
-						\item It's the truthful contribution schedule in GH94 that implies the constant weighting of $1+a$ for sectors represented by a lobby. Won't get this clean, constant weighting with other schedules.
-						\item I claim that the government welfare function presented in this paper can be interpreted as a special case of the general welfare function proposed in DGH97. They specify government welfare as $G(a,c)$ where $a$ is the policy vector $\left(\left(\tau,\tau^*\right)\right)$ and $c$ is a vector of payments from each lobby ($e$).						
-						\item To be clear about the differences, the non-unitary model examined in the body of the paper assumes that different levels of lobbying effort result in different \textit{decision-makers}. In the unitary model of DGH97, one decision maker makes different decisions depending on the level of lobbying effort. This distinction is mainly important in the context of the repeated game. Whereas the unitary decision-maker evaluates future welfare according to the lobbying effort she expects to experience in the future, the non-unitary decision-maker knows that different decision-makers will be in power and evaluates future welfare with her own preferences.
-					\end{itemize}
-				\item Then specialize to BS2005 when necessary (tariff cap example, picture for interior max of gov't obj fcn)
-				\item Menu auction framework doesn't work with one lobby because gov't doesn't get any surplus. Switch to MRC07 (bargaining). But want decreasing returns (LT).
-				\begin{itemize}
-					\item The model does admit an interpretation in which the same branch of government both negotiates the trade agreement and decides on the applied tariff ex-post, as long as the one branch is non-unitary. The model analyzed in the body of this paper can be given an interpretation in line with Maggi and Rodriguez-Clare 2007 if capital is completely mobile in the long run. In Appendix B.1, I compare the results of this paper to those from a model with a unitary government, as this would seem to bring the model most closely into alignment with Maggi and Rodriguez-Clare 2007 and a large part of the literature.
-					\item Consider the following, alternative interpretation of the model. Assume there is only one decision-making body but the lobby is not active during the ex-ante phase, that is, when the trade agreement is being negotiated. For ease of exposition, take this single decision-making body to be the legislature so that the single decision-making body has the preferences in Expression 2. At the ex-ante stage, the welfare function would reduce to that in Expression 4. This interpretation fits into the framework of Maggi and Rodriguez-Clare 2007 by assuming that capital is perfectly mobile in the long run so that it is not worthwhile for the lobby to expend resources to influence the negotiation of the trade agreement.\footnote{To match the assumption of a social-wefare maximing executive, this requires the additional assumption that $\ga(0)=1.$ The model is qualitatively unchanged for other values of $\ga(0)$ as long as the analogue of Assumption 2 below holds.} Note that this remains a non-unitary model. Out of a single decision-making body, the level of lobbying effort determines a different decisive member depending on the situation, e.g. during ex-ante negotiations ($e=0$) versus a trade war ($e=e_{tw}$). A unitary model---in which a single actor makes different decisions depending on how much lobbying effort she experiences---results in minor, qualitative changes to the results. I discuss the unitary version of the model in Appendix B.1. Note that in either case, it is only the realization of $\ga(\cdot)$ that changes with $e$, not the preferences themselves which are embodied in $\ga(\cdot)$.
-				\end{itemize}
-				\item Make argument that want this version like Baldwin-style literature for comparison
-					\begin{itemize}
-						\item Want to make argument that things go wrong in standard model when you insert $e$ into $\ga$ (also, when $e$ goes into $\ga$ need to subtract $e$ too, and this often results in interior optimum)
-						\item This is an easier way to get the result from MRC07 / LT, can make comparisons, develop design results more easily
-					\end{itemize}
-				\item Want non-contingent set-up for different assumptions on timing / meaning of $s$; contingent only makes sense if $e$ chosen after $s$ and $s$ is completely verifiable to lobby. If $s$ is political uncertainty, it probably realizes after/contemporaneously with $e$
-					\begin{itemize}
-						\item I can leave general, then specify for escape clause. Or I can just go with my order of $s$ then $e$, which assumes $s$ is an economic shock.
-						\item Contingent payments are hard to reconcile with uncertainty
-					\end{itemize}
-				\item Bargaining framework is not appealing when gov't is non-unitary
-				\item Limao $\&$ Tovar: lobby objective the same as mine. $G = \Psi(C) + aW(p)$. Gov't decides whether to commit in int'l agreement, then Nash bargains with lobby over $C$ and policies $(t,\tau)$ where $\tau$ is a NTB
-					\begin{itemize}
-						\item Careful of transferable vs. non-transferable utility
-						\item Gov't doesn't care about \textit{anything} because it gets the same payoff no matter what
-							\begin{itemize}
-								\item Menu auction eqm requirement: $(C(\tau),\tau)$ must maximize joint surplus
-								\item With one lobby, this lobby-has-all-the-bargaining-power feature is an equilibrium implication of the menu-auction set-up where the lobby makes a TIOLI offer
-								\item Gov't gets all the surplus when there are two or more lobbies
-								\item This result holds in DGH97, p. 767. Footnote 10 explicitly says that this is because lobby makes TIOLI offer.
-								\item So go to MRC07 where bargaining power can be manipulated
-							\end{itemize}
-						\item Section 3.3: They show exactly what I need to show. If gov't can commit with this obj fcn, it will as long as it doesn't have all the bargaining power and there are decreasing returns to lobbying.
-						\item Gov't does not have an interest in maximizing joint surplus, because it doesn't appropriate all the gains
-					\end{itemize}
-				\item Only difference between Limao / Tovar and mine is $\Psi(e)$ vs. $[\ga(e) - 1]\pi_x(\tau)$
-					\begin{itemize}
-						\item This means there's a positive cross partial between $e$ and $\tau$ in my formulation, so that an increase in $\tau$ increases $W$ more the higher is $e$
-					\end{itemize}
-			\end{itemize}
+There are several advantages to using the government objective function in Expression~\ref{eq:wel}, first of all tractability for analyzing institutional design questions. I do not propose this alternative lightly, and it is closely related to objective functions that are well-studied in the literature.
 
+\Textcite{gh94}'s well-known government objective function both restricts the returns to lobbying to be constant and assumes that utility is transferable between the government and lobby, preventing analysis of distributional questions. \Textcite{dgh97} point this out and proposes a more general form where the government objective is a function of a policy vector payments from each interest group (here $\left(\tau,\tau^*\right)$) and $e$, respectively). When there are no exogenous shocks, Expression~\ref{eq:wel} is therefore a special case of the \Textcite{dgh97} objective function.
 
-
-When political pressure is determined endogenously, a government can predict the political pressure it will face. I argue below that in some cases a government may want to use a trade agreement to alter lobbying incentives. If this is true, then the perceived role that trade agreements can play is influenced by the choice of government objective function.
-
-Let's begin with the \Textcite{baldwin}-style government objective function that is most common in the recent literature on trade agreements, specialized to the case of endogenous pressure only.
+Part of the appeal of the \Textcite{gh94} model is that it provides theoretical foundations for the standard \Textcite{baldwin}-style political objective function that is often used in the literature on the design of trade institutions:
 \begin{equation}
-  W(\ga(e),\tau,\tau^*) = \mathit{CS}_X(\tau) + \ga(e) \cdot \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
+  W(\ga(e),\tau,\tau^*) = \mathit{CS}_X(\tau) + \ga \cdot \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
   \label{eq:baldwin}
 \end{equation}
-The government chooses $\tau$ according to Equation~\ref{eq:eff} when setting tariffs in the context of a trade agreement. The government knows that this trade agreement tariff will impact lobbying incentives and therefore the realization of $\ga(e)$ at the applied tariff-setting phase. We want to know how $\ga(e)$ affects the government's welfare so that we can see how the desire to manipulate lobbying incentives may influence the government's choice of trade agreement tariff.
 
-Envelope-theorem style results imply that the first order condition is the same in the unilateral and joint problems: $\displaystyle \frac{\partial W_x}{\partial \ga} = 0$. See the \hyperlink{envelope}{Appendix} for details.
+The \Textcite{gh94} result is that $\ga$ must equal $1+a$, where $a$ is the weight the government places on social welfare. The literature that uses both the endogenous and the exogenous versions of this welfare function has typically concluded that without some kind of long-run inefficiency, governments will not want to use the trade agreement to reduce lobbying. That is, trade agreements internalize the terms of trade externality but nothing more. Careful inspection of Expression~\ref{eq:baldwin} helps explain why. If we ask where the maximum of the objective function is in terms of $\ga$, an envelope-theorem style result implies that the first order condition is the same in the unilateral and joint problems: $\displaystyle \frac{\partial W_x}{\partial \ga} = 0$. See the \hyperlink{envelope}{Appendix} for details.
 
-An interior solution does not exist to this problem. By inspection, the partial derivative of government welfare with respect to $\ga$ is simply producer surplus in the import sector. This is always positive. Thus, under the government welfare function in Expression~\ref{eq:wel}, government welfare is maximized when $\ga$ takes on the highest value achievable. This is because the governments can expect that ex-post political pressure will increase in the trade agreement tariff, and government welfare increases everywhere in political pressure.
+An interior solution does not exist to this problem. By inspection, the partial derivative of government welfare with respect to $\ga$ is simply producer surplus in the import sector. This is always positive. Thus, under the government welfare function in Expression~\ref{eq:baldwin}, government welfare is maximized when $\ga$ takes on the highest value achievable.
+
+Thus the objective function in \Textcite{gh94} and Expression~\ref{eq:baldwin} are not well-suited to answering the question of whether governments would like to use trade agreements as a political commitment device because the functional forms rule this out by assumption. For the exogenous version to be well micro-founded, it also requires the assumption that lobbies present truthful contribution schedules that are contingent, take-it-or-leave-it offers. With one lobby, this means the government never receives any surplus. Even if the government did not prefer as much political pressure as possible, in the menu-auction set-up the government is made indifferent between all outcomes. This feature remains in the more general \Textcite{dgh97} model because it's a result of the take-it-or-leave-it offer of the lobby.
+
+We would like a framework in which the government's payoff is not constant. An appealing candidate is \Textcite{mrc2007}, which is in the spirit of \Textcite{gh94} but uses a bargaining framework. Although \Textcite{mrc2007} also assumes the constant returns form and that either the lobby or the government has all the bargaining power, \Textcite{lt} extend this framework to one with decreasing returns to lobbying and general bargaining weights.
+
+In \Textcite{lt}'s setup, the government, with objective function $G = \Psi(e) + aW(\tau,\tau^*)$, decides whether to commit in an international agreement and then Nash bargains with the lobby over $e$ and the tariff.\footnote{I have changed notation to match that which I use here and restricted attention to their Section 3.3. with the tariff only; their main results address the choice between tariffs and non-tariff barriers.} They show that the government will use the trade agreement to commit vis-\`{a}-vis the lobby as long as it doesn't have all the bargaining power and there are decreasing returns to lobbying. Here, the government does not have an interest in maximizing joint surplus because it is unable to appropriate all the gains.\footnote{In the working paper version of \Textcite{mrc2007}, a similar result is demonstrated for the case of immobile capital when the government has all the bargaining power.}
+
+The setup that I have assumed has very similar dynamics. When the cost of lobbying effort is included in government welfare as in Equation~\ref{eq:wel}, the monotonicity in $\ga$ inherent in \ref{eq:baldwin} typically breaks down. For most specifications of the $\ga(e)$ function, there is an interior optimum. If a government's objective function is closer to Expression~\ref{eq:wel} than Expression~\ref{eq:baldwin} with $e$ endogenized, the government will likely be interested in using the trade agreement to manipulate the lobby's behavior and therefore the political pressure that it experiences. By setting a tariff cap below the lobby's optimal tariff, the government can use the trade agreement to improve welfare by changing lobbying incentives and therefore the political pressure it encounters.\footnote{There are many candidates for the government objective function that are not monotonic in political pressure. For example, in \Textcite{ethier2012}, returns to lobbying decrease as tariffs increase. In the current model, one could take government welfare to be quadratic in $\ga$ or make the weights on the terms in the objective function sum to one.}
+
+I do not argue that the government welfare function in Expression~\ref{eq:wel} perfectly represents the preferences of those who negotiate trade agreements. I only want to make the point that assumptions on the features of the government objective function can be important drivers of results on the role that trade agreements can play. And this can potentially provide a bridge between the theoretical literature and the claims of trade policy practitioners that an important role of trade agreements is to rein in protectionist pressure.
+
+There are several additional advantages to the setup assumed here. First, it allows me to take lobbying incentives into account in the same framework typically used in the literature to examine institutional design questions so that comparisons to the existing literature are direct. Second, it is very tractable, making it easily adopted to ask how endogenous politics changes the answers to a wide range of policy questions. Third, if one prefers a non-unitary interpretation of the government, this framework in which the lobby exerts effort that determines the identity of the pivotal decision-maker within the government is more appealing than bargaining. Finally, in an environment where exogenous shocks are present, contingent lobbying effort / payments are hard to reconcile with many types of uncertainty. 
+
+If one takes $a=1$, the only difference between the \Textcite{lt} government objective function and Expression~\ref{eq:wel} is that in place of their $\Psi(e)$, I have $[\ga(e) - 1]\pi_x(\tau) - e$.\footnote{Note that this is still consistent with the \Textcite{dgh97} form, although of course I have the lobby maximizing net profits instead of making a take-it-or-leave-it offer.}	This means there's a positive cross derivative between lobbying effort and tariffs in my formulation, so that an increase in tariffs increases government welfare more the higher is lobbying effort.
+			
+
 
 \begin{comment}
 This can be seen in Figure~\ref{fig:unweight}, which displays a graph of the government welfare function from Expression~\ref{eq:baldwin}. Note that the graph is in terms of tariffs, which are monotonically increasing in $\ga$. You can see that from $\tau=0.05$---the tariff the home government optimally sets when making unilateral policy with no political pressure---government welfare steadily increases as the trade agreement tariff increases. 
@@ -311,7 +279,7 @@ This can be seen in Figure~\ref{fig:unweight}, which displays a graph of the gov
 \end{figure}
 \end{comment}
 
-When the cost of lobbying effort is included in government welfare as in Equation~\ref{eq:wel}, this monotonicity often breaks down. For most specifications of the $\ga(e)$ function, there is an interior optimum. If a government's objective function is closer to Expression~\ref{eq:wel} than Expression~\ref{eq:baldwin}, the government may be interested in using the trade agreement to manipulate the lobby's behavior and therefore the political pressure that it experiences. By setting a tariff cap below the lobby's optimal tariff, the government can use the trade agreement to improve welfare by changing lobbying incentives and therefore the political pressure it encounters. There are many candidates for the government objective function that are not monotonic in political pressure. For example, in \Textcite{ethier2012}, returns to lobbying decrease as tariffs increase. In the current model, one could take government welfare to be quadratic in $\ga$ or make the weights on the terms in the objective function sum to one. 
+
 
 
 \begin{comment}
@@ -331,10 +299,6 @@ Here, the optimum occurs at $\tau = 0.142$ and $e = 0.0065$, which is about $6\%
 In this case, again the government does not have means to encourage any additional lobbying, but it can improve its situation by discouraging lobbying. 
 \end{comment}
 
-
-I do not argue that the government welfare function in Expression~\ref{eq:wel} perfectly represents the preferences of those who negotiate trade agreements. I only want to make the point that assumptions on the features of the government objective function can be important drivers of results on the role that trade agreements can play. 
-
-Examining these alternatives in combination with endogenous lobbying points out that the idea that trade agreements can function as domestic political commitment devices may be more general than previously demonstrated. It can also provide a bridge between the theoretical literature and the claims of trade policy practitioners that an important role of trade agreements is to rein in protectionist pressure.
 
 \subsection{Exogenous Political Pressure and Incentive Compatibility}
 In order to compare the results for the case of endogenous political pressure to \Textcite{bs2005} results for exogenous political shocks, I provide the essentials of their setup. 
