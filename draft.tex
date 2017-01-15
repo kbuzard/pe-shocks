@@ -99,14 +99,31 @@ bookmarksopen=true,hyperfootnotes=false]{hyperref}
 
 \section{The Model}
 \label{sec:stage}
+\begin{comment}
 I employ a two good partial equilibrium model with two countries: home (no asterisk) and foreign (asterisk).  The countries trade two goods, $X$ and $Y$, where $P_i$ denotes the home price of good $i \in \left\{X,Y\right\}$ and $P_i^*$ denotes the foreign price of good $i$.
 
 The fundamentals here are chosen to match those of \Textcite{bs2001,bs2005}. Home country demand, supply and profits are given by $D(P_i) = 1 - P_i$, $Q_X(P_X) = \frac{P_X}{2}$, $Q_Y(P_Y) = P_Y$, $\Pi_X(P_X) = \frac{(P_X)^2}{4}$, and $\Pi_Y(P_Y) = \frac{(P_Y)^2}{2}$. %Note that production function consistent with these supply functions are $F_X = \sqrt{l}$ and $F_Y = \sqrt{2l}$ where we assume $w=1$. 
 Foreign is taken to be symmetric.
 
 This implies Home-country imports of $X$ and exports of $Y$ of $M_X(P_X)= 1 - \frac{3}{2}P_X$ and $E_Y(P_Y)= 2P_Y -1$, with foreign imports of $Y$ and exports of $X$ given by $M_Y^*(P_Y^*)= 1 - \frac{3}{2}P_Y^*$ and $E_X(P_X^*)= 2P_X^* -1$. With the only trade policy instruments being tariffs on import-competing goods, world prices are $P_X = P_X^W + \tau$, $P_X^* = P_X^W$, $P_Y^* = P_Y^W + \tau^*$, and $P_Y = P_Y^W$. Market clearing implies that world and home prices of $X$ are $P_X^W = \frac{4-3\tau}{7}$ and $P_X = \frac{4+4\tau}{7}$, symmetric for $Y$.
+\end{comment}
 
-As is standard in the literature, I assume that the production of each good requires the possession of a sector-specific factor that is available in inelastic supply and is non-tradable so that the income of owners of the specific factor is tied to the price of the good in whose production their factor is used. 
+\subsection{The Economic Setting}
+\label{sec:economic}
+I begin by describing the economic setting within which trade occurs.\footnote{Note this is the economic environment of \Textcite{gh95} specialized to two tradable goods with symmetry assumed for simplicity of exposition.} It is a three-good model with two countries: home (no asterisk) and foreign (asterisk). In the home country, the representative consumer maximizes
+\[
+  u = c_N + u_X(c_X) + u_Y(c_Y).
+\]
+where $c_i$ for $i \in \left\{i,X,Y\right\}$ denotes consumption of the numeraire, X and Y goods respectively. The functions $u_X(\cdot)$ and $u_Y(\cdot)$ are assumed to be increasing, strictly concave and differentiable. The demand functions for $X$ and $Y$ are written $D(P_i)$ where $D(\cdot)$ is the inverse of $u'_i(\cdot)$ and $P_i$ ($P_i^*$) denotes the home (foreign) price of good $i \in \left\{N,X,Y\right\}$. Demand is assumed symmetric in foreign.
+
+Good $N$ is produced with labor alone so that $Q_N = l_N$. I assume the aggregate labor supply $l$ is large enough to ensure that the output of good $N$ is positive. The production of goods $X$ and $Y$ requires labor and a sector-specific factor that is available in inelastic supply and is non-tradable so that the income of owners of the specific factors is tied to the price of the good in whose production their factor is used. Production of these goods is also assumed to exhibit constant returns to scale. The supply functions for good $X$ are $Q_X(P_X)$ and $Q_X^*(P_X^*)$ and are assumed strictly increasing and twice continuously differentiable for all prices that elicit positive supply. For any such $P_X$, I assume $Q_X^*(P_X) > Q_X(P_X)$ so that the home country is a net importer of good $X$. The production structure for good $Y$ is symmetric. 
+
+For simplicity, I assume each government's only trade policy instrument is a specific tariff on its import-competing good: the home country levies a tariff $\tau$ on good $X$ while the foreign country applies a tariff $\tau^*$ to good $Y$. Local prices are then $P_X = P_X^W + \tau$, $P_X^* = P_X^W$, $P_Y = P_Y^W$ and $P_Y^* = P_Y^W + \tau^*$ where a $W$ superscript indicates world prices. Equilibrium prices are determined by the market clearing conditions
+$$M_X(P_X)= D(P_X)-Q_X(P_X) = Q_X^*(P_X^*) - D(P_X^*) = E_X^*(P_X^*)$$
+$$E_Y(P_Y)=Q_Y(P_Y)-D(P_Y) = D(P_Y^*)-Q_Y^*(P_Y) = M_Y^*(P_Y^*)$$
+where e.g. $M_X$ are home-county imports and $E_X^*$ are foreign exports of good $X$. The price of the numeraire is equal to one in both countries and on the world market.
+
+$P_X^W$ and $P_Y^W$ are decreasing in $\tau$ and $\tau^*$ respectively, while $P_X$ and $P_Y^*$ are increasing in the respective domestic tariff. This gives rise to a terms-of-trade externality. Profits in a sector are increasing in the price of its good and also in the domestic tariff. This fact, combined with the assumptions on specific factor ownership, motivates political activity by import-competing lobbies.
 
 Note that $P_X^W$ and $P_Y^W$ are decreasing in $\tau$ and $\tau^*$ respectively, while $P_X$ and $P_Y^*$ are increasing in the respective importing country's tariff. As profits and producer surplus (identical in this model) in a sector increase in the price of its good, profits in the import-competing sector also increase in the domestic tariff. This economic fact, combined with the assumptions on specific factor ownership, is what motivates political activity.
 
@@ -273,13 +290,11 @@ Examining these alternatives in combination with endogenous lobbying points out 
 \subsection{Exogenous Political Pressure and Incentive Compatibility}
 In order to compare the results for the case of endogenous political pressure to \Textcite{bs2005} results for exogenous political shocks, I provide the essentials of their setup. 
 
-They assume that $\ga$ and $\ga^*$ are each drawn independently from probability distributions with cumulative distribution functions $H(\ga)$ with $h(\ga)=H'(\ga)$. The support for this probability distribution is $\left[\un{\ga}, \ov{\ga} \right]$ where $\ov{\ga} < \frac{7}{4}$. They also assume $\ga$ and $\ga^*$ are private information.
+They assume that $\ga$ and $\ga^*$ are each drawn independently from probability distributions with cumulative distribution functions $H(\ga)$ with $h(\ga)=H'(\ga)$. The support for this probability distribution is $\left[\un{\ga}, \ov{\ga} \right]$ where $\ov{\ga}$ is small enough that the government's optimal tariff will be non-prohibitive. They also assume $\ga$ and $\ga^*$ are private information.
 
 This leads to a concern about incentive compatibility. It must be in a government's best interest to truthfully reveal its $\ga$ or else it will misrepresent its private information about $\ga$ in order to raise tariffs and create a terms-of-trade gain, thereby improving its unilateral welfare. They provide conditions that guarantee incentive compatibility on page 481.
 
 On a separate note, it is important to make clear that in this strand of the literature, it is assumed that trade agreements are negotiated to maximize the expected welfare of politically motivated governments given the exogenously-determined political pressure they expect to face at the time of the agreement's implementation. I will follow this convention throughout.
-
-
 
 
 \section{Rigid Tariffs with Endogenous Political Pressure}
