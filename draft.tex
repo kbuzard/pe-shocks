@@ -226,15 +226,16 @@ When political pressure is determined endogenously, a government can predict the
 Let's begin with the \Textcite{baldwin}-style government objective function that is most common in the recent literature on trade agreements, specialized to the case of endogenous pressure only.
 \begin{equation}
   W(\ga(e),\tau,\tau^*) = \mathit{CS}_X(\tau) + \ga(e) \cdot \pi_X(\tau) + \mathit{CS}_Y(\tau^*) + \pi_Y(\tau^*) + \mathit{TR}(\tau)
-  \tag{\ref{eq:baldwin}}
+  \label{eq:baldwin}
 \end{equation}
 The government chooses $\tau$ according to Equation~\ref{eq:eff} when setting tariffs in the context of a trade agreement. The government knows that this trade agreement tariff will impact lobbying incentives and therefore the realization of $\ga(e)$ at the applied tariff-setting phase. We want to know how $\ga(e)$ affects the government's welfare so that we can see how the desire to manipulate lobbying incentives may influence the government's choice of trade agreement tariff.
 
 Envelope-theorem style results imply that the first order condition is the same in the unilateral and joint problems: $\displaystyle \frac{\partial W_x}{\partial \ga} = 0$. See the \hyperlink{envelope}{Appendix} for details.
 
-An interior solution does not exist to this problem. By inspection, the partial derivative of government welfare with respect to $\ga$ is simply producer surplus in the import sector. This is always positive. Thus, under the government welfare function in Expression~\ref{eq:wel}, government welfare is maximized when $\ga$ takes on the highest value achievable.
+An interior solution does not exist to this problem. By inspection, the partial derivative of government welfare with respect to $\ga$ is simply producer surplus in the import sector. This is always positive. Thus, under the government welfare function in Expression~\ref{eq:wel}, government welfare is maximized when $\ga$ takes on the highest value achievable. This is because the governments can expect that ex-post political pressure will increase in the trade agreement tariff, and government welfare increases everywhere in political pressure.
 
-This can be seen in Figure~\ref{fig:unweight}, which displays a graph of the government welfare function from Expression~\ref{eq:baldwin}. Note that the graph is in terms of tariffs, which are monotonically increasing in $\ga$. You can see that from $\tau=0.05$---the tariff the home government optimally sets when making unilateral policy with no political pressure---government welfare steadily increases as the trade agreement tariff increases. This is because the governments can expect that ex-post political pressure will increase in the trade agreement tariff, and government welfare increases everywhere in political pressure.
+\begin{comment}
+This can be seen in Figure~\ref{fig:unweight}, which displays a graph of the government welfare function from Expression~\ref{eq:baldwin}. Note that the graph is in terms of tariffs, which are monotonically increasing in $\ga$. You can see that from $\tau=0.05$---the tariff the home government optimally sets when making unilateral policy with no political pressure---government welfare steadily increases as the trade agreement tariff increases. 
 
 \begin{figure}
 \begin{center}
@@ -242,8 +243,13 @@ This can be seen in Figure~\ref{fig:unweight}, which displays a graph of the gov
 \end{center}
 \caption{Government Welfare with Partially Weighted Objective Function \label{fig:unweight}}
 \end{figure}
+\end{comment}
 
-When the cost of lobbying effort is included in government welfare as in Equation~\ref{eq:wel}, this monotonicity often breaks down. For most specifications of the $\ga(e)$ function, there is an interior optimum. Figure~\ref{fig:weight} illustrates for the case of $\ga(e) = 1 + e^{.2}$. Here, the optimum occurs at $\tau = 0.105$ and $e = 0.0072$, which is about $7\%$ of profits in the import-competing industry. Here $ga(0.0065) = 1.37$. The lobby's optimum is at $\tau = But if a government's objective function is closer to Expression~\ref{eq:wel} than Expression~\ref{eq:baldwin}, the government may be interested in using the trade agreement to manipulate the lobby's behavior and therefore the political pressure that it experiences.
+When the cost of lobbying effort is included in government welfare as in Equation~\ref{eq:wel}, this monotonicity often breaks down. For most specifications of the $\ga(e)$ function, there is an interior optimum. If a government's objective function is closer to Expression~\ref{eq:wel} than Expression~\ref{eq:baldwin}, the government may be interested in using the trade agreement to manipulate the lobby's behavior and therefore the political pressure that it experiences. By setting a tariff cap below the lobby's optimal tariff, the government can use the trade agreement to improve welfare by changing lobbying incentives and therefore the political pressure it encounters. There are many candidates for the government objective function that are not monotonic in political pressure. For example, in \Textcite{ethier2012}, returns to lobbying decrease as tariffs increase. In the current model, one could take government welfare to be quadratic in $\ga$ or make the weights on the terms in the objective function sum to one. 
+
+
+\begin{comment}
+Figure~\ref{fig:weight} illustrates for the case of $\ga(e) = 1 + e^{.2}$. Here, the optimum occurs at $\tau = 0.105$ and $e = 0.0072$, which is about $7\%$ of profits in the import-competing industry. Here $ga(0.0065) = 1.37$. 
 	
 \begin{figure}
 \begin{center}
@@ -254,9 +260,11 @@ When the cost of lobbying effort is included in government welfare as in Equatio
 
 Whether or not the optimal trade agreement would set a tariff cap aimed at reducing lobbying depends on the lobby's incentives, which depends in turn on the shape of $\ga(e)$. Let's look at two parameterizations in a simple family of functions for $\ga(e)$ that demonstrate drastically different outcomes.
 
-Here, the optimum occurs at $\tau = 0.142$ and $e = 0.0065$, which is about $6\%$ of profits in the import-competing industry. Here $ga(0.0065) = 1.60$. But if a government's objective function is closer to Expression~\ref{eq:wel} than Expression~\ref{eq:baldwin}, the government may be interested in using the trade agreement to manipulate the lobby's behavior and therefore the political pressure that it experiences.
+Here, the optimum occurs at $\tau = 0.142$ and $e = 0.0065$, which is about $6\%$ of profits in the import-competing industry. Here $ga(0.0065) = 1.60$. 
 
-In this case, again the government does not have means to encourage any additional lobbying, but it can improve its situation by discouraging lobbying. By setting a tariff cap of zero---assuming the conditions for self enforcement outlined in Section~\ref{sec:selfweak} are met---the government can use the trade agreement to improve welfare by changing lobbying incentives and therefore the political pressure it encounters. The stark prediction that the best the government can do is to set the trade agreement to zero would be softened in an environment such as that in Section~\ref{sec:escape2} where there are both endogenous and exogenous sources of political pressure or with a government welfare function that has an interior global maximum in $\ga$. There are many candidate for the government objective function in which the maximum is strictly interior. For example, in \Textcite{ethier2012}, returns to lobbying decrease as tariffs increase. In the current model, one could take government welfare to be quadratic in $\ga$ or to simply subtract lobbying effort from Equation~\ref{eq:wel}. 
+In this case, again the government does not have means to encourage any additional lobbying, but it can improve its situation by discouraging lobbying. 
+\end{comment}
+
 
 I do not argue that the government welfare function in Expression~\ref{eq:wel} perfectly represents the preferences of those who negotiate trade agreements. I only want to make the point that assumptions on the features of the government objective function can be important drivers of results on the role that trade agreements can play. 
 
