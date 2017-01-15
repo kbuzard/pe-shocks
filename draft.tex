@@ -108,7 +108,7 @@ Foreign is taken to be symmetric.
 This implies Home-country imports of $X$ and exports of $Y$ of $M_X(P_X)= 1 - \frac{3}{2}P_X$ and $E_Y(P_Y)= 2P_Y -1$, with foreign imports of $Y$ and exports of $X$ given by $M_Y^*(P_Y^*)= 1 - \frac{3}{2}P_Y^*$ and $E_X(P_X^*)= 2P_X^* -1$. With the only trade policy instruments being tariffs on import-competing goods, world prices are $P_X = P_X^W + \tau$, $P_X^* = P_X^W$, $P_Y^* = P_Y^W + \tau^*$, and $P_Y = P_Y^W$. Market clearing implies that world and home prices of $X$ are $P_X^W = \frac{4-3\tau}{7}$ and $P_X = \frac{4+4\tau}{7}$, symmetric for $Y$.
 \end{comment}
 
-\subsection{The Economic Setting}
+\subsection{Setup}
 \label{sec:economic}
 I begin by describing the economic setting within which trade occurs.\footnote{Note this is the economic environment of \Textcite{gh95} specialized to two tradable goods with symmetry assumed for simplicity of exposition.} It is a three-good model with two countries: home (no asterisk) and foreign (asterisk). In the home country, the representative consumer maximizes
 \[
@@ -238,6 +238,55 @@ The second order condition is satisfied for $\ga < \frac{25}{4}$, so again for a
 
 \subsection{Political Objective Functions and the Role of Trade Agreements}
 \label{sec:objfcn}
+Approach: denote the government's welfare function as $W_G(\tau,\tau^*,e) = W(\tau,\tau^*) + g(e)$ where $W = CS_X + PS_X + CS_Y + PS_Y +TR$ is social welfare.
+			\begin{itemize}
+				\item This is like DGH97 (they write as $G(a,C)$, so no problem putting an $e$ in there), BS1999 `Economic Theory of GATT' (I think), $W(p,\tilde{p}^w)$
+				\item Careful of transferable vs. non-transferable utility
+					\begin{itemize}
+						\item I've already written $W(\ga(e,s),\tau,\tau^*)$
+						\item It's the truthful contribution schedule in GH94 that implies the constant weighting of $1+a$ for sectors represented by a lobby. Won't get this clean, constant weighting with other schedules.
+						\item I claim that the government welfare function presented in this paper can be interpreted as a special case of the general welfare function proposed in DGH97. They specify government welfare as $G(a,c)$ where $a$ is the policy vector $\left(\left(\tau,\tau^*\right)\right)$ and $c$ is a vector of payments from each lobby ($e$).						
+						\item To be clear about the differences, the non-unitary model examined in the body of the paper assumes that different levels of lobbying effort result in different \textit{decision-makers}. In the unitary model of DGH97, one decision maker makes different decisions depending on the level of lobbying effort. This distinction is mainly important in the context of the repeated game. Whereas the unitary decision-maker evaluates future welfare according to the lobbying effort she expects to experience in the future, the non-unitary decision-maker knows that different decision-makers will be in power and evaluates future welfare with her own preferences.
+					\end{itemize}
+				\item Then specialize to BS2005 when necessary (tariff cap example, picture for interior max of gov't obj fcn)
+				\item Menu auction framework doesn't work with one lobby because gov't doesn't get any surplus. Switch to MRC07 (bargaining). But want decreasing returns (LT).
+				\begin{itemize}
+					\item The model does admit an interpretation in which the same branch of government both negotiates the trade agreement and decides on the applied tariff ex-post, as long as the one branch is non-unitary. The model analyzed in the body of this paper can be given an interpretation in line with Maggi and Rodriguez-Clare 2007 if capital is completely mobile in the long run. In Appendix B.1, I compare the results of this paper to those from a model with a unitary government, as this would seem to bring the model most closely into alignment with Maggi and Rodriguez-Clare 2007 and a large part of the literature.
+					\item Consider the following, alternative interpretation of the model. Assume there is only one decision-making body but the lobby is not active during the ex-ante phase, that is, when the trade agreement is being negotiated. For ease of exposition, take this single decision-making body to be the legislature so that the single decision-making body has the preferences in Expression 2. At the ex-ante stage, the welfare function would reduce to that in Expression 4. This interpretation fits into the framework of Maggi and Rodriguez-Clare 2007 by assuming that capital is perfectly mobile in the long run so that it is not worthwhile for the lobby to expend resources to influence the negotiation of the trade agreement.\footnote{To match the assumption of a social-wefare maximing executive, this requires the additional assumption that $\ga(0)=1.$ The model is qualitatively unchanged for other values of $\ga(0)$ as long as the analogue of Assumption 2 below holds.} Note that this remains a non-unitary model. Out of a single decision-making body, the level of lobbying effort determines a different decisive member depending on the situation, e.g. during ex-ante negotiations ($e=0$) versus a trade war ($e=e_{tw}$). A unitary model---in which a single actor makes different decisions depending on how much lobbying effort she experiences---results in minor, qualitative changes to the results. I discuss the unitary version of the model in Appendix B.1. Note that in either case, it is only the realization of $\ga(\cdot)$ that changes with $e$, not the preferences themselves which are embodied in $\ga(\cdot)$.
+				\end{itemize}
+				\item Make argument that want this version like Baldwin-style literature for comparison
+					\begin{itemize}
+						\item Want to make argument that things go wrong in standard model when you insert $e$ into $\ga$ (also, when $e$ goes into $\ga$ need to subtract $e$ too, and this often results in interior optimum)
+						\item This is an easier way to get the result from MRC07 / LT, can make comparisons, develop design results more easily
+					\end{itemize}
+				\item Want non-contingent set-up for different assumptions on timing / meaning of $s$; contingent only makes sense if $e$ chosen after $s$ and $s$ is completely verifiable to lobby. If $s$ is political uncertainty, it probably realizes after/contemporaneously with $e$
+					\begin{itemize}
+						\item I can leave general, then specify for escape clause. Or I can just go with my order of $s$ then $e$, which assumes $s$ is an economic shock.
+						\item Contingent payments are hard to reconcile with uncertainty
+					\end{itemize}
+				\item Bargaining framework is not appealing when gov't is non-unitary
+				\item Limao $\&$ Tovar: lobby objective the same as mine. $G = \Psi(C) + aW(p)$. Gov't decides whether to commit in int'l agreement, then Nash bargains with lobby over $C$ and policies $(t,\tau)$ where $\tau$ is a NTB
+					\begin{itemize}
+						\item Careful of transferable vs. non-transferable utility
+						\item Gov't doesn't care about \textit{anything} because it gets the same payoff no matter what
+							\begin{itemize}
+								\item Menu auction eqm requirement: $(C(\tau),\tau)$ must maximize joint surplus
+								\item With one lobby, this lobby-has-all-the-bargaining-power feature is an equilibrium implication of the menu-auction set-up where the lobby makes a TIOLI offer
+								\item Gov't gets all the surplus when there are two or more lobbies
+								\item This result holds in DGH97, p. 767. Footnote 10 explicitly says that this is because lobby makes TIOLI offer.
+								\item So go to MRC07 where bargaining power can be manipulated
+							\end{itemize}
+						\item Section 3.3: They show exactly what I need to show. If gov't can commit with this obj fcn, it will as long as it doesn't have all the bargaining power and there are decreasing returns to lobbying.
+						\item Gov't does not have an interest in maximizing joint surplus, because it doesn't appropriate all the gains
+					\end{itemize}
+				\item Only difference between Limao / Tovar and mine is $\Psi(e)$ vs. $[\ga(e) - 1]\pi_x(\tau)$
+					\begin{itemize}
+						\item This means there's a positive cross partial between $e$ and $\tau$ in my formulation, so that an increase in $\tau$ increases $W$ more the higher is $e$
+					\end{itemize}
+			\end{itemize}
+
+
+
 When political pressure is determined endogenously, a government can predict the political pressure it will face. I argue below that in some cases a government may want to use a trade agreement to alter lobbying incentives. If this is true, then the perceived role that trade agreements can play is influenced by the choice of government objective function.
 
 Let's begin with the \Textcite{baldwin}-style government objective function that is most common in the recent literature on trade agreements, specialized to the case of endogenous pressure only.
