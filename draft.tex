@@ -164,7 +164,7 @@ I refer to this as the Nash tariff because it is the result of Nash equilibrium 
 
 Given the government's preferences, the home lobby chooses its lobbying effort $e$ to maximize profits net of lobbying effort:
 \begin{equation}
-  U_\text{L} = \pi(\tau(\ga(s,e))) - e
+  U_\text{L} = \pi_X(\tau(\ga(s,e))) - e
   \label{eq:lv3}
 \end{equation}
 where $\pi(\cdot)$ is the current-period profit and $\tau$ is the home country's tariff on the import good. %I use the convention throughout of representing a vector of tariffs for both countries $(\tau,\tau^*)$ as a single bold $\bm{\tau}$. 
@@ -384,7 +384,7 @@ For a given $\de$, $\tau^B$ and $e^B$ are derived using Equation~\ref{eq:nash} a
 
 The lobby's incentives must also be satisfied, as the government's decision on whether to abide by the agreement or break it depends on the amount of lobbying effort it encounters. In order for the lobby to prefer the trade agreement tariff to the option of causing the agreement to be broken and tariffs to revert to the non-cooperative level, the following must hold
 \begin{equation}
-  \frac{1}{1-\de}\left[\pi(\tau_e^R) - e^R\right] \geq \pi(\tau^B) - e^B + \frac{\de}{1-\de}\left[\pi(\tau^N) - e^N\right]
+  \frac{1}{1-\de}\left[\pi_X(\tau_e^R) - e^R\right] \geq \pi_X(\tau^B) - e^B + \frac{\de}{1-\de}\left[\pi_X(\tau^N) - e^N\right]
 	\label{exp:lobby}
 \end{equation}
 That is, the present discounted value of net profits under the trade agreement must be weakly higher than one period of net profits from the ``cheater'' tariffs and the discounted future Nash profits.
@@ -393,7 +393,7 @@ Here we have the possibility of a starkly different result from that under exoge
 
 To see this, start by noticing that the lefthand side of Expression~\ref{exp:govincent} is increasing in $\de$, while the righthand side is constant in $\de$. That is, as the government becomes more patient, it is easier to satisfy the government's constraint. Equivalently, it requires a larger $e^B$ to violate the constraint.
 
-Shifting attention to the lobby's incentive constraint in Expression~\ref{exp:lobby}, this becomes harder to satisfy as $\de$ increases for most levels of the trade agreement tariff. That is, the lefthand side is decreasing and the righthand side is increasing as a direct function of $\de$. When taking into account the influence of $\de$ from the government's constraint on $e^B$, for a small part of the parameter space where $e^B$ must be very large, it's possible for the lobby's constraint to eventually loosen as $\de$ increases since $\pi(\tau^B) - e^B$ decreases to the right of $\tau^N$.
+Shifting attention to the lobby's incentive constraint in Expression~\ref{exp:lobby}, this becomes harder to satisfy as $\de$ increases for most levels of the trade agreement tariff. That is, the lefthand side is decreasing and the righthand side is increasing as a direct function of $\de$. When taking into account the influence of $\de$ from the government's constraint on $e^B$, for a small part of the parameter space where $e^B$ must be very large, it's possible for the lobby's constraint to eventually loosen as $\de$ increases since $\pi_X(\tau^B) - e^B$ decreases to the right of $\tau^N$.
 
 In general, however, we cannot be guaranteed that even the most patient government can sustain cooperation at the politically optimal trade agreement level. At issue is the behavior of the lobby, which is now a formal player in its own right and must be incentivized to keep its behavior on the equilibrium path. More patient lobbies are willing to work harder to encourage the government to break the trade agreement so that they can enjoy infinite periods of Nash tariffs. Increasing the discount factor makes it more difficult rather than easier to satisfy the lobby's constraint.\footnote{The essential point underlying this result was first made by \Textcite{buzard2013a}.}
 
@@ -492,7 +492,7 @@ The government's incentive constraint is given by
   \end{multline}
 Label $\ov{e}$ the level of $e^F$ that is just high enough to cause the government to throw the trading relationship into dispute. We use $\ov{e}$ in the lobby's constraint, in which the lobby optimally exerts no effort if the government applies the safeguard tariff $\tau(s)$:
 \begin{equation}
-  \left[1+ \de +\de^2 \right] \pi(\tau(s)) \geq \left[1+ \de +\de^2 \right] \left\{\pi(\tau(\ga(s,\ov{e})) - \ov{e} \right\}
+  \left[1+ \de +\de^2 \right] \pi_X(\tau(s)) \geq \left[1+ \de +\de^2 \right] \left\{\pi_X(\tau(\ga(s,\ov{e})) - \ov{e} \right\}
 	\label{exp:lobbyEC}
 \end{equation}
 
