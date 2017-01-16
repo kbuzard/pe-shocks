@@ -171,7 +171,7 @@ where $\pi(\cdot)$ is the current-period profit and $\tau$ is the home country's
 
 I assume the lobby's contribution is not observable to the foreign government. The implication is that the lobby can directly influence only the home government, and so the influence of one country's lobby on the other country's government occurs only through the tariffs selected.\footnote{cfr. \Textcite{gh95}, page 685.} $\ga(s,e)$ is assumed to be private information of the government, with specifics about its distributions given below. This makes the environment one of asymmetric information, with asymmetries potentially coming from two sources: the exogenous shocks and the endogenous behavior of the special interest group.
 
-In the first stage, the governments choose the trade agreement tariffs via a negotiating process that I assume to be efficient. This process therefore maximizes the joint payoffs produced by the trade agreement:
+In the first stage, the governments choose the trade agreement tariffs via a negotiating process that I assume to be efficient. In this strand of the literature, it is typically assumed that trade agreements are negotiated to maximize the expected welfare of politically motivated governments given the exogenously-determined political pressure they expect to face at the time of the agreement's implementation. I will follow this convention throughout, making necessary adjustments for endogenous politics. The trade negotiation therefore is assumed to maximize the joint payoffs produced by the trade agreement:
 \begin{equation}
   W(\ga(s,e),\ga^*(s^*,e^*),\tau,\tau^*) = W(\ga(s,e),\tau,\tau^*) + W^*(\ga^*(s^*,e^*),\tau,\tau^*)
   \label{eq:jv}
@@ -182,7 +182,7 @@ Government welfare in both countries is additively separable in $\tau$ and we ca
   \tau^a(\ga(s,e)) = \max_\tau W_X(\ga(s,e),\tau) + W_X^*(\tau)
   \label{eq:eff}
 \end{equation}
-As in the applied tariff problem, I assume the realization of $\ga$ is below the threshold need to ensure the second order condition is satisfied.
+As in the applied tariff problem, I assume the realization of $\ga$ is below the threshold needed to ensure the second order condition is satisfied.
 
 Note that in this symmetric environment, this problem can be solved by applying the Nash bargaining solution where the disagreement point is the welfare resulting from the Nash equilibrium in the non-cooperative game.
 
@@ -300,16 +300,6 @@ In this case, again the government does not have means to encourage any addition
 \end{comment}
 
 
-\subsection{Exogenous Political Pressure and Incentive Compatibility}
-In order to compare the results for the case of endogenous political pressure to \Textcite{bs2005} results for exogenous political shocks, I provide the essentials of their setup. 
-
-They assume that $\ga$ and $\ga^*$ are each drawn independently from probability distributions with cumulative distribution functions $H(\ga)$ with $h(\ga)=H'(\ga)$. The support for this probability distribution is $\left[\un{\ga}, \ov{\ga} \right]$ where $\ov{\ga}$ is small enough that the government's optimal tariff will be non-prohibitive. They also assume $\ga$ and $\ga^*$ are private information.
-
-This leads to a concern about incentive compatibility. It must be in a government's best interest to truthfully reveal its $\ga$ or else it will misrepresent its private information about $\ga$ in order to raise tariffs and create a terms-of-trade gain, thereby improving its unilateral welfare. They provide conditions that guarantee incentive compatibility on page 481.
-
-On a separate note, it is important to make clear that in this strand of the literature, it is assumed that trade agreements are negotiated to maximize the expected welfare of politically motivated governments given the exogenously-determined political pressure they expect to face at the time of the agreement's implementation. I will follow this convention throughout.
-
-
 \section{Rigid Tariffs with Endogenous Political Pressure}
 \label{sec:rigid}
 We are now ready to demonstrate the implications of taking account of endogenous political pressure on some central design features of trade agreements. I develop some basic results about the design of trade agreements with tariff caps when political pressure is endogenous and compare and contrast these results to the case where political considerations are exogenous.
@@ -337,7 +327,7 @@ We are now in a position to determine how the governments set trade agreement ta
 
 I assume for simplicity of exposition that the government does not set the tariff binding $\tau_e^R$ higher than that which would result from the lobby's optimal effort $e^L$, as setting a higher tariff cap would not change lobbying behavior or outcomes in any way.\footnote{The government's tariff cap choice can reduce lobbying effort; it cannot, however, increase lobbying effort above $e^L$. The government is unable to use a weak binding to encourage extra lobbying when only import-competing interests are represented by a lobby. Introducing lobbies for the export industry could reverse this: lobbying effort by exporters could be encouraged in support of capping the import tariffs of the partner country.}
 
-This is in contrast to the case of exogenous political pressure, for which \Textcite{bs2005} show several interesting results.\footnote{Note that in their treatment, Bagwell and Staiger (2005) assume linear supply and demand.} In particular, they find that when governments negotiate commitments that take the form of weak bindings, the tariff caps they choose imply that applied tariffs will be set strictly below the bound level when governments experience low realizations of political pressure.
+This is in contrast to the case of exogenous political pressure, for which \Textcite{bs2005} show several interesting results.\footnote{\Textcite{bs2005} assume that $\ga$ and $\ga^*$ are each drawn independently from probability distributions with cumulative distribution functions $H(\ga)$ with $h(\ga)=H'(\ga)$. The support for this probability distribution is $\left[\un{\ga}, \ov{\ga} \right]$ where $\ov{\ga}$ is small enough that the government's optimal tariff will be non-prohibitive. They also assume $\ga$ and $\ga^*$ are private information. They also assume linear supply and demand.} In particular, they find that when governments negotiate commitments that take the form of weak bindings, the tariff caps they choose imply that applied tariffs will be set strictly below the bound level when governments experience low realizations of political pressure.
 
 To understand how the optimal home tariff $\tau_e^R$ under the trade agreement is set, notice that it must maximize joint government welfare. As argued in Section~\ref{sec:stage}, joint government welfare (with variables that do not affect the $X$ sector suppressed) is
   \begin{equation}
@@ -421,7 +411,7 @@ If there is no $\de$ such that Inequalities~\ref{exp:govincent} and \ref{exp:lob
 \label{sec:escape}
 I begin by following the literature in examining a trade agreement with an escape clause by adding a second negotiated binding to the agreement so that there is one (weak) binding for when political pressure is low and a higher, weak binding for exceptional circumstances of high levels of political pressure. Escape clauses are common features of trade agreements in practice, and when one models political pressure as exogenous, an escape clause seems attractive: in the presence of a particularly large negative political shock, being bound to a tariff designed for normal times would cause significant welfare losses to the politician.
 
-However, because the tariff allowed under the trade agreement with an escape clause varies with the announced level of political pressure, the incentive compatibility constraint now comes into play: a government may gain an advantage by misreporting the level of $\ga$ it experiences. In their Proposition 4, Bagwell and Staiger show that a trade agreement with a costless escape clause cannot improve welfare because it cannot be made incentive compatible. No matter the realization of the stochastic $\ga$, it is always in the government's interest to announce that $\ga$ is high, which allows it to apply any tariff up to the higher weak binding. This deviation improves unilateral welfare while imposing a terms-of-trade externality on the trading partner.
+However, because the tariff allowed under the trade agreement with an escape clause varies with the announced level of political pressure, introducing an escape clause leads to a concern about incentive compatibility. It must be in a government's best interest to truthfully reveal its $\ga$ or else it will misrepresent its private information about $\ga$ in order to raise tariffs and create a terms-of-trade gain, thereby improving its unilateral welfare. \Textcite{bs2005} provide conditions that guarantee incentive compatibility, but they also show that a trade agreement with a costless escape clause cannot improve welfare because it cannot be made incentive compatible. No matter the realization of the stochastic $\ga$, it is always in the government's interest to announce that $\ga$ is high, which allows it to apply any tariff up to the higher weak binding. This deviation improves unilateral welfare while imposing a terms-of-trade externality on the trading partner.
 
 A similar problem arises in the case of endogenous political pressure, but with no parallel potential gain. The problem of asymmetric information remains, as lobbying effort is not observable to the trading partner. The appeal of an escape clause is to provide the flexibility of a higher binding in exceptional circumstances when political pressure is randomly high. But in the stark case under examination here with purely endogenous politics, an exceptionally high $\ga$ can only derive from higher effort exerted by the lobby. If one chooses an optimal tariff cap, a second, higher cap can only encourage excess lobbying that is sub-optimal from the point of view of the government.
 
