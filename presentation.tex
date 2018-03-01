@@ -50,13 +50,13 @@
 	
 	\let\Tiny=\tiny
 
-\usepackage{appendixnumberbeamer}
+%\usepackage{appendixnumberbeamer}
 
 
 \title[Endogenous Politics and the Design of Trade Institutions\hspace{2.05in}\insertframenumber/\inserttotalframenumber]{Endogenous Politics and \\ the Design of Trade Institutions}
 %\author[Kristy Buzard]{Kristy Buzard \\ Syracuse University and The Wallis Institute \\ kbuzard@syr.edu}
-\author[Kristy Buzard]{\texorpdfstring{Kristy Buzard\newline Syracuse University and The Wallis Institute  \newline\url{kbuzard@syr.edu}}{Kristy Buzard}}
-\date{June 30, 2016}
+\author[Kristy Buzard]{\texorpdfstring{Kristy Buzard\newline Syracuse University \newline\url{kbuzard@syr.edu}}{Kristy Buzard}}
+\date{March 2, 2018}
 \begin{document}
 \maketitle
 %\insertpresentationendpage removed b/c of appendix
@@ -70,14 +70,14 @@
 
 \pause
 \begin{enumerate}[<+->]
-\item When is endogenizing political pressure important for answering optimal design questions?
-	\begin{itemize}
-		\item Exogenous vs. endogenous politics
-	\end{itemize}
-	\vskip.1in
 \item Can trade agreements be used to manipulate domestic lobbying incentives?
 	\begin{itemize}
 		\item Government objective function
+	\end{itemize}
+\vskip.1in
+	\item When is endogenizing political pressure important for answering optimal design questions?
+	\begin{itemize}
+		\item Exogenous vs. endogenous politics
 	\end{itemize}
 \end{enumerate}
 
@@ -91,6 +91,9 @@ With a few exceptions, TA design literature has taken political economy forces t
 \pause
 \begin{itemize}[<+->]
 	\item endogenize politics into a standard model for studying TA design questions
+		\begin{itemize}
+			\item use this to examine gov't objective
+		\end{itemize}
 	\item carefully distinguish between dynamics induced by exogenous and endogenous politics for
 		\begin{itemize}[<+->]
 			\item base case with tariff caps
@@ -106,9 +109,12 @@ With a few exceptions, TA design literature has taken political economy forces t
 
 \pause
 \begin{itemize}[<+->]
-	\item Show that TAs may be used to manipulate domestic political actors (no long-run distortions)
-	\item For both tariff caps and escape clauses, outcomes are very different with endogenous politics
-	\item Demonstrate that (standard, theoretical) escape clause can't work in the presence of endogenous political pressure
+	\item TAs may be used to manipulate domestic political actors (no long-run distortions)
+	\item Simple modeling framework can capture results from models of both exogenous and endogenous politics
+		\begin{itemize}
+			\item For both tariff caps and escape clauses, endogenous politics changes outcomes dramatically
+		\end{itemize}
+	\item Standard, theoretical escape clause can't work in the presence of endogenous political pressure
 		\begin{itemize}
 			\item Points to real-world design of WTO Agreement on Safeguards
 			\item May explain why escape clause has fallen out of use
@@ -388,6 +394,23 @@ Grossman and Helpman (1995)
 \end{frame}
 
 
+\begin{frame}{Comparison to the Literature}
+Others derive non-monotonicity in lobbying effort/tariff 
+\begin{itemize}
+	\item Maggi $\&$ Rodriguez-Clare (1998/2007): dynamic firm investment disortions
+	\item Mitra (2002): lobbies pay investment cost to form
+\end{itemize}
+
+\vskip.15in
+Here, I acknowledge the gov't objective function may be fundamentally non-monotonic
+\begin{itemize}
+	\item Achieve same results with simpler model
+	\item Endogenous politics in a wider range of questions
+	\item Can have both endogenous / exogenous at the same time $\Rightarrow$ unify the exogenous and endogenous politics literatures
+\end{itemize}
+\end{frame}
+
+
 \section{Tariff Caps}
 \subsection{Tariff Caps}
 \begin{comment}
@@ -430,9 +453,15 @@ Must set tariff at specified level
 Must set tariff at or below specified level (aka tariff cap)
 \pause
 \begin{itemize}[<+->]
-	\item $\ga$ exogenous (Bagwell $\&$ Staiger 2005): Negotiated weak bindings (a) are higher than those gov'ts would choose if they instead negotiated strong bindings and (b) imply that governments with low realizations of $\ga$ set their applied tariffs strictly below the bound level.
+	\item $\ga(s)$, i.e. exogenous: Negotiated weak bindings (a) are higher than those gov'ts would choose if they instead negotiated strong bindings and (b) imply that governments with low realizations of $\ga$ set their applied tariffs strictly below the bound level.
+		\begin{itemize}
+			\item Bagwell $\&$ Staiger 2005 result
+		\end{itemize}
 
-	\item $\ga$ endogenous: Governments will not set applied tariffs strictly below the bound level. They may use the weak tariff binding either to encourage and/or restrain endogenous political pressure.
+	\item $\ga(e)$, i.e. endogenous: Governments will not set applied tariffs strictly below the bound level. They may use the weak tariff binding either to encourage and/or restrain endogenous political pressure.
+		\begin{itemize}
+			\item Maggi $\&$ Rodriguez-Clare (1998/2007) result
+		\end{itemize}
 
 \end{itemize}
 \end{frame}
@@ -442,7 +471,7 @@ Must set tariff at or below specified level (aka tariff cap)
 \frametitle{Tariff Caps with Self Enforcement}
 \pause
 \begin{itemize}[<+->]
-	\item $\ga$ exogenous (Bagwell $\&$ Staiger 2005): if governments patient enough ($\de$ high enough), optimal externally-enforced weak binding can be self-enforced
+	\item $\ga$ exogenous (Bagwell $\&$ Staiger 2005): if governments patient enough (discount factor $\de$ high enough), optimal externally-enforced weak binding can be self-enforced
   \item $\ga$ endogenous: optimal externally-enforced weak binding may not be self-enforcing
 		\begin{itemize}
 			\item Problem: lobby is an additional repeated-game player
@@ -451,7 +480,7 @@ Must set tariff at or below specified level (aka tariff cap)
 	 
 \end{itemize}
 \pause
-\hyperlink{repeated<1>}{\beamergotobutton{Repeated Game Intuition}}
+%\hyperlink{repeated<1>}{\beamergotobutton{Repeated Game Intuition}}
 \end{frame}
 
 
@@ -489,6 +518,52 @@ Must set tariff at or below specified level (aka tariff cap)
 \end{itemize}
 \end{frame}
 \end{comment}
+
+
+\begin{frame}[label=repeated]
+\frametitle{Repeated Game Intuition}
+\pause
+Legislature: break agreement if punishment not strong enough
+\pause
+\begin{itemize}
+	\item i.e. if one period of gain from cheater's payoff is greater than T-periods of loss from trade-war
+\end{itemize}
+
+\vskip.1in
+\pause
+Lobby: solve for lowest effort ($\ov{e}_b$) that breaks this constraint
+\pause
+\begin{itemize}
+	\item pay $\ov{e}_b$ if it's less than gain from $T$ periods of trade-war profits
+\end{itemize}
+
+\pause
+\vskip.1in
+Executives: set lowest $\bta$ that makes paying $\ov{e}_b$ unprofitable \textit{and} satisfies legislature's condition
+\pause
+\begin{itemize}
+	\item[$\Rightarrow$] $e_b=0$, agreement remains in force
+	\pause
+	\item High tariffs, no lobbying, no trade disruptions
+\end{itemize}
+%\hyperlink{self<1>}{\beamergotobutton{Go Back}}
+\end{frame}
+
+
+\begin{frame}{When the world is more complicated...}
+Now suppose political pressure is a result of both endogenous and exogenous forces (i.e. $\ga(s,e)$):
+\pause
+\vskip.1in
+\begin{beamerboxesrounded}[upper=palette tertiary, shadow=true]{Water in the Bindings with $\ga(s,e)$}
+  Assume $\ga(s,e) = \ga(s) + \ga(e)$. In order for governments to set applied tariffs strictly below the weak binding, the low shock must be realized \textit{and} the lobby must not have the incentive to `top up' political pressure to the level associated with the binding. 
+\end{beamerboxesrounded}
+
+\pause
+\begin{itemize}[<+->]
+	\item Can happen if gov't mis-judges lobby's incentives
+	\item In general, gov't prefers cap because lobby will `fill in' for low shock up to gov'ts optimal level of $\ga$
+\end{itemize}
+\end{frame}
 
 
 \section{Escape Clause}
@@ -532,9 +607,9 @@ When $\ga$ is \textit{only} endogenous:
 \begin{itemize}[<+->]
 	\item Benefit of escape clause from exogenous case is gone
 	\item Assuming lower binding is set to maximize political welfare, escape clause encourages inefficiently high lobbying effort / protection
-	\item (Incentive compatibility still an issue, but often not the central one)
+	\item Incentive compatibility still an issue, but often not the central one
 		\begin{itemize}[<+->]
-			\item (If lobby's preferred tariff $\geq$ escape clause binding, gov't experiences high $\ga$, no need to lie)
+			\item If lobby's preferred tariff $\geq$ escape clause binding, gov't experiences high $\ga$, no need to lie
 		\end{itemize}
   \end{itemize}
 	
@@ -559,6 +634,7 @@ Now suppose political pressure is a result of both endogenous and exogenous forc
   Assume $\ga(s,e) = \ga(s) + \ga(e)$. If an escape clause conditions on $\ga(s,e)$ and $\ga(s^L) < \ga(s^H) < \ga(e^L)$, the lower ``normal'' tariff binding will never be applied.
 \end{beamerboxesrounded}
 \end{frame}
+
 
 \begin{frame}{When the world is more complicated... (con't)}
 \begin{itemize}[<+->]
@@ -628,13 +704,16 @@ When ex-ante lobbying ($e^{\text{EA}}$) is possible, we could have
 \end{comment}
 
 \begin{frame}{Conclusion}
-Taking into account endogenous political forces alongside exogenous ones...
+Taking into account endogenous political forces alongside exogenous ones in this simplified modeling framework
 \pause
 \begin{itemize}[<+->]
-		\item helps explain the structure and enforcement of the WTO Safeguards measure
-		\item can help us think about optimal design of trading insitutions
 		\item demonstrates that TAs can be used to discourage lobbing activity in general
-		\item provides additional general explanation for tariff caps
+		\item can nest established results and provide new insights
+		\item can answer questions about optimal design of trading institutions more fully
+			\begin{itemize}
+				\item provides additional general explanation for tariff caps
+				\item helps explain the structure and enforcement of the WTO Safeguards measure
+			\end{itemize}
 \end{itemize}
 
 \end{frame}
@@ -650,35 +729,6 @@ Taking into account endogenous political forces alongside exogenous ones...
 \end{frame}
 
 
-\appendix
-\begin{frame}[label=repeated]
-\frametitle{Repeated Game Intuition}
-\pause
-Legislature: break agreement if punishment not strong enough
-\pause
-\begin{itemize}
-	\item i.e. if one period of gain from cheater's payoff is greater than T-periods of loss from trade-war
-\end{itemize}
-
-\vskip.1in
-\pause
-Lobby: solve for lowest effort ($\ov{e}_b$) that breaks this constraint
-\pause
-\begin{itemize}
-	\item pay $\ov{e}_b$ if it's less than gain from $T$ periods of trade-war profits
-\end{itemize}
-
-\pause
-\vskip.1in
-Executives: set lowest $\bta$ that makes paying $\ov{e}_b$ unprofitable \textit{and} satisfies legislature's condition
-\pause
-\begin{itemize}
-	\item[$\Rightarrow$] $e_b=0$, agreement remains in force
-	\pause
-	\item High tariffs, no lobbying, no trade disruptions
-\end{itemize}
-\hyperlink{self<1>}{\beamergotobutton{Go Back}}
-\end{frame}
 
 
 
